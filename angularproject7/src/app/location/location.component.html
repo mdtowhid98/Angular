@@ -7,12 +7,19 @@
 <tr>
     <th>Name</th>
     <th>City</th>
+    <th>Action</th>
 </tr>
 
 <tr *ngFor="let l of locations |async">
 
 <td>{{l.name}}</td>
 <td>{{l.city}}</td>
+
+<td>
+    <button  class="btn btn-warning" >Edit</button>
+    <button class="btn btn-danger" (click)="deleteLocation(l.id)">Delete</button>
+
+</td>
 
 </tr>
 
