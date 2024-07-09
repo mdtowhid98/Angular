@@ -1,0 +1,23 @@
+<p>location works!</p>
+
+<div class="container">
+
+<table class="table table-striped">
+
+<tr>
+    <th>Name</th>
+    <th>City</th>
+</tr>
+
+<tr *ngFor="let l of locations |async">
+
+<td>{{l.name}}</td>
+<td>{{l.city}}</td>
+
+</tr>
+
+</table>
+
+
+
+</div>
