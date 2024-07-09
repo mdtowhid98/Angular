@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JeeComponent } from './jee/jee.component';
 import { IdbComponent } from './idb/idb.component';
+import { LocationComponent } from './location/location.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     JeeComponent,
-    IdbComponent
+    IdbComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
