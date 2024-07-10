@@ -13,6 +13,7 @@
   <th>Photo</th>  
   <th>Wifi</th>  
   <th>Laundry</th>  
+  <th>Action</th>  
 </tr>
 
 <tr *ngFor="let location of locations |async">
@@ -25,6 +26,10 @@
     <td>{{location.availableUnits}}</td>
     <td>{{location.wifi}}</td>
     <td>{{location.laundry}}</td>
+    <td>
+        <button class="btn btn-warning">Edit</button>
+        <button class="btn btn-danger" (click)="deleteLocation(location.id)">Delete</button>
+    </td>
 
 
 </tr>

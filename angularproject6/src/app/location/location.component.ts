@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LocationService } from '../location.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { error } from 'node:console';
 
 @Component({
   selector: 'app-location',
@@ -20,6 +21,22 @@ export class LocationComponent implements OnInit{
   }
   ngOnInit(): void {
     this.locations=this.locationService.getAllLocation();
+  }
+
+  deleteLocation(id:string){
+this.locationService.deleteLocation(id)
+.subscribe({
+
+  next:rs=>{
+
+    this.locations=this.locationService.getAllLocation();
+    this.router.navigate(['/location'])
+  },
+  error:error=>{
+    console.log(error);
+  }
+})
+
   }
 
 }

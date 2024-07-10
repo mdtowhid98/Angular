@@ -1,4 +1,4 @@
-export class location{
+export class Location{
 
     id: string |undefined;
   name: string |undefined;
