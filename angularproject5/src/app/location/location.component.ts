@@ -41,4 +41,9 @@ error:error=>{
   })
 }
 
+updateLocation(id:string){
+
+this.router.navigate(['updateLocation',id]);
+}
+
 }

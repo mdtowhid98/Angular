@@ -26,6 +26,23 @@ constructor(private locationservice:LocationService,private router:Router,
 
   }
 
+  deleteLocation(id:string){
+this.locationservice.deleteLocation(id)
+.subscribe({
+
+  next: res=>{
+this.loacations=this.locationservice.getAllLocation();
+this.router.navigate(['/location']);
+
+  },
+  error:error=>{
+console.log(error);
+
+  }
+
+});
+
+  }
 
 
 

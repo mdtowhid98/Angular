@@ -21,7 +21,7 @@
             <td>{{location.state}}</td>
             <td>{{location.availableUnits}}</td>
             <td>
-                <button class="btn btn-warning">Edit</button>
+                <button class="btn btn-warning" (click)="updateLocation(location.id)">Edit</button>
                 <button class="btn btn-danger" (click)="deleteLocation(location.id)">Delete</button>
             </td>
         </tr>

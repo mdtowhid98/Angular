@@ -9,6 +9,7 @@
             <th>City</th>
             <th>State</th>
             <th>Unit</th>
+            <th>Action</th>
         </tr>
         <tr *ngFor=" let location of loacations |async">
 
@@ -16,7 +17,11 @@
             <td>{{location.city}}</td>
             <td>{{location.state}}</td>
             <td>{{location.availableUnits}}</td>
-            <td></td>
+            <td>
+                <button class="btn btn-warning">Edit</button>
+                <button class="btn btn-danger" (click)="deleteLocation(location.id)">Delete</button>
+
+            </td>
 
         </tr>
 

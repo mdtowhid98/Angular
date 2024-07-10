@@ -1,41 +1,42 @@
-<p>create-location works!</p>
+<p>update-location works!</p>
+
 
 <div class="container">
-    <form [formGroup]="formValue">
+    <form (ngSubmit)="updateLocation()">
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Name</label>
-            <input type="text" class="form-control"   formControlName="name">
+            <input type="text" class="form-control"   name="name" [(ngModel)]="location.name">
             
         </div>
 
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">City</label>
-            <input type="text" class="form-control" formControlName="city">
+            <input type="text" class="form-control" name="city" [(ngModel)]="location.city">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">State</label>
-            <input type="text" class="form-control" formControlName="state">
+            <input type="text" class="form-control" name="state" [(ngModel)]="location.state">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Photo</label>
-            <input type="text" class="form-control" formControlName="photo">
+            <input type="text" class="form-control" name="photo" [(ngModel)]="location.photo">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Unit</label>
-            <input type="text" class="form-control" formControlName="availableUnits">
+            <input type="text" class="form-control" name="availableUnits" [(ngModel)]="location.availableUnits">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">WIFI</label>
-            <input type="checkbox" class="form-check-input" formControlName="wifi" value="true">
+            <input type="checkbox" class="form-check-input" name="wifi" value="true" [(ngModel)]="location.wifi">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Laundry</label>
-            <input type="text" class="form-check-input" formControlName="laundry" value="true">
+            <input type="checkbox" class="form-check-input" name="laundry" value="true" [(ngModel)]="location.laundry">
         </div>
 
     
-        <button type="submit" class="btn btn-primary" (click)=" createLocation()">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
 </div>
