@@ -36,37 +36,7 @@
       "city": "Oakland",
       "state": "CA",
       "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-GGupkreKwxA-unsplash.jpg",
-      "availableUnits": 2,
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "4136",
-      "name": "dgh",
-      "city": "syed",
-      "state": "gt",
-      "photo": "esgt",
-      "availableUnits": "9",
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "f978",
-      "name": "gtf",
-      "city": "rth",
-      "state": "dfhr",
-      "photo": "r",
-      "availableUnits": "4",
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": "5d4b",
-      "name": "yhkt",
-      "city": "yukl",
-      "state": "yk",
-      "photo": "tyyko",
-      "availableUnits": "yuk",
+      "availableUnits": "100",
       "wifi": true,
       "laundry": true
     }

@@ -27,7 +27,7 @@
     <td>{{location.wifi}}</td>
     <td>{{location.laundry}}</td>
     <td>
-        <button class="btn btn-warning">Edit</button>
+        <button class="btn btn-warning" (click)="updateLocation(location.id)">Edit</button>
         <button class="btn btn-danger" (click)="deleteLocation(location.id)">Delete</button>
     </td>
 
