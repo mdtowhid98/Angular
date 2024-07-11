@@ -19,28 +19,16 @@
       "availableUnits": 0,
       "wifi": false,
       "laundry": true
-    },
-    {
-      "id": "2",
-      "name": "Warm Beds Housing Support",
-      "city": "Juneau",
-      "state": "AK",
-      "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
-      "availableUnits": "7",
-      "wifi": false,
-      "laundry": false
     }
   ],
-
-  "students":[
-
+  "students": [
     {
-      "id":1,
-      "name":"Raju",
-      "email":"ghehg@urhu",
-      "cellNo":"54145",
-      "location":{
-        "id":"0"
+      "id": "1",
+      "name": "Raju",
+      "email": "ghehg@urhu",
+      "cellNo": "54145",
+      "location": {
+        "id": "0"
       }
     }
   ]
