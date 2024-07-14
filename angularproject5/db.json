@@ -2,9 +2,9 @@
   "locations": [
     {
       "id": "0",
-      "name": "Acme Fresh Start Housing",
+      "name": "Dhanmondi",
       "city": "dhaka",
-      "state": "IL",
+      "state": "dhaka",
       "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
       "availableUnits": 4,
       "wifi": true,
@@ -12,9 +12,9 @@
     },
     {
       "id": "1",
-      "name": "A113 Transitional Housing",
-      "city": "Santa Monica",
-      "state": "CA",
+      "name": "Naogaon",
+      "city": "Naogaon",
+      "state": "dhaka",
       "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
       "availableUnits": 0,
       "wifi": false,
@@ -28,7 +28,46 @@
       "email": "ghehg@urhu",
       "cellNo": "54145",
       "location": {
-        "id": "0"
+        "id": "0",
+        "name": "Dhanmondi",
+        "city": "dhaka",
+        "state": "dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+        "availableUnits": 4,
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "2",
+      "name": "Towhid",
+      "email": "Towhid@urhu",
+      "cellNo": "484",
+      "location": {
+        "id": "2",
+        "name": "Naogaon",
+        "city": "Naogaon",
+        "state": "dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+        "availableUnits": 4,
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "d09b",
+      "name": "Md Towhidul Alam",
+      "email": "alammdtowhidul9@gmail.com",
+      "cellNo": "41854",
+      "location": {
+        "id": "0",
+        "name": "Dhanmondi",
+        "city": "dhaka",
+        "state": "dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+        "availableUnits": 4,
+        "wifi": true,
+        "laundry": true
       }
     }
   ]

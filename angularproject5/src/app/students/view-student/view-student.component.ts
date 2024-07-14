@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../student.service';
 import { LocationserviceService } from '../../location/locationservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-student',
@@ -10,7 +11,9 @@ import { LocationserviceService } from '../../location/locationservice.service';
 export class ViewStudentComponent implements OnInit{
 students:any;
 locations:any
-constructor(private service:StudentService
+constructor(private Studentservice:StudentService,
+  private locationService:LocationserviceService,
+  private router:Router
   
   ){
 
@@ -19,9 +22,27 @@ constructor(private service:StudentService
 
 
   ngOnInit(): void {
-    // this.locations=LocationserviceService
+
+    this.locations=this.locationService.getAllLocationforStudent();
     
-    this.students=this.service.viewAllStudent();
+    this.students=this.Studentservice.viewAllStudent();
   }
+
+  deleteStudents(id:string){
+    this.Studentservice.deleteStudents(id)
+    .subscribe({
+    
+    next: rs=>{
+      this.students=this.Studentservice.viewAllStudent();
+      this.router.navigate(['/students']);
+    },
+    error:error=>{
+    
+      console.log(error);
+    }
+    
+    })
+    
+      }
 
 }
