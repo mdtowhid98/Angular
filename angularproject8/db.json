@@ -79,6 +79,80 @@
       "availableUnits": 6,
       "wifi": true,
       "laundry": true
+    },
+    {
+      "id": "a379",
+      "name": "Md Towhidul Alam",
+      "city": "Naogaon",
+      "state": "gj",
+      "photo": "4",
+      "availableUnits": "g",
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": "1c6b",
+      "name": "",
+      "city": "",
+      "state": "",
+      "photo": "",
+      "availableUnits": "",
+      "wifi": "",
+      "laundry": ""
+    },
+    {
+      "id": "650b",
+      "name": "",
+      "city": "",
+      "state": "",
+      "photo": "",
+      "availableUnits": "",
+      "wifi": "",
+      "laundry": true
+    },
+    {
+      "id": "4b3b",
+      "name": "Md Towhidul Alam",
+      "city": "Naogaon",
+      "state": "",
+      "photo": "",
+      "availableUnits": "",
+      "wifi": "",
+      "laundry": ""
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "name": "habijabi",
+      "email": "habijabi@gmail.com",
+      "cellNo": "54584",
+      "location": {
+        "id": "0",
+        "name": "Dhaka",
+        "city": "Dhaka",
+        "state": "IL",
+        "photo": "https://angular.io/assets/images/tutorials/faa/webaliser-_TPTXZd9mOo-unsplash.jpg",
+        "availableUnits": 4,
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "2",
+      "name": "kisuEkta",
+      "email": "kisuEkta@gmail.com",
+      "cellNo": "5415",
+      "location": {
+        "id": "1",
+        "name": "Dhanmondi",
+        "city": "Dhanmondi",
+        "state": "IL",
+        "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+        "availableUnits": 4,
+        "wifi": true,
+        "laundry": true
+      }
     }
   ]
 }

@@ -11,7 +11,7 @@ import { StudentModel } from '../student.model';
 })
 export class ViewStudentComponent implements OnInit {
   students: any;
-  locations: any
+  locations: any;
   constructor(private Studentservice: StudentService,
     private locationService: LocationserviceService,
     private router: Router

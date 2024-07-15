@@ -8,19 +8,28 @@ import { LocationComponent } from './location/location.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { CreateLocationComponent } from './create-location/create-location.component';
 import { UpdateLocationComponent } from './update-location/update-location.component';
+import { ViewStudentComponent } from './student/view-student/view-student.component';
+import { UpdateStudentComponent } from './student/update-student/update-student.component';
+import { CreateStudentComponent } from './student/create-student/create-student.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     LocationComponent,
     CreateLocationComponent,
-    UpdateLocationComponent
+    UpdateLocationComponent,
+    ViewStudentComponent,
+    UpdateStudentComponent,
+    CreateStudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [
     

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Location } from '../../location/location.model';
-import { StudentModel } from '../student.model';
-import { ActivatedRoute, Router } from '@angular/router';
-import { LocationserviceService } from '../../location/locationservice.service';
+import { studentModel } from '../student.model';
+import { LocationService } from '../../location.service';
 import { StudentService } from '../student.service';
+import { ActivatedRoute, Router } from '@angular/router';
 import { error } from 'console';
 
 @Component({
@@ -15,29 +15,27 @@ import { error } from 'console';
 export class UpdateStudentComponent implements OnInit {
 
   studentForm!: FormGroup;
-  locations: Location[] = [];
   studentId: string = "";
-  student: StudentModel = new StudentModel();
+  locations: Location[] = [];
+  student: studentModel = new studentModel();
 
-  constructor(
-
-    private formBuilder: FormBuilder,
+  constructor(private locationService: LocationService,
+    private studentService: StudentService,
+    private fromBuilder: FormBuilder,
     private router: Router,
-    private route: ActivatedRoute,
-    private locationService: LocationserviceService,
-    private studentService: StudentService
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     this.studentId = this.route.snapshot.params['id'];
-
     console.log(this.studentId);
 
-    this.studentForm = this.formBuilder.group({
+    this.studentForm = this.fromBuilder.group({
+
       name: [''],
       email: [''],
       cellNo: [''],
-      location: this.formBuilder.group({
+      location: this.fromBuilder.group({
         id: [undefined],
         name: [undefined],
         city: [undefined],
@@ -50,77 +48,65 @@ export class UpdateStudentComponent implements OnInit {
 
     });
 
-    this.loadLocation();
     this.loadStudentDetails();
-
+    this.loadLocation();
   }
 
   loadLocation(): void {
 
-    this.locationService.getAllLocationforStudent()
+    this.locationService.getAllLocationForStudent()
       .subscribe({
-
         next: (res: Location[]) => {
+
           this.locations = res;
         },
         error: error => {
-
           console.log(error);
         }
       });
   }
 
   loadStudentDetails(): void {
-
     this.studentService.getStudentById(this.studentId)
       .subscribe({
-        next: (student: StudentModel) => {
-          this.student = student;
+        next: (student: studentModel) => {
+
+          this.student=student;
           this.studentForm.patchValue({
 
-            name: student.name,
-            email: student.email,
-            cellNo: student.cellNo,
-            location: student.location
-
+            name:student.name,
+            email:student.email,
+            cellNo:student.cellNo,
+            location:student.location
           });
-
-
         },
-
-        error: error => {
+        error:error=>{
           console.log(error);
         }
 
       });
-
-
-
-
   }
 
   updateStudent():void{
-
-    const updatedStudent:StudentModel={
+    const updateStudent:studentModel={
 
       ...this.student,
-      ...this.  studentForm.value
-
+      ...this.studentForm.value
     };
 
-    this.studentService.updateStudent(updatedStudent)
+    this.studentService.updateStudent(updateStudent)
     .subscribe({
       next:res=>{
-        console.log('Student updated successfully:', res);
-        this.router.navigate(['students']);
+
+        console.log('student update successfully:',res);
+        this.router.navigate(['student']);
       },
       error:error=>{
 
-        console.log('Error updating student:', error);
-
+        console.log('Error updating student:',error);
       }
 
-    })
+    });
 
   }
 
