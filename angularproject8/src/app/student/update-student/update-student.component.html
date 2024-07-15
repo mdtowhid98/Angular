@@ -18,11 +18,13 @@
 
         <div class="mb-3">
             <label for="location" class="form-label">Location:</label>
-            <select id="location" formControlName="location" class="form-select">
+            <select id="location" formGroupName="location" class="form-select">
                 <option *ngFor="let loc of locations" [ngValue]="loc">{{ loc.name }}</option>
             </select>
         </div>
 
+
+        
         <button type="submit" class="btn btn-primary">Update Student</button>
     </form>
 </div>

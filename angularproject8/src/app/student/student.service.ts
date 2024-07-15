@@ -33,7 +33,10 @@ export class StudentService {
   }
 
   getStudentById(studentId:string):Observable<studentModel>{
-    return this.http.get<studentModel>('${this.baseUrl}${studentId}');
+    return this.http.get<studentModel>(this.baseUrl+studentId);
+
+
+    
   }
 
 }
