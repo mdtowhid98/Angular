@@ -12,6 +12,7 @@ import { UpdateLocationComponent } from './update-location/update-location.compo
 import { ViewStudentComponent } from './students/view-student/view-student.component';
 import { CreateStudentComponent } from './students/create-student/create-student.component';
 import { UpdateStudentComponent } from './students/update-student/update-student.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { UpdateStudentComponent } from './students/update-student/update-student
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule, 
+    AppRoutingModule
 
   ],
   providers: [

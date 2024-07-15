@@ -21,7 +21,7 @@
             <td>{{st.cellNo}}</td>
             <td>{{st.location.name}}</td>
             <td>
-                <button class="btn btn-warning" >Edit</button>
+                <button class="btn btn-warning" (click)="editStudent(st)">Edit</button>
                 <button class="btn btn-danger" (click)="deleteStudents(st.id)">Delete</button>
             </td>
         </tr>

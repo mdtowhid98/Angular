@@ -28,4 +28,15 @@ export class StudentService {
   deleteStudents(id:string):Observable<any>{
     return this.http.delete(this.baseUrl+id);
       }
+
+      updateStudent(student:StudentModel):Observable<StudentModel>{
+
+        return this.http.post<StudentModel>(this.baseUrl,student);
+      }
+
+      getStudentById(studentId:string):Observable<StudentModel>{
+
+        return this.http.get<StudentModel>('${this.baseUrl}${studentId}');
+
+      }
 }
