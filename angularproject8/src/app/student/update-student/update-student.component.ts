@@ -67,10 +67,10 @@ export class UpdateStudentComponent implements OnInit {
   }
 
   loadStudentDetails(): void {
+    
     this.studentService.getStudentById(this.studentId)
       .subscribe({
         next: (student: studentModel) => {
-
           this.student=student;
           this.studentForm.patchValue({
 
@@ -78,6 +78,7 @@ export class UpdateStudentComponent implements OnInit {
             email:student.email,
             cellNo:student.cellNo,
             location:student.location
+            
           });
         },
         error:error=>{

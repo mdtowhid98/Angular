@@ -10,15 +10,15 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  {path:"location",component:LocationComponent},
-  {path:"createLocation",component:CreateLocationComponent},
-  
-  {path:"updateLocation/:id",component:UpdateLocationComponent},
-  {path:"student",component:ViewStudentComponent},
-  {path:"createStudent",component:CreateStudentComponent},
-  {path: 'updateStudent/:id', component:UpdateStudentComponent},
-  {path: 'reg', component:RegistrationComponent},
-{path: 'logIn', component:LoginComponent},
+  { path: "location", component: LocationComponent },
+  { path: "createLocation", component: CreateLocationComponent },
+
+  { path: "updateLocation/:id", component: UpdateLocationComponent },
+  { path: "student", component: ViewStudentComponent },
+  { path: "createStudent", component: CreateStudentComponent },
+  { path: 'updateStudent/:id', component: UpdateStudentComponent },
+  { path: 'reg', component: RegistrationComponent },
+  { path: 'logIn', component: LoginComponent },
 
 ];
 

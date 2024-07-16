@@ -39,9 +39,12 @@ export class AuthserviceService {
           if (user.password === credentials.password) {
             const token = btoa(`${user.email}:${user.password}`);
             return { token, user } as Authresponse;
-          } else {
+          } 
+          
+          else {
             throw new Error('Invalid password');
           }
+          
         } else {
           throw new Error('User not found');
         }
