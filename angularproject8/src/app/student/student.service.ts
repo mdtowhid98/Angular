@@ -27,16 +27,14 @@ export class StudentService {
     return this.http.delete(this.baseUrl+id);
   }
 
-  updateStudent(student:studentModel):Observable<studentModel>{
-    return this.http.post<studentModel>(this.baseUrl,student);
-
+  updateStudent(student: studentModel): Observable<studentModel> {
+    return this.http.put<studentModel>(`${this.baseUrl}${student.id}`, student);
   }
 
-  getStudentById(studentId:string):Observable<studentModel>{
-    return this.http.get<studentModel>(this.baseUrl+studentId);
-
-
-    
+  getStudentById(studentId: string): Observable<studentModel> {
+    // const url = `${this.baseUrl}/${studentId}`;
+    return this.http.get<studentModel>(`${this.baseUrl}${studentId}`);
   }
+
 
 }

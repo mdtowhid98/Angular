@@ -1,0 +1,22 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "Raju ahmed",
+      "email": "raju@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "16e6",
+      "name": "Md Towhidul Alam",
+      "email": "alammdtowhidul9@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "e6ea",
+      "name": "safdrsdfsad",
+      "email": "htugjk@gmail.com",
+      "password": "123456"
+    }
+  ]
+}

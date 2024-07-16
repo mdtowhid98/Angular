@@ -43,9 +43,9 @@ constructor(private locationService:LocationService,
     });
   }
 
-  editStudent(student:studentModel):void{
-
-    this.router.navigate(['/updateStudent',student.id]);
+  editStudent(student: studentModel): void {
+    
+    this.router.navigate(['/updatestudent', student.id]);
   }
 
 }

@@ -29,31 +29,32 @@ export class UpdateStudentComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.studentId = this.route.snapshot.params['id'];
+   
 
-    console.log(this.studentId);
+    this.studentId= this.route.snapshot.params['id'];
 
-    this.studentForm = this.formBuilder.group({
-      name: [''],
-      email: [''],
-      cellNo: [''],
-      location: this.formBuilder.group({
-        id: [undefined],
-        name: [undefined],
-        city: [undefined],
-        state: [undefined],
-        photo: [undefined],
-        availableUnits: [undefined],
-        wifi: [undefined],
-        laundry: [undefined]
-      })
 
-    });
+   console.log(this.studentId);
 
-    this.loadLocation();
-    this.loadStudentDetails();
+   this.studentForm = this.formBuilder.group({
+     name: [''],
+     email: [''],
+     cellNo: [''],
+     location: this.formBuilder.group({
+       id: [undefined],
+       name: [undefined],
+       city: [undefined],
+       state: [undefined],
+       photo: [undefined],
+       availableUnits: [undefined],
+       wifi: [undefined],
+       laundry: [undefined]
+     })
+   });
 
-  }
+   this.loadLocation();
+   this.loadStudentDetails();
+ }
 
   loadLocation(): void {
 

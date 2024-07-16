@@ -23,22 +23,6 @@
   ],
   "students": [
     {
-      "id": "1",
-      "name": "Raju",
-      "email": "ghehg@urhu",
-      "cellNo": "54145",
-      "location": {
-        "id": "0",
-        "name": "Dhanmondi",
-        "city": "dhaka",
-        "state": "dhaka",
-        "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-        "availableUnits": 4,
-        "wifi": true,
-        "laundry": true
-      }
-    },
-    {
       "id": "2",
       "name": "Towhid",
       "email": "Towhid@urhu",
@@ -147,6 +131,86 @@
         "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
         "availableUnits": 0,
         "wifi": false,
+        "laundry": true
+      }
+    },
+    {
+      "id": "c54c",
+      "name": "Md Towhidul Alam",
+      "email": "rtyu@gmail.com",
+      "cellNo": "41854",
+      "location": {
+        "id": "1",
+        "name": "Naogaon",
+        "city": "Naogaon",
+        "state": "dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+        "availableUnits": 0,
+        "wifi": false,
+        "laundry": true
+      }
+    },
+    {
+      "id": "803f",
+      "name": "Md Towhidul Alam",
+      "email": "rtyu@gmail.com",
+      "cellNo": "41854",
+      "location": {
+        "id": "0",
+        "name": "Dhanmondi",
+        "city": "dhaka",
+        "state": "dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+        "availableUnits": 4,
+        "wifi": true,
+        "laundry": true
+      }
+    },
+    {
+      "id": "9c2e",
+      "name": "Md Towhidul Alam",
+      "email": "htugjk@gmail.com",
+      "cellNo": "56434",
+      "location": {
+        "id": "1",
+        "name": "Naogaon",
+        "city": "Naogaon",
+        "state": "dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+        "availableUnits": 0,
+        "wifi": false,
+        "laundry": true
+      }
+    },
+    {
+      "id": "699c",
+      "name": "Md Towhidul Alam",
+      "email": "htugjk@gmail.com",
+      "cellNo": "41854",
+      "location": {
+        "id": "1",
+        "name": "Naogaon",
+        "city": "Naogaon",
+        "state": "dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+        "availableUnits": 0,
+        "wifi": false,
+        "laundry": true
+      }
+    },
+    {
+      "id": "0f20",
+      "name": "Md Towhidul Alam",
+      "email": "htugjk@gmail.com",
+      "cellNo": "4548",
+      "location": {
+        "id": "0",
+        "name": "Dhanmondi",
+        "city": "dhaka",
+        "state": "dhaka",
+        "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+        "availableUnits": 4,
+        "wifi": true,
         "laundry": true
       }
     }

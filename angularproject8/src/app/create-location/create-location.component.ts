@@ -37,8 +37,8 @@ constructor(private locationService:LocationService,
       state:[''],
       photo:[''],
       availableUnits:[''],
-      wifi:[''],
-      laundry:[''],
+      wifi:['false'],
+      laundry:['false'],
 
     });
     
