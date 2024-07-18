@@ -20,7 +20,9 @@ export class RegistrationComponent {
     this.regForm = this.formBuilder.group({
       name:['', Validators.required],
       email:['', [Validators.required, Validators.email]],
-      password:['',Validators.required]
+      password:['',Validators.required],
+      age:['',Validators.required],
+      photo:['',Validators.required]
 
       // name:['', Validators.required],
       // email:['', [Validators.required, Validators.email]],
