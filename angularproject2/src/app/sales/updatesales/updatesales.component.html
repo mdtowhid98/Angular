@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>Update Sales Details</h2>
+    <form [formGroup]="saleForm" (ngSubmit)="updateSale()">
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="text" class="form-control" id="quantity" formControlName="quantity">
+        </div>
+
+        <div class="mb-3">
+            <label for="totalprice" class="form-label">Total Price</label>
+            <input type="text" class="form-control" id="totalprice" formControlName="totalprice">
+        </div>
+
+        <div class="mb-3">
+            <label for="salesdate" class="form-label">Sales Date</label>
+            <input type="text" class="form-control" id="salesdate" formControlName="salesdate">
+        </div>
+
+        <div class="mb-3">
+            <label for="product" class="form-label">Product:</label>
+            <select id="product" formGroupName="product" class="form-select" formControlName="product">
+                <option *ngFor="let loc of products" [ngValue]="loc">{{ loc.name }}</option>
+            </select>
+        </div>
+
+
+        
+        <button type="submit" class="btn btn-primary">Update Student</button>
+    </form>
+</div>

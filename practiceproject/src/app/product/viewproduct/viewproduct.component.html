@@ -1,0 +1,31 @@
+<div class="container">
+
+    <table class="table table-striped">
+    <tr>
+    
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Update</th>
+        <th>Delete</th>
+        
+       
+       
+    </tr>
+    <tr *ngFor="let product of products |async">
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.stock}}</td>
+        <!-- <td><img [src]="location.photo" alt="{{location.name}}" style="width: 50px; height: auto;"></td> -->
+        <td><button class="btn btn-warning" (click)="updateProduct(product.id)">Edit</button></td>
+        <td><button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button></td>
+        
+       
+    </tr>
+    </table>
+    
+    </div>
+    
+    
+    
+    

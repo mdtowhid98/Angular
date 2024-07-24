@@ -1,0 +1,37 @@
+
+
+<div class="container">
+
+<table class="table table-striped">
+<tr>
+
+    <th>Name</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Photo</th>
+    <th>Unit</th>
+    <th>Wifi</th>
+    <th>Laundry</th>
+    <th>Update</th>
+    <th>Delete</th>
+   
+   
+</tr>
+<tr *ngFor="let location of locations |async">
+    <td>{{location.name}}</td>
+    <td>{{location.city}}</td>
+    <td>{{location.state}}</td>
+    <td><img [src]="location.photo" alt="{{location.name}}" style="width: 50px; height: auto;"></td>
+    <td>{{location.availableUnits}}</td>
+    <td>{{location.wifi}}</td>
+    <td>{{location.laundry}}</td>
+    <td ><button class="btn btn-warning" (click)="updateLocation(location)">Edit</button></td>
+    <td ><button class="btn btn-danger" (click)="deleteLocation(location.id)">Delete</button></td>
+   
+</tr>
+</table>
+
+</div>
+
+
+

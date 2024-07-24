@@ -38,6 +38,7 @@ export class AuthserviceService {
           const user = users[0];
           if (user.password === credentials.password) {
             const token = btoa(`${user.email}:${user.password}`);
+            this.storeUserProfile(user)
             return { token, user } as Authresponse;
           } 
           
@@ -69,8 +70,21 @@ export class AuthserviceService {
   getToken(): string | null {
     return localStorage.getItem('token');
   }
+  storeUserProfile(user:userModel):void{
 
+    localStorage.setItem('userProfile',JSON.stringify(user));
+      }
 
+  getProfileFromStorage():userModel | null{
+
+    const userProfile=localStorage.getItem('userProfile');
+    return userProfile ? JSON.parse(userProfile):null;
+  }
+
+  removeUserDetails(){
+
+    localStorage.clear();
+  }
 
 
 }

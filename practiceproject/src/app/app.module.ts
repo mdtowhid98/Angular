@@ -8,12 +8,37 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { LogoutComponent } from './logout/logout.component';
+import { HomeComponent } from './home/home.component';
+import { ViewproductComponent } from './product/viewproduct/viewproduct.component';
+import { CreateproductComponent } from './product/createproduct/createproduct.component';
+import { UpdateproductComponent } from './product/updateproduct/updateproduct.component';
+import { ViewsalesComponent } from './sales/viewsales/viewsales.component';
+import { CreatesalesComponent } from './sales/createsales/createsales.component';
+import { UpdatesalesComponent } from './sales/updatesales/updatesales.component';
+import { ViewsalesproductComponent } from './salesproduct/viewsalesproduct/viewsalesproduct.component';
+import { CreatesalesproductComponent } from './salesproduct/createsalesproduct/createsalesproduct.component';
+import { UpdatesalesproductComponent } from './salesproduct/updatesalesproduct/updatesalesproduct.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    UserprofileComponent,
+    LogoutComponent,
+    HomeComponent,
+    ViewproductComponent,
+    CreateproductComponent,
+    UpdateproductComponent,
+    ViewsalesComponent,
+    CreatesalesComponent,
+    UpdatesalesComponent,
+    ViewsalesproductComponent,
+    CreatesalesproductComponent,
+    UpdatesalesproductComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +50,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     
   ],
   providers: [
-    provideClientHydration(),
+    // provideClientHydration(),
     provideHttpClient(
       withFetch()
     )

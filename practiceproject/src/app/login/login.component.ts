@@ -31,7 +31,7 @@ export class LoginComponent {
         next: (res) => {
           console.log('User logged in successfully:', res);
           this.authService.storeToken(res.token);
-          this.router.navigate(['/']); // Navigate to a protected route after login
+          this.router.navigate(['userProfile']); 
         },
         error: (err) => {
           console.error('Error logging in:', err);

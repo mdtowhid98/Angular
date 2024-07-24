@@ -200,6 +200,22 @@
         "wifi": false,
         "laundry": true
       }
+    },
+    {
+      "id": "fe35",
+      "name": "fhdgdg",
+      "email": "sf@gjg",
+      "cellNo": "41854",
+      "location": {
+        "id": "3",
+        "name": "Homesteady Housing",
+        "city": "Chicago",
+        "state": "IL",
+        "photo": "https://angular.io/assets/images/tutorials/faa/ian-macdonald-W8z6aiwfi1E-unsplash.jpg",
+        "availableUnits": 1,
+        "wifi": true,
+        "laundry": false
+      }
     }
   ]
 }
