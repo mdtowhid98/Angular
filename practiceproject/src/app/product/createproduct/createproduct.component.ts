@@ -35,6 +35,12 @@ export class CreateproductComponent implements OnInit{
     }
   
     createProduct(){
+      // if(this.product.name==this.formValue.value.name){
+      //   add:this.product;
+      // }
+      // else{
+      //   this.product.name=this.formValue.value.name;
+      // }
  this.product.name=this.formValue.value.name;
  this.product.price=this.formValue.value.price;
  this.product.stock=this.formValue.value.stock;

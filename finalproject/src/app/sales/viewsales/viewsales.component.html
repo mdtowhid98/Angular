@@ -1,0 +1,46 @@
+<div class="container">
+    <table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        
+        <th>Customer Name</th>
+        <th>Product Name</th>
+        <th>Sales date</th>
+        <th>Unit Price</th>
+        <th>Quantity</th>
+        
+        <th>Total Price</th>
+        <th>Stock</th>
+        
+        <th>Update</th>
+        <th>Delete</th>
+        
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let st of sales |async">
+    
+        <td>{{st.id}}</td>
+        <td>{{st.customername}}</td>
+        <td>{{st.product.name}}</td>
+        <td>{{st.salesdate}}</td>
+        <td>{{st.product.unitprice}}</td>
+        <td>{{st.quantity}}</td>
+        
+        <td>{{st.product.unitprice*st.quantity}}</td>
+        <td>{{st.product.stock-st.quantity}}</td>
+        
+        
+        
+        <td><button class="btn btn-warning" (click)="editSales(st)">Edit</button></td>
+        <td><button class="btn btn-danger" (click)="deleteSales(st.id)">Delete</button></td>
+    
+    </tr>
+    </tbody>
+    
+    </table>
+    
+    </div>
+    
+

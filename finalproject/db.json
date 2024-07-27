@@ -1,0 +1,53 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+      "stock": "1210",
+      "unitprice": 5
+    }
+  ],
+  "sales": [
+    {
+      "id": "af47",
+      "customername": "joipko",
+      "quantity": 5,
+      "salesdate": "2024-08-07",
+      "totalprice": "25",
+      "product": {
+        "id": "1",
+        "name": "Apple",
+        "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+        "stock": "1210",
+        "unitprice": 5
+      }
+    },
+    {
+      "id": "8b38",
+      "customername": "Oppo",
+      "quantity": 5,
+      "salesdate": "2024-07-17",
+      "product": {
+        "id": "1",
+        "name": "Apple",
+        "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+        "stock": "1210",
+        "unitprice": 5
+      }
+    },
+    {
+      "id": "3798",
+      "customername": "Oppo",
+      "quantity": 5,
+      "salesdate": "2024-07-16",
+      "product": {
+        "id": "1",
+        "name": "Apple",
+        "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+        "stock": "1210",
+        "unitprice": 5
+      }
+    }
+  ]
+}

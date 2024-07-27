@@ -1,0 +1,28 @@
+<!-- createproduct.component.html -->
+<div class="container">
+    <h2>Create or Update Product</h2>
+    <form [formGroup]="formValue" (ngSubmit)="createProduct()">
+      <div class="form-group">
+        <label for="name">Product Name</label>
+        <input id="name" type="text" formControlName="name" class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label for="photo">Product Photo URL</label>
+        <input id="photo" type="text" formControlName="photo" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="unitprice">Unit Price</label>
+        <input id="unitprice" type="number" formControlName="unitprice" class="form-control" />
+      </div>
+  
+      <div class="form-group">
+        <label for="stock">Product Stock</label>
+        <input id="stock" type="number" formControlName="stock" class="form-control" />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Create/Update Product</button>
+    </form>
+  </div>
+  

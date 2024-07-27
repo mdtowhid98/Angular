@@ -1,0 +1,124 @@
+/* General container styling */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual receipt item styling */
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.receipt-item .label {
+    font-weight: bold;
+    color: #333;
+}
+
+.receipt-item .value {
+    color: #666;
+}
+
+/* Button group styling */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-group .btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group .btn-warning {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+.button-group .btn-warning:hover {
+    background-color: #ec971f;
+}
+
+.button-group .btn-danger {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.button-group .btn-danger:hover {
+    background-color: #c9302c;
+}
+
+/* Print button styling */
+.printbtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #5bc0de;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.printbtn:hover {
+    background-color: #31b0d5;
+}
+
+/* Additional responsive styling */
+@media (max-width: 600px) {
+    .receipt-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .button-group .btn:last-child {
+        margin-bottom: 0;
+    }
+}
+/* Fieldset styling */
+fieldset {
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Heading styles within the fieldset */
+fieldset h1, fieldset h4 {
+    text-align: center;
+    margin: 0;
+    padding: 5px 0;
+    color: #333;
+}
+
+/* Additional heading styles */
+fieldset h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+fieldset h4 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #777;
+}
