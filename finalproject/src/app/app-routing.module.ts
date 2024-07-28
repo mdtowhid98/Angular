@@ -13,6 +13,7 @@ const routes: Routes = [
   {path:"updateProduct/:id",component:UpdateproductComponent},
   {path:"viewsales",component:ViewsalesComponent},
   {path:"createSales",component:CreatesalesComponent},
+  // { path: '', redirectTo: '/createsales', pathMatch: 'full' },
   {path:"updateSales/:id",component:UpdatesalesComponent},
 ];
 

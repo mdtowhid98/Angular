@@ -55,9 +55,17 @@
         "stock": 58,
         "unitprice": 12
       }
+    },
+    {
+      "id": "fc2d",
+      "customername": "Oppo",
+      "salesdate": "2024-07-19",
+      "product": [
+        {
+          "id": "1",
+          "quantity": 4
+        }
+      ]
     }
   ]
- 
-
-  
 }

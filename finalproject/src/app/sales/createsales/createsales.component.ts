@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductModule } from '../../module/product/product.module';
 import { SalesModule } from '../../module/sales/sales.module';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 import { ProductService } from '../../service/product.service';
 import { SalesService } from '../../service/sales.service';
 import { Router } from '@angular/router';
@@ -28,34 +28,20 @@ export class CreatesalesComponent implements OnInit {
     this.loadProduct();
 
     this.salesForm = this.formBuilder.group({
-      customername: [''],
-      quantity: [''],
-      salesdate: [''],
-      totalprice: [{ value: '', disabled: true }], 
-      product: this.formBuilder.group({
-        id: [undefined],
-        name: [undefined],
-        photo: [undefined],
-        stock: [undefined],
-        unitprice: [undefined],
-      })
+      customername: ['', Validators.required],
+      salesdate: ['', Validators.required],
+      products: this.formBuilder.array([]),
+      totalprice: [{ value: '', disabled: true }]
     });
 
-    this.salesForm.get('product')?.get('name')?.valueChanges.subscribe(name => {
-      const selectedProduct = this.products.find(loc => loc.name === name);
-      if (selectedProduct) {
-        this.salesForm.patchValue({ product: selectedProduct });
-        this.calculateTotalPrice();
-      }
-    });
-
-    this.salesForm.get('quantity')?.valueChanges.subscribe(() => {
+    this.addProduct();
+    this.salesForm.get('product')?.valueChanges.subscribe(() => {
       this.calculateTotalPrice();
     });
+  }
 
-    this.salesForm.get('product')?.get('unitprice')?.valueChanges.subscribe(() => {
-      this.calculateTotalPrice();
-    });
+  get productsArray(): FormArray {
+    return this.salesForm.get('products') as FormArray;
   }
 
   loadProduct() {
@@ -69,21 +55,55 @@ export class CreatesalesComponent implements OnInit {
     });
   }
 
+  addProduct() {
+    const productGroup = this.formBuilder.group({
+      id: ['',undefined],
+      name: ['', Validators.required],
+      quantity: [0, Validators.required],
+      unitprice: [{ value: 0, disabled: true }],
+    });
+
+    productGroup.get('name')?.valueChanges.subscribe(name => {
+      const selectedProduct = this.products.find(prod => prod.name === name);
+      if (selectedProduct) {
+        productGroup.patchValue({ 
+          id: selectedProduct.id,
+          unitprice: selectedProduct.unitprice 
+        });
+        this.calculateTotalPrice();
+      }
+    });
+
+    productGroup.get('quantity')?.valueChanges.subscribe(() => {
+      this.calculateTotalPrice();
+    });
+
+    this.productsArray.push(productGroup);
+  }
+
+  removeProduct(index: number) {
+    this.productsArray.removeAt(index);
+    this.calculateTotalPrice();
+  }
+
   calculateTotalPrice() {
-    const quantity = this.salesForm.get('quantity')?.value || 0;
-    const unitprice = this.salesForm.get('product')?.get('unitprice')?.value || 0;
-    const totalprice = quantity * unitprice;
+    let totalprice = 0;
+    this.productsArray.controls.forEach(control => {
+      const quantity = control.get('quantity')?.value || 0;
+      const unitprice = control.get('unitprice')?.value || 0;
+      totalprice += quantity * unitprice;
+    });
     this.salesForm.patchValue({ totalprice });
   }
 
   createSales() {
     this.sale.customername = this.salesForm.value.customername;
-    this.sale.quantity = this.salesForm.value.quantity;
     this.sale.salesdate = this.salesForm.value.salesdate;
     this.sale.totalprice = this.salesForm.value.totalprice;
-    this.sale.product = this.salesForm.value.product;
-
-   
+    this.sale.product = this.salesForm.value.products.map((product: any) => ({
+      id: product.id,
+      quantity: product.quantity
+    }));
 
     this.salesService.createSales(this.sale).subscribe({
       next: res => {
