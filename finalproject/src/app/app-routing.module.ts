@@ -5,6 +5,7 @@ import { CreateproductComponent } from './product/createproduct/createproduct.co
 import { UpdateproductComponent } from './product/updateproduct/updateproduct.component';
 import { ViewsalesComponent } from './sales/viewsales/viewsales.component';
 import { CreatesalesComponent } from './sales/createsales/createsales.component';
+import { UpdatesalesComponent } from './sales/updatesales/updatesales.component';
 
 const routes: Routes = [
   {path:"viewproduct",component:ViewproductComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:"updateProduct/:id",component:UpdateproductComponent},
   {path:"viewsales",component:ViewsalesComponent},
   {path:"createSales",component:CreatesalesComponent},
+  {path:"updateSales/:id",component:UpdatesalesComponent},
 ];
 
 @NgModule({

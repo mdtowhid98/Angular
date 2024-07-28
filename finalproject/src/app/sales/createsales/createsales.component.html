@@ -24,6 +24,13 @@
       </select>
     </div>
 
+    <div formGroupName="product" class="form-group">
+      <label for="product">Unitprice</label>
+      <select id="product" formControlName="unitprice" class="form-control">
+        <option *ngFor="let product of products" [value]="product.unitprice">{{ product.unitprice}}</option>
+      </select>
+    </div>
+
     <div class="form-group">
       <label for="totalprice">Total Price</label>
       <input type="text" id="totalprice" formControlName="totalprice" class="form-control" >

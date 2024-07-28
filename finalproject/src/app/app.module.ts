@@ -15,6 +15,7 @@ import { ViewsalesComponent } from './sales/viewsales/viewsales.component';
 import { CreatesalesComponent } from './sales/createsales/createsales.component';
 import { UpdatesalesComponent } from './sales/updatesales/updatesales.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { UpdatesalesComponent } from './sales/updatesales/updatesales.component'
     UpdateproductComponent,
     ViewsalesComponent,
     CreatesalesComponent,
-    UpdatesalesComponent
+    UpdatesalesComponent,
+    
   ],
   imports: [
     BrowserModule,

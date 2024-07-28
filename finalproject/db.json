@@ -6,6 +6,13 @@
       "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
       "stock": "1210",
       "unitprice": 5
+    },
+    {
+      "id": "db4d",
+      "name": "Orange",
+      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+      "unitprice": 12,
+      "stock": 58
     }
   ],
   "sales": [
@@ -37,17 +44,20 @@
       }
     },
     {
-      "id": "3798",
-      "customername": "Oppo",
-      "quantity": 5,
-      "salesdate": "2024-07-16",
+      "id": "5cac",
+      "customername": "tyu",
+      "quantity": 10,
+      "salesdate": "2024-07-07",
       "product": {
-        "id": "1",
-        "name": "Apple",
-        "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
-        "stock": "1210",
-        "unitprice": 5
+        "id": "db4d",
+        "name": "Orange",
+        "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+        "stock": 58,
+        "unitprice": 12
       }
     }
   ]
+ 
+
+  
 }

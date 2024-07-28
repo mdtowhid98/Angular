@@ -31,7 +31,7 @@ export class CreatesalesComponent implements OnInit {
       customername: [''],
       quantity: [''],
       salesdate: [''],
-      totalprice: [{ value: '', disabled: true }], // Disable totalprice input
+      totalprice: [{ value: '', disabled: true }], 
       product: this.formBuilder.group({
         id: [undefined],
         name: [undefined],
@@ -82,6 +82,8 @@ export class CreatesalesComponent implements OnInit {
     this.sale.salesdate = this.salesForm.value.salesdate;
     this.sale.totalprice = this.salesForm.value.totalprice;
     this.sale.product = this.salesForm.value.product;
+
+   
 
     this.salesService.createSales(this.sale).subscribe({
       next: res => {
