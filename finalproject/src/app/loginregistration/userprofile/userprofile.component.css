@@ -1,0 +1,50 @@
+/* Container styling */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Heading styling */
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Paragraph styling */
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* Strong text styling */
+strong {
+    color: #333;
+}
+
+/* Image styling */
+.img-fluid {
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    border: 2px solid #ddd;
+    padding: 3px;
+}
+
+/* Loading message styling */
+p.loading {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+}

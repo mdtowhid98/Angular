@@ -14,6 +14,11 @@ import { UpdateproductComponent } from './product/updateproduct/updateproduct.co
 import { ViewsalesComponent } from './sales/viewsales/viewsales.component';
 import { CreatesalesComponent } from './sales/createsales/createsales.component';
 import { UpdatesalesComponent } from './sales/updatesales/updatesales.component';
+import { RegistrationComponent } from './loginregistration/registration/registration.component';
+import { LoginComponent } from './loginregistration/login/login.component';
+import { LogoutComponent } from './loginregistration/logout/logout.component';
+import { UserprofileComponent } from './loginregistration/userprofile/userprofile.component';
+
 
 
 @NgModule({
@@ -26,6 +31,11 @@ import { UpdatesalesComponent } from './sales/updatesales/updatesales.component'
     ViewsalesComponent,
     CreatesalesComponent,
     UpdatesalesComponent,
+    RegistrationComponent,
+    LoginComponent,
+    LogoutComponent,
+    UserprofileComponent,
+    
     
   ],
   imports: [

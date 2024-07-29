@@ -1,6 +1,6 @@
 <!-- createproduct.component.html -->
 <div class="container">
-    <h2>Create or Update Product</h2>
+    <h2>Create Product</h2>
     <form [formGroup]="formValue" (ngSubmit)="createProduct()">
       <div class="form-group">
         <label for="name">Product Name</label>
@@ -22,7 +22,7 @@
         <input id="stock" type="number" formControlName="stock" class="form-control" />
       </div>
   
-      <button type="submit" class="btn btn-primary">Create/Update Product</button>
+      <button type="submit" class="btn btn-primary">Create</button>
     </form>
   </div>
   

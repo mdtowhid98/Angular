@@ -1,18 +1,41 @@
 {
-  "products": [
+  "user": [
     {
       "id": "1",
-      "name": "Apple",
-      "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
-      "stock": "1210",
-      "unitprice": 5
+      "name": "Raju ahmed",
+      "email": "raju@gmail.com",
+      "password": "123456",
+      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg"
     },
+    {
+      "id": "a838",
+      "name": "Md Towhidul Alam",
+      "email": "alammdtowhidul9@gmail.com",
+      "password": "123456",
+      "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg"
+    }
+  ],
+  "products": [
     {
       "id": "db4d",
       "name": "Orange",
       "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
       "unitprice": 12,
-      "stock": 58
+      "stock": 80
+    },
+    {
+      "id": "e556",
+      "name": "Nut",
+      "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+      "unitprice": 8,
+      "stock": 22
+    },
+    {
+      "id": "62ad",
+      "name": "apple",
+      "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "unitprice": 12,
+      "stock": 2
     }
   ],
   "sales": [
@@ -55,17 +78,6 @@
         "stock": 58,
         "unitprice": 12
       }
-    },
-    {
-      "id": "fc2d",
-      "customername": "Oppo",
-      "salesdate": "2024-07-19",
-      "product": [
-        {
-          "id": "1",
-          "quantity": 4
-        }
-      ]
     }
   ]
 }
