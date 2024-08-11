@@ -28,14 +28,14 @@
       "name": "Nut",
       "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
       "unitprice": 8,
-      "stock": 22
+      "stock": 42
     },
     {
       "id": "62ad",
       "name": "apple",
       "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
       "unitprice": 12,
-      "stock": 2
+      "stock": 12
     }
   ],
   "sales": [
