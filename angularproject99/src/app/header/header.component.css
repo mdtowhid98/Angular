@@ -1,0 +1,47 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 1rem;
+  }
+  
+  /* Logo styling */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* User section */
+  .user {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* User name styling */
+  .user-name {
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  
+  /* User image styling */
+  .user-image {
+    background-color: #343a40;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+  
