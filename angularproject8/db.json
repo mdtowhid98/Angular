@@ -191,13 +191,13 @@
       "email": "alammdtowhidul9@gmail.com",
       "cellNo": "856",
       "location": {
-        "id": "1",
-        "name": "A113 Transitional Housing",
-        "city": "Santa Monica",
+        "id": "6",
+        "name": "Seriously Safe Towns",
+        "city": "Oakland",
         "state": "CA",
-        "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-        "availableUnits": 0,
-        "wifi": false,
+        "photo": "https://angular.io/assets/images/tutorials/faa/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
+        "availableUnits": 5,
+        "wifi": true,
         "laundry": true
       }
     },
