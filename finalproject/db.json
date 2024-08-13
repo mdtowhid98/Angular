@@ -21,7 +21,7 @@
       "name": "Orange",
       "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
       "unitprice": 20,
-      "stock": 80
+      "stock": 100
     },
     {
       "id": "e556",
@@ -41,7 +41,7 @@
   "sales": [
     {
       "id": "af47",
-      "customername": "joipko",
+      "customername": "yitr",
       "quantity": 5,
       "salesdate": "2024-08-07",
       "totalprice": "25",
