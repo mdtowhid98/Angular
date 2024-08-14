@@ -5,14 +5,16 @@
       "name": "Raju ahmed",
       "email": "raju@gmail.com",
       "password": "123456",
-      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg"
+      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+      "role":"User"
     },
     {
       "id": "a838",
       "name": "Md Towhidul Alam",
       "email": "alammdtowhidul9@gmail.com",
       "password": "123456",
-      "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg"
+      "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+      "role":"Admin"
     }
   ],
   "products": [

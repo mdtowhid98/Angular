@@ -15,4 +15,5 @@ export class UserModule {
   email!: string;
   password!: string;
   photo!: string;
+  role!: string;
 }

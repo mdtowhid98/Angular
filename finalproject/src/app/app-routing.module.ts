@@ -11,18 +11,27 @@ import { RegistrationComponent } from './loginregistration/registration/registra
 import { UserprofileComponent } from './loginregistration/userprofile/userprofile.component';
 import { LogoutComponent } from './loginregistration/logout/logout.component';
 import { authGuard } from './loginregistration/auth.guard';
+import { RoleGuard } from './loginregistration/role.guard';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path:"viewproduct",component:ViewproductComponent},
-  {path:"createProduct",component:CreateproductComponent, canActivate:[authGuard]},
-  {path:"updateProduct/:id",component:UpdateproductComponent},
+  {path:"createProduct",component:CreateproductComponent, canActivate:[authGuard,RoleGuard],data: { role: 'Admin' }},
+  {path:"updateProduct/:id",component:UpdateproductComponent,canActivate:[authGuard]},
   {path:"viewsales",component:ViewsalesComponent},
-  {path:"createSales",component:CreatesalesComponent},
+  {path:"createSales",component:CreatesalesComponent,canActivate:[authGuard,RoleGuard],data: { role: 'Admin' }},
 
   {path:"updateSales/:id",component:UpdatesalesComponent},
   {path:"logIn",component:LoginComponent},
   {path:"reg",component:RegistrationComponent},
-  {path:"userProfile",component:UserprofileComponent},
+  {path:"home",component:HomeComponent},
+  {
+    path: 'userprofile',
+    component: UserprofileComponent,
+    canActivate: [authGuard, RoleGuard],
+    data:{role: ['Admin','User']}
+    
+  },
   { path: 'logout', component: LogoutComponent},
   { path: '**', redirectTo:'logIn',pathMatch:'full' },
 ];

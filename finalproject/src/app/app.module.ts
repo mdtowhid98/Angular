@@ -18,6 +18,8 @@ import { RegistrationComponent } from './loginregistration/registration/registra
 import { LoginComponent } from './loginregistration/login/login.component';
 import { LogoutComponent } from './loginregistration/logout/logout.component';
 import { UserprofileComponent } from './loginregistration/userprofile/userprofile.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -35,6 +37,8 @@ import { UserprofileComponent } from './loginregistration/userprofile/userprofil
     LoginComponent,
     LogoutComponent,
     UserprofileComponent,
+    NavbarComponent,
+    HomeComponent,
     
     
   ],
