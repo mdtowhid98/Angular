@@ -1,0 +1,88 @@
+/* Common Styles */
+.navbar, .horizontal-sidebar {
+    background-color: #343a40; /* Bootstrap's 'bg-dark' color */
+    color: white;
+}
+
+/* Navbar Styles */
+.navbar .nav-link {
+    color: white;
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active {
+    color: #adb5bd; /* Slightly lighter color on hover/active */
+}
+
+.navbar .btn-outline-success {
+    color: white;
+    border-color: white;
+}
+
+.navbar .btn-outline-success:hover {
+    color: #343a40;
+    background-color: white;
+    border-color: white;
+}
+
+/* Sidebar Styles */
+.horizontal-sidebar {
+    width: 200px;
+    position: fixed;
+    top: 56px; /* Adjust based on the height of your navbar */
+    left: 0;
+    bottom: 0;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1030; /* Ensure it stays above other elements */
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+.horizontal-sidebar a {
+    display: block;
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+
+.horizontal-sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
+}
+
+/* Dropdown Styles in Sidebar */
+.horizontal-sidebar .dropdown-menu {
+    background-color: #495057; /* Darker background for dropdown */
+    color: white; /* White text color for contrast */
+    border: none; /* Remove border for a flat design */
+    border-radius: 0; /* Flat design */
+}
+
+.horizontal-sidebar .dropdown-item {
+    padding: 10px;
+    color: white;
+}
+
+.horizontal-sidebar .dropdown-item:hover {
+    background-color: #6c757d; /* Light gray hover effect */
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
+    color: rgb(250, 24, 24);
+}
+
+/* Additional Dropdown Specific Styles */
+.horizontal-sidebar .dropdown-toggle {
+    cursor: pointer;
+}
+
+.horizontal-sidebar .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}

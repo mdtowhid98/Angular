@@ -1,0 +1,16 @@
+/* Ensure the body and html elements take up the full height of the page */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the image to cover the entire page */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire page without distortion */
+    display: block;
+    margin: 0;
+    padding: 0;
+}

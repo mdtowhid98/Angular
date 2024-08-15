@@ -62,17 +62,6 @@
         "stock": "1210",
         "unitprice": 5
       }
-    },
-    {
-      "id": "6793",
-      "customername": "tyu",
-      "salesdate": "2024-08-03",
-      "product": [
-        {
-          "id": "62ad",
-          "quantity": 2
-        }
-      ]
     }
   ]
 }
