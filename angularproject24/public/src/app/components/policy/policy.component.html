@@ -1,0 +1,49 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item success" aria-current="page">Policies</li>
+</ol>
+<div style="text-align: right">
+  <button mat-button class="add-policy-button" routerLink="/policy-add">
+    <mat-icon>add</mat-icon>
+    Add Policy
+  </button>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Client Name</th>
+      <th scope="col">Client Phone</th>
+      <th scope="col">Policy Number</th>
+      <th scope="col">issueDate</th>
+      <th scope="col">Coverage Start Date</th>
+      <th scope="col">Coverage End Date</th>
+      <th scope="col">Edit</th>
+      <th scope="col">View</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let policy of policies; let number = index">
+    <tr>
+      <th scope="row">
+        {{ number + 1 }}
+      </th>
+      <td>{{ policy.client.name }}</td>
+      <td>{{ policy.client.phone }}</td>
+      <td>{{ policy.policyNumber }}</td>
+      <td>{{ policy.issueDate | date : "dd-MM-yyyy" }}</td>
+      <td>{{ policy.coverageStartDate | date : "dd-MM-yyyy" }}</td>
+      <td>{{ policy.coverageEndDate | date : "dd-MM-yyyy" }}</td>
+      
+      <td>
+        <button mat-button class="edit-button" color="primary">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+
+      <td>
+        <button mat-button class="edit-button" color="primary" routerLink="">
+          <mat-icon>remove_red_eye</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

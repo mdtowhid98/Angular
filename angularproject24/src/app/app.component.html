@@ -1,0 +1,52 @@
+<mat-toolbar
+  ><button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  <!-- Dashboard -->
+  <h1>Dashboard</h1>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+      class="avatar mat-elevation-z8"
+      src="https://source.unsplash.com/c_GmwfHBDzk/200x200"
+    />
+
+    <h4 class="name">Md Kutub Uddin</h4>
+    <p class="designation">mdkutub150gmail.com</p>
+
+    <mat-divider></mat-divider>
+    <!-- Home page -->
+    <button mat-button class="menu-button" routerLink="/home">
+      <mat-icon>home</mat-icon>
+      <span class="button-text">Home</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/beneficiary">
+      <mat-icon>group</mat-icon>
+      <span class="button-text">Beneficiaries</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/products">
+      <mat-icon>local_offer</mat-icon>
+      <span class="button-text">Products</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/policies">
+      <mat-icon>assignment</mat-icon>
+      <span class="button-text">Policies</span>
+    </button>
+
+    <button mat-button class="menu-button" routerLink="/clients">
+      <mat-icon>person</mat-icon>
+      <span class="button-text">Policy Holders</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

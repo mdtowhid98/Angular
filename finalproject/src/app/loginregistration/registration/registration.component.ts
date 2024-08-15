@@ -21,7 +21,8 @@ export class RegistrationComponent {
       name:['', Validators.required],
       email:['', [Validators.required, Validators.email]],
       password:['',Validators.required],
-      photo:['',Validators.required]
+      photo:['',Validators.required],
+      role:['',Validators.required],
 
       // name:['', Validators.required],
       // email:['', [Validators.required, Validators.email]],

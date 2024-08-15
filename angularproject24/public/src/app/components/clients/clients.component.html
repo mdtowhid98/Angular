@@ -1,0 +1,319 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item success" aria-current="page">Policy Holders</li>
+</ol>
+
+<div style="text-align: right">
+  <button
+    mat-button
+    class="add-client-button"
+    (click)="openClientAddModal(ClientAddContent)"
+  >
+    <mat-icon>add</mat-icon>
+    Add Client
+  </button>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let client of clients; let number = index">
+    <tr>
+      <th scope="row">
+        {{ number + 1 }}
+      </th>
+      <td>
+        {{ client.name }}
+      </td>
+      <td>
+        {{ client.phone }}
+      </td>
+      <td>
+        {{ client.email }}
+      </td>
+      <td>
+        <ng-container *ngIf="client.address; else noAddress">
+          {{ client.address }}
+        </ng-container>
+        <ng-template #noAddress> _ </ng-template>
+      </td>
+      <td>
+        <button
+          mat-button
+          class="edit-button"
+          color="primary"
+          *ngIf="client.id"
+          (click)="openEditModal(ClientUpdateContent, client.id)"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+      <td>
+        <button
+          mat-button
+          class="delete-button"
+          color="warn"
+          *ngIf="client.id"
+          (click)="onDeleteClient(client.id)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #ClientAddContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add Client</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <form #clientAddForm="ngForm" (ngSubmit)="onAddClient(clientAddForm)">
+    <div class="modal-body">
+      <div class="mb-3">
+        <label for="name">Client Name</label>
+        <input
+          id="name"
+          class="form-control"
+          placeholder="Client Name"
+          name="name"
+          ngModel
+          required
+        />
+        <div
+          *ngIf="
+            clientAddForm.submitted && !clientAddForm.controls['name'].valid
+          "
+          class="text-danger"
+        >
+          <p>Client Name is required.</p>
+        </div>
+        <!-- client phone -->
+        <label for="phone">Client Phone</label>
+        <input
+          id="phone"
+          type="text"
+          class="form-control"
+          placeholder="Client Phone"
+          name="phone"
+          ngModel
+          required
+        />
+        <div
+          *ngIf="
+            clientAddForm.submitted && !clientAddForm.controls['phone'].valid
+          "
+          class="text-danger"
+        >
+          <p>Client Phone is required.</p>
+        </div>
+        <!-- client email -->
+        <label for="email">Client Email</label>
+        <input
+          id="email"
+          class="form-control"
+          placeholder="Client Email"
+          name="email"
+          ngModel
+          required
+        />
+        <div
+          *ngIf="
+            clientAddForm.submitted && !clientAddForm.controls['email'].valid
+          "
+          class="text-danger"
+        >
+          <p>Client Email is required.</p>
+        </div>
+        <!-- address -->
+        <label for="eddress">Client Address</label>
+        <input
+          id="address"
+          class="form-control"
+          placeholder="Client Addess"
+          name="address"
+          ngModel
+        />
+        <!-- nok name -->
+        <label for="nextOfKin">Next of Kin Name</label>
+        <input
+          id="nextOfKin"
+          class="form-control"
+          placeholder="Next of Kin Name"
+          name="nextOfKin"
+          ngModel
+        />
+        <!-- nok phone -->
+        <label for="nextOfKinPhone">Next of Kin Phone</label>
+        <input
+          id="nextOfKinPhone"
+          class="form-control"
+          placeholder="Next of Kin Phone"
+          name="nextOfKinPhone"
+          ngModel
+        />
+        <!-- nokemail -->
+        <label for="nextOfKinEmail">Next of Kin Email</label>
+        <input
+          id="nextOfKinEmail"
+          class="form-control"
+          placeholder="Next of Kin Email"
+          name="nextOfKinEmail"
+          ngModel
+        />
+
+        <!--  -->
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="submit"
+        class="btn submit-button"
+        (click)="clientAddForm.valid ? modal.close('Save click') : null"
+      >
+        Add Client
+      </button>
+    </div>
+  </form>
+</ng-template>
+
+<!-- Update Modal -->
+
+<ng-template #ClientUpdateContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Client update</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <form
+    #clientUpdateForm="ngForm"
+    *ngIf="clientData.id"
+    (ngSubmit)="onUpdateClient(clientData.id, clientUpdateForm)"
+  >
+    <div class="modal-body">
+      <div class="mb-3">
+        <label for="name">Client Name</label>
+        <input
+          id="name"
+          class="form-control"
+          placeholder="Client Name"
+          name="name"
+          [(ngModel)]="clientData.name"
+          required
+        />
+        <div
+          *ngIf="
+            clientUpdateForm.submitted &&
+            !clientUpdateForm.controls['name'].valid
+          "
+          class="text-danger"
+        >
+          <p>Client Name is required.</p>
+        </div>
+        <!-- client phone -->
+        <label for="phone">Client Phone</label>
+        <input
+          id="phone"
+          type="text"
+          class="form-control"
+          placeholder="Client Phone"
+          name="phone"
+          [(ngModel)]="clientData.phone"
+          required
+        />
+        <div
+          *ngIf="
+            clientUpdateForm.submitted &&
+            !clientUpdateForm.controls['phone'].valid
+          "
+          class="text-danger"
+        >
+          <p>Client Phone is required.</p>
+        </div>
+        <!-- client email -->
+        <label for="email">Client Email</label>
+        <input
+          id="email"
+          class="form-control"
+          placeholder="Client Email"
+          name="email"
+          [(ngModel)]="clientData.email"
+          required
+        />
+        <div
+          *ngIf="
+            clientUpdateForm.submitted &&
+            !clientUpdateForm.controls['email'].valid
+          "
+          class="text-danger"
+        >
+          <p>Client Email is required.</p>
+        </div>
+        <!-- address -->
+        <label for="eddress">Client Address</label>
+        <input
+          id="address"
+          class="form-control"
+          placeholder="Client Addess"
+          name="address"
+          [(ngModel)]="clientData.address"
+        />
+        <!-- nok name -->
+        <label for="nextOfKin">Next of Kin Name</label>
+        <input
+          id="nextOfKin"
+          class="form-control"
+          placeholder="Next of Kin Name"
+          name="nextOfKin"
+          [(ngModel)]="clientData.nextOfKin"
+        />
+        <!-- nok phone -->
+        <label for="nextOfKinPhone">Next of Kin Phone</label>
+        <input
+          id="nextOfKinPhone"
+          class="form-control"
+          placeholder="Next of Kin Phone"
+          name="nextOfKinPhone"
+          [(ngModel)]="clientData.nextOfKinPhone"
+        />
+        <!-- nokemail -->
+        <label for="nextOfKinEmail">Next of Kin Email</label>
+        <input
+          id="nextOfKinEmail"
+          class="form-control"
+          placeholder="Next of Kin Email"
+          name="nextOfKinEmail"
+          [(ngModel)]="clientData.nextOfKinEmail"
+        />
+
+        <!--  -->
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="submit"
+        class="btn submit-button"
+        (click)="clientUpdateForm.valid ? modal.close('Save click') : null"
+      >
+        Update Client
+      </button>
+    </div>
+  </form>
+</ng-template>
