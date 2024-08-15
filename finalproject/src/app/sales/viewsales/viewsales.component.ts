@@ -3,6 +3,9 @@ import { ProductService } from '../../service/product.service';
 import { SalesService } from '../../service/sales.service';
 import { Router } from '@angular/router';
 import { SalesModule } from '../../module/sales/sales.module';
+import { ProductModule } from '../../module/product/product.module';
+import { Observable } from 'rxjs';
+import { log } from 'console';
 
 @Component({
   selector: 'app-viewsales',
@@ -11,9 +14,8 @@ import { SalesModule } from '../../module/sales/sales.module';
 })
 export class ViewsalesComponent implements OnInit{
 
-  sales:any;
-  products:any;
-  
+  sales: SalesModule[] = [];
+  products: ProductModule[] = [];
   
   
   constructor(private productService:ProductService,
@@ -22,8 +24,32 @@ export class ViewsalesComponent implements OnInit{
   ){}
   
     ngOnInit(): void {
-      this.products=this.productService.getAllProductForSales();
-      this.sales=this.salesService.getAllsales();
+      this.loadProducts();
+      this.loadSales();
+    }
+
+    loadProducts() {
+      this.productService.getAllProductForSales().subscribe({
+        next: (res: ProductModule[]) => {
+          this.products = res;
+          console.log(this.products); // Log the products array
+        },
+        error: error => {
+          console.error(error);
+        }
+      });
+    }
+  
+    loadSales() {
+      this.salesService.getAllsales().subscribe({
+        next: (res: SalesModule[]) => {
+          this.sales = res;
+          console.log(this.sales); // Log the sales array
+        },
+        error: error => {
+          console.error(error);
+        }
+      });
     }
 
     deleteSales(id:string){
@@ -31,7 +57,7 @@ export class ViewsalesComponent implements OnInit{
       this.salesService.deleteSales(id)
       .subscribe({
         next:res=>{
-          this.sales=this.salesService.getAllsales();
+          this.loadSales();
           this.router.navigate(['/viewsales'])
         },
         error:error=>{

@@ -46,22 +46,103 @@
       "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
       "unitprice": 12,
       "stock": 12
+    },
+    {
+      "id": "27d8",
+      "name": "Mango",
+      "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
+      "unitprice": 9,
+      "stock": 110
     }
   ],
   "sales": [
     {
-      "id": "af47",
-      "customername": "yitr",
-      "quantity": 5,
-      "salesdate": "2024-08-07",
-      "totalprice": "25",
-      "product": {
-        "id": "1",
-        "name": "Apple",
-        "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
-        "stock": "1210",
-        "unitprice": 5
-      }
+      "id": "2f76",
+      "customername": "Shabab",
+      "salesdate": "2024-08-15",
+      "totalprice": 340,
+      "product": [
+        {
+          "id": "db4d",
+          "name": "Orange",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 100,
+          "unitprice": 20,
+          "quantity": 13
+        },
+        {
+          "id": "e556",
+          "name": "Nut",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 42,
+          "unitprice": 8,
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "id": "1891",
+      "customername": "Final",
+      "salesdate": "2024-08-30",
+      "totalprice": 49,
+      "product": [
+        {
+          "id": "e556",
+          "name": "Nut",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 42,
+          "unitprice": 8,
+          "quantity": 1
+        },
+        {
+          "id": "db4d",
+          "name": "Orange",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 100,
+          "unitprice": 20,
+          "quantity": 1
+        },
+        {
+          "id": "27d8",
+          "name": "Mango",
+          "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
+          "stock": 110,
+          "unitprice": 9,
+          "quantity": 1
+        },
+        {
+          "id": "62ad",
+          "name": "apple",
+          "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+          "stock": 12,
+          "unitprice": 12,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "d756",
+      "customername": "dsag",
+      "salesdate": "2024-08-29",
+      "totalprice": 29,
+      "product": [
+        {
+          "id": "db4d",
+          "name": "Orange",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 100,
+          "unitprice": 20,
+          "quantity": 1
+        },
+        {
+          "id": "27d8",
+          "name": "Mango",
+          "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
+          "stock": 110,
+          "unitprice": 9,
+          "quantity": 1
+        }
+      ]
     }
   ]
 }

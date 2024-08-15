@@ -71,7 +71,7 @@ export class UpdatesalesComponent {
         this.sale = sale;
         this.saleForm.patchValue({
           customername: sale.customername,
-          quantity: sale.quantity,
+          quantity: sale.product,
           salesdate: sale.salesdate,
           totalprice: sale.totalprice,
           product: sale.product

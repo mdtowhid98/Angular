@@ -31,7 +31,7 @@ export class CreatesalesComponent implements OnInit {
       customername: ['', Validators.required],
       salesdate: ['', Validators.required],
       products: this.formBuilder.array([]),
-      totalprice: [{ value: '', disabled: true }]
+      totalprice: [{ value: ''}]
     });
 
     this.addProduct();
@@ -100,10 +100,18 @@ export class CreatesalesComponent implements OnInit {
     this.sale.customername = this.salesForm.value.customername;
     this.sale.salesdate = this.salesForm.value.salesdate;
     this.sale.totalprice = this.salesForm.value.totalprice;
-    this.sale.product = this.salesForm.value.products.map((product: any) => ({
-      id: product.id,
-      quantity: product.quantity
-    }));
+
+    this.sale.product = this.salesForm.value.products.map((product: any) => {
+      const originalProduct = this.products.find(p => p.id === product.id);
+      return {
+        id: originalProduct?.id,
+        name: originalProduct?.name,
+        photo: originalProduct?.photo,
+        stock: originalProduct?.stock,
+        unitprice: originalProduct?.unitprice,
+        quantity: product.quantity
+      };
+    });
 
     this.salesService.createSales(this.sale).subscribe({
       next: res => {

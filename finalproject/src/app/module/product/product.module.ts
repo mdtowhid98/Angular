@@ -15,4 +15,5 @@ export class ProductModule {
   photo!: string
   stock!: number
   unitprice!:number
+  quantity!:number
  }

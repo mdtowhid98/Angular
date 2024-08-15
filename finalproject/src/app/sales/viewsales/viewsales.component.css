@@ -1,56 +1,77 @@
+/* Style the container */
 .container {
-    margin: 20px auto;
-    max-width: 800px;
+    margin: 20px;
+    padding: 10px;
 }
 
+/* Style the table */
 .table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-.table th, .table td {
-    border: 1px solid #ddd;
-    padding: 8px;
+/* Style table headers */
+.table thead th {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px;
     text-align: left;
+    border-bottom: 2px solid #ddd;
 }
 
-.table th {
-    background-color: #f2f2f2;
-    color: black;
+/* Style table rows */
+.table tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
 }
 
-.table tr:hover {
-    background-color: #f5f5f5;
+/* Hover effect for table rows */
+.table tbody tr:hover {
+    background-color: #f1f1f1;
 }
 
-.table img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+/* Style table cells */
+.table td {
+    padding: 10px;
+    vertical-align: top;
 }
 
-.btn {
-    padding: 5px 10px;
+/* Style the product details list */
+.table td ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.table td li {
+    padding: 5px 0;
+}
+
+/* Style buttons */
+.table button {
+    background-color: #007bff;
     border: none;
-    border-radius: 3px;
+    color: #fff;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
     cursor: pointer;
+    border-radius: 4px;
 }
 
-.btn-warning {
-    background-color: #4eddf0;
-    color: white;
+.table button:hover {
+    background-color: #0056b3;
 }
 
-.btn-warning:hover {
-    background-color: #ec971f;
+/* Style the delete button with a different color */
+.table button.delete {
+    background-color: #dc3545;
 }
 
-.btn-danger {
-    background-color: #d9534f;
-    color: white;
-}
-
-.btn-danger:hover {
-    background-color: #c9302c;
+.table button.delete:hover {
+    background-color: #c82333;
 }
