@@ -22,7 +22,7 @@ export class RegistrationComponent {
       email:['', [Validators.required, Validators.email]],
       password:['',Validators.required],
       photo:['',Validators.required],
-      role:['',Validators.required],
+      role:['User',Validators.required],
 
       // name:['', Validators.required],
       // email:['', [Validators.required, Validators.email]],

@@ -23,6 +23,14 @@
       "password": "123456",
       "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
       "role": "User"
+    },
+    {
+      "id": "c890",
+      "name": "Apple",
+      "email": "jh8fud@ydu7hg",
+      "password": "123456",
+      "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "role": "User"
     }
   ],
   "products": [
@@ -116,30 +124,6 @@
           "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
           "stock": 12,
           "unitprice": 12,
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "id": "d756",
-      "customername": "dsag",
-      "salesdate": "2024-08-29",
-      "totalprice": 29,
-      "product": [
-        {
-          "id": "db4d",
-          "name": "Orange",
-          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-          "stock": 100,
-          "unitprice": 20,
-          "quantity": 1
-        },
-        {
-          "id": "27d8",
-          "name": "Mango",
-          "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
-          "stock": 110,
-          "unitprice": 9,
           "quantity": 1
         }
       ]
