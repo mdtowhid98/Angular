@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg bg-primary sticky-top">
     <div class="container-fluid">
         <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <a class="navbar-brand" href="#"><img src="https://i.postimg.cc/2yzzz6KY/bird-1045954-1280.jpg" height="40px"
+        <a class="navbar-brand" href="#"><img src="https://i.postimg.cc/SQMbrpzy/download.png" height="40px"
                 alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,8 +10,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                    <a class="nav-link " aria-current="page" href="/home">Home</a>
                 </li>
+              
                 <li class="nav-item">
                     <a class="nav-link" href="/reg">Registration</a>
                 </li>
@@ -51,10 +52,15 @@
                 <li class="nav-item">
                     <a class="nav-link disabled">Disabled</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/userprofile">Profile</a>
+                </li>
             </ul>
+           
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
+                
                 <a class="btn btn-outline-success" href="/logout">Logout</a>
             </form>
         </div>
@@ -65,21 +71,22 @@
 
     <div class="col-md-2">
         <!-- Left-Aligned Horizontal Sidebar -->
-        <div class="horizontal-sidebar bg-dark text-white d-flex flex-column align-items-start py-2">
-            <!-- <a href="/link1" class="text-white mb-2">Link 1</a>
-  <a href="/link2" class="text-white mb-2">Link 2</a> -->
+        <div class="horizontal-sidebar bg-primary text-white d-flex flex-column align-items-start py-2">
+           
             <a href="/home" class="text-white mb-2">Home</a>
             <div class="dropdown mb-2">
                 <a href="#" class="text-white mb-2 dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    Product
+                    Fruits
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="productDropdown">
-                    <li><a class="dropdown-item" href="/viewproduct">View Product</a></li>
-                    <li><a class="dropdown-item" href="/createProduct">Create Product</a></li>
+                    <li><a class="dropdown-item" href="/viewproduct">View Fruits</a></li>
+                    <li><a class="dropdown-item" href="/createProduct">Create Fruits</a></li>
+                    <li><a class="dropdown-item" href="/viewsales">View Sales</a></li>
+                    <li><a class="dropdown-item" href="/createSales">Create Sales</a></li>
                 </ul>
             </div>
-            <div class="dropdown mb-2">
+            <!-- <div class="dropdown mb-2">
                 <a href="#" class="text-white mb-2 dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     Sales
@@ -88,7 +95,7 @@
                     <li><a class="dropdown-item" href="/viewsales">View Sales</a></li>
                     <li><a class="dropdown-item" href="/createSales">Create Sales</a></li>
                 </ul>
-            </div>
+            </div> -->
 
         </div>
     </div>

@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { SalesModule } from '../module/sales/sales.module';
+import { ProductModule } from '../module/product/product.module';
 
 @Injectable({
   providedIn: 'root'
@@ -46,8 +47,16 @@ export class SalesService {
     return this.httpClient.delete(this.baseUrl + id);
   }
 
-  updateSales(sale: SalesModule): Observable<SalesModule> {
-    return this.httpClient.put<SalesModule>(`${this.baseUrl}${sale.id}`, sale);
+  // updateSales(sale: SalesModule): Observable<SalesModule> {
+  //   return this.httpClient.put<SalesModule>(`${this.baseUrl}${sale.id}`, sale);
+  // }
+
+  updateProductStock(productId: string, quantity: number): Observable<ProductModule> {
+    return this.httpClient.patch<ProductModule>(`${this.baseUrl}/products/${productId}/reduceStock`, { quantity });
+  }
+
+  updateSales(id: string, sale: SalesModule): Observable<SalesModule> {
+    return this.httpClient.put<SalesModule>(`${this.baseUrl}/${id}`, sale);
   }
 
   getSalesById(saleId: string): Observable<SalesModule> {

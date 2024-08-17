@@ -56,11 +56,18 @@ export class ProductService {
     return this.httpClient.put(this.baseUrl + '/' + id, product);
   
   }
+  // updateProductsStock(products: ProductModule[]): Observable<any> {
+  //   return this.httpClient.post('/api/products/updateStock', products);
+  // }
+  // reduceStock(productId: string, quantity: number): Observable<ProductModule> {
+  //   return this.httpClient.patch<ProductModule>(`${this.baseUrl}/products/${productId}/reduceStock`, { quantity });
+  // }
   
   getById(id: string): Observable<any> {
   
     return this.httpClient.get(this.baseUrl + "/" + id);
   }
+  
   
   }
   

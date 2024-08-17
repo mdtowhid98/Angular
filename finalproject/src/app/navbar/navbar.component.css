@@ -56,6 +56,7 @@
     color: white; /* White text color for contrast */
     border: none; /* Remove border for a flat design */
     border-radius: 0; /* Flat design */
+    text-align: center;
 }
 
 .horizontal-sidebar .dropdown-item {

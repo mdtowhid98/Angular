@@ -14,106 +14,144 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UpdatesalesComponent implements OnInit {
 
-  saleForm!: FormGroup;
-  saleId: string = "";
   products: ProductModule[] = [];
+  salesForm!: FormGroup;
   sale: SalesModule = new SalesModule();
+  saleId!: string;
 
-  constructor(private prductService: ProductService,
+  constructor(
+    private productService: ProductService,
     private salesService: SalesService,
-    private fromBuilder: FormBuilder,
-    private router:Router,
+    private formBuilder: FormBuilder,
+    private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.saleId = this.route.snapshot.params['id'];
-    console.log(this.saleId);
+    this.saleId = this.route.snapshot.params['id']; // Assuming 'id' is passed in the route
+    this.loadProduct();
+    this.loadSale();
 
-    this.saleForm = this.fromBuilder.group({
+    this.salesForm = this.formBuilder.group({
+      customername: ['', Validators.required],
+      salesdate: ['', Validators.required],
+      products: this.formBuilder.array([]),
+      totalprice: [{ value: '', disabled: true }]
+    });
+  }
 
-      customername: [''],
-      salesdate: [''],
-      totalprice: [''],
-      
-      product: this.fromBuilder.group({
-        id: [undefined],
-        name: [undefined],
-        price: [undefined],
-        stock: [undefined]
-       
-      })
+  get productsArray(): FormArray {
+    return this.salesForm.get('products') as FormArray;
+  }
 
+  loadProduct() {
+    this.productService.getAllProductForSales().subscribe({
+      next: res => {
+        this.products = res;
+      },
+      error: error => {
+        console.log(error);
+      }
+    });
+  }
+
+  loadSale() {
+    this.salesService.getSalesById(this.saleId).subscribe({
+      next: res => {
+        this.sale = res;
+        this.populateForm();
+      },
+      error: error => {
+        console.log(error);
+      }
+    });
+  }
+
+  populateForm() {
+    this.salesForm.patchValue({
+      customername: this.sale.customername,
+      salesdate: this.sale.salesdate
     });
 
-    this.loadSaleDetails();
-    this.loadProduct();
-  }
-  get productsArray(): FormArray {
-    return this.saleForm.get('products') as FormArray;
-  }
-
-  loadProduct(): void {
-
-    this.prductService.getAllProductForSales()
-      .subscribe({
-next:(res:ProductModule[])=>{
-
-  this.products=res;
-
-},
-error:error=>{
-  console.log(error)
-}
-
+    this.sale.product.forEach(prod => {
+      const productGroup = this.formBuilder.group({
+        id: [prod.id],
+        name: [prod.name, Validators.required],
+        quantity: [prod.quantity, Validators.required],
+        unitprice: [{ value: prod.unitprice, disabled: true }],
       });
+
+      this.productsArray.push(productGroup);
+    });
+
+    this.calculateTotalPrice();
   }
 
-  loadSaleDetails(): void {
-    
-    this.salesService.getSalesById(this.saleId)
-      .subscribe({
-        next: (sale: SalesModule) => {
-          this.sale=sale;
-          this.saleForm.patchValue({
-
-            // quantity:sale.quantity,
-            totalprice:sale.totalprice,
-            salesdate:sale.salesdate,
-            product:sale.product
-            
-          });
-        },
-        error:error=>{
-          console.log(error);
-        }
-
-      });
+  calculateTotalPrice() {
+    let totalprice = 0;
+    this.productsArray.controls.forEach(control => {
+      const quantity = control.get('quantity')?.value || 0;
+      const unitprice = control.get('unitprice')?.value || 0;
+      totalprice += quantity * unitprice;
+    });
+    this.salesForm.patchValue({ totalprice });
   }
 
-  updateSale():void{
-    const updateSale:SalesModule={
+  addProduct() {
+    const productGroup = this.formBuilder.group({
+      id: ['', undefined],
+      name: ['', Validators.required],
+      quantity: [0, Validators.required],
+      unitprice: [{ value: 0, disabled: true }],
+    });
 
-      ...this.sale,
-      ...this.saleForm.value
-    };
+    productGroup.get('name')?.valueChanges.subscribe(name => {
+      const selectedProduct = this.products.find(prod => prod.name === name);
+      if (selectedProduct) {
+        productGroup.patchValue({ 
+          id: selectedProduct.id,
+          unitprice: selectedProduct.unitprice 
+        });
+        this.calculateTotalPrice();
+      }
+    });
 
-    this.salesService.updateSales(updateSale)
-    .subscribe({
-      next:res=>{
+    productGroup.get('quantity')?.valueChanges.subscribe(() => {
+      this.calculateTotalPrice();
+    });
 
-        console.log('sales update successfully:',res);
+    this.productsArray.push(productGroup);
+  }
+
+  removeProduct(index: number) {
+    this.productsArray.removeAt(index);
+    this.calculateTotalPrice();
+  }
+
+  updateSales() {
+    this.sale.customername = this.salesForm.value.customername;
+    this.sale.salesdate = this.salesForm.value.salesdate;
+    this.sale.totalprice = this.salesForm.value.totalprice;
+
+    this.sale.product = this.salesForm.value.products.map((product: any) => {
+      const originalProduct = this.products.find(p => p.id === product.id);
+      return {
+        id: originalProduct?.id,
+        name: originalProduct?.name,
+        photo: originalProduct?.photo,
+        stock: originalProduct?.stock,
+        unitprice: originalProduct?.unitprice,
+        quantity: product.quantity
+      };
+    });
+
+    this.salesService.updateSales(this.saleId, this.sale).subscribe({
+      next: res => {
         this.router.navigate(['viewsales']);
       },
-      error:error=>{
-
-        console.log('Error updating sales:',error);
+      error: error => {
+        console.log(error);
       }
-
     });
-
-    
   }
-
 }
-

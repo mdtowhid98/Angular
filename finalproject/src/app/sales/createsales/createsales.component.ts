@@ -14,15 +14,13 @@ import { Router } from '@angular/router';
 export class CreatesalesComponent implements OnInit {
 
   products: ProductModule[] = [];
-  sales: SalesModule[] = [];
   salesForm!: FormGroup;
   sale: SalesModule = new SalesModule();
 
   constructor(private productService: ProductService,
-    private salesService: SalesService,
-    private formBuilder: FormBuilder,
-    private router: Router
-  ) { }
+              private salesService: SalesService,
+              private formBuilder: FormBuilder,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.loadProduct();
@@ -31,11 +29,11 @@ export class CreatesalesComponent implements OnInit {
       customername: ['', Validators.required],
       salesdate: ['', Validators.required],
       products: this.formBuilder.array([]),
-      totalprice: [{ value: ''}]
+      totalprice: [{ value: '' }]
     });
 
     this.addProduct();
-    this.salesForm.get('product')?.valueChanges.subscribe(() => {
+    this.salesForm.get('products')?.valueChanges.subscribe(() => {
       this.calculateTotalPrice();
     });
   }
@@ -57,7 +55,7 @@ export class CreatesalesComponent implements OnInit {
 
   addProduct() {
     const productGroup = this.formBuilder.group({
-      id: ['',undefined],
+      id: ['', undefined],
       name: ['', Validators.required],
       quantity: [0, Validators.required],
       unitprice: [{ value: 0, disabled: true }],
@@ -100,22 +98,39 @@ export class CreatesalesComponent implements OnInit {
     this.sale.customername = this.salesForm.value.customername;
     this.sale.salesdate = this.salesForm.value.salesdate;
     this.sale.totalprice = this.salesForm.value.totalprice;
-
+  
     this.sale.product = this.salesForm.value.products.map((product: any) => {
       const originalProduct = this.products.find(p => p.id === product.id);
+      if (originalProduct) {
+        // Adjust the stock based on the quantity sold
+        originalProduct.stock -= product.quantity;
+      }
       return {
         id: originalProduct?.id,
         name: originalProduct?.name,
         photo: originalProduct?.photo,
-        stock: originalProduct?.stock,
+        stock: originalProduct?.stock, // Updated stock
         unitprice: originalProduct?.unitprice,
         quantity: product.quantity
       };
     });
-
+  
+    // Create the sales order
     this.salesService.createSales(this.sale).subscribe({
       next: res => {
-        this.loadProduct();
+        // After successful creation of the sales order, update product stock
+        this.sale.product.forEach(prod => {
+          this.productService.updateProducts(prod).subscribe({
+            next: () => {
+              console.log(`Stock reduced and updated for product ID ${prod.id}`);
+            },
+            error: (error) => {
+              console.log(error);
+            }
+          });
+        });
+  
+        // Reset the form and navigate
         this.salesForm.reset();
         this.router.navigate(['viewsales']);
       },
@@ -124,4 +139,5 @@ export class CreatesalesComponent implements OnInit {
       }
     });
   }
+  
 }

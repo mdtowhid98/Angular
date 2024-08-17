@@ -1,16 +1,74 @@
-/* Ensure the body and html elements take up the full height of the page */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+/* Container styling */
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 
-/* Style the image to cover the entire page */
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire page without distortion */
-    display: block;
-    margin: 0;
+/* Dropdown Toggle Link */
+#productDropdown {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 50px 70px;
+    background-color: #00ff4c;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the dropdown toggle */
+#productDropdown:hover {
+    background-color: #0056b3;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: #18f33c;
+    border: none;
+    border-radius: 5px;
     padding: 0;
+    margin-top: 5px;
+    min-width: 200px;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Alignment of the Dropdown Menu */
+.dropdown-menu[aria-labelledby="productDropdown"] {
+    left: 0;
+    right: auto;
+    top: 100%;
+    margin-top: 0.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.text-azur {
+    color: #310cd4; /* This is a yellow color, adjust as needed */
+}
+
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem; /* Adjust the size as needed */
+    margin-bottom: 0.5rem; /* Space below the h2 */
+}
+
+h3 {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    margin-top: 0; /* Remove top margin if needed */
 }

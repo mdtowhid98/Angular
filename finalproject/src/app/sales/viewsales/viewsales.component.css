@@ -1,77 +1,137 @@
-/* Style the container */
 .container {
-    margin: 20px;
-    padding: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-/* Style the table */
 .table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-/* Style table headers */
-.table thead th {
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 10px;
+.table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
     text-align: left;
-    border-bottom: 2px solid #ddd;
-}
-
-/* Style table rows */
-.table tbody tr {
     border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s ease;
 }
 
-/* Hover effect for table rows */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+}
+
 .table tbody tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Style table cells */
-.table td {
-    padding: 10px;
-    vertical-align: top;
+.table ul {
+    padding-left: 20px;
 }
 
-/* Style the product details list */
-.table td ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
+.table ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
 }
 
-.table td li {
-    padding: 5px 0;
-}
-
-/* Style buttons */
-.table button {
-    background-color: #007bff;
+button {
+    background-color: #28a745;
     border: none;
-    color: #fff;
-    padding: 6px 12px;
+    color: white;
+    padding: 8px 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    margin: 0;
+    margin: 4px 2px;
     cursor: pointer;
     border-radius: 4px;
 }
 
-.table button:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: #218838;
 }
 
-/* Style the delete button with a different color */
-.table button.delete {
+button:active {
+    background-color: #1e7e34;
+}
+
+button[click="deleteSales(sale.id)"] {
     background-color: #dc3545;
 }
 
-.table button.delete:hover {
+button[click="deleteSales(sale.id)"]:hover {
     background-color: #c82333;
 }
+
+button[click="deleteSales(sale.id)"]:active {
+    background-color: #ec2727;
+}
+/* Delete button color red */
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Table row hover dancing effect */
+table tbody tr:hover {
+    animation: dance 0.5s infinite alternate;
+}
+
+@keyframes dance {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+/* Edit button color green */
+button.edit-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.edit-button:hover {
+    opacity: 0.8;
+}
+
+/* Delete button color red */
+button.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.delete-button:hover {
+    opacity: 0.8;
+}
+
+/* Table row hover dancing effect */
+table tbody tr:hover {
+    animation: dance 0.5s infinite alternate;
+}
+
+@keyframes dance {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+

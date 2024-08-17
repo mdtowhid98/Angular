@@ -1,42 +1,102 @@
-<div class="container">
-  <h2>Create Sales</h2>
-  <form [formGroup]="saleForm" (ngSubmit)="updateSale()">
+<div class="container mt-4">
+  <h2>Update Sales</h2>
+
+  <form [formGroup]="salesForm" (ngSubmit)="updateSales()">
+    <!-- Customer Name -->
     <div class="form-group">
-      <label for="customername">Customer Name:</label>
-      <input id="customername" type="text" class="form-control" formControlName="customername" />
-    </div>
-
-    <div class="form-group">
-      <label for="salesdate">Sales Date:</label>
-      <input id="salesdate" type="date" class="form-control" formControlName="salesdate" />
-    </div>
-
-    <div formArrayName="products">
-      <div *ngFor="let product of productsArray.controls; let i=index" [formGroupName]="i" class="product-group">
-        <div class="form-group">
-          <label for="productname-{{i}}">Product:</label>
-          <select id="productname-{{i}}" class="form-control" formControlName="name">
-            <option *ngFor="let product of products" [value]="product.name">{{ product.name }}</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="quantity-{{i}}">Quantity:</label>
-          <input id="quantity-{{i}}" type="number" class="form-control" formControlName="quantity" />
-        </div>
-
-        <div class="form-group">
-          <label for="unitprice-{{i}}">Unit Price:</label>
-          <input id="unitprice-{{i}}" type="text" class="form-control" formControlName="unitprice" [disabled]="true" />
-        </div>
-
-        <div class="form-group">
-          <label for="totalprice-{{i}}">Total Price:</label>
-          <input id="totalprice-{{i}}" type="text" class="form-control" formControlName="totalprice" readonly />
-        </div>
+      <label for="customername">Customer Name</label>
+      <input 
+        type="text" 
+        id="customername" 
+        class="form-control" 
+        formControlName="customername" 
+        placeholder="Enter Customer Name">
+      <div *ngIf="salesForm.get('customername')?.invalid && salesForm.get('customername')?.touched">
+        <small class="text-danger">Customer name is required.</small>
       </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Create Sale</button>
+    <!-- Sales Date -->
+    <div class="form-group">
+      <label for="salesdate">Sales Date</label>
+      <input 
+        type="date" 
+        id="salesdate" 
+        class="form-control" 
+        formControlName="salesdate">
+      <div *ngIf="salesForm.get('salesdate')?.invalid && salesForm.get('salesdate')?.touched">
+        <small class="text-danger">Sales date is required.</small>
+      </div>
+    </div>
+
+    <!-- Products List -->
+    <div formArrayName="products">
+      <div *ngFor="let product of productsArray.controls; let i=index" [formGroupName]="i" class="product-group">
+        <h5>Product {{ i + 1 }}</h5>
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="productName{{ i }}">Product Name</label>
+            <select 
+              id="productName{{ i }}" 
+              class="form-control" 
+              formControlName="name">
+              <option *ngFor="let prod of products" [value]="prod.name">
+                {{ prod.name }}
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="quantity{{ i }}">Quantity</label>
+            <input 
+              type="number" 
+              id="quantity{{ i }}" 
+              class="form-control" 
+              formControlName="quantity" 
+              min="1">
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="unitprice{{ i }}">Unit Price</label>
+            <input 
+              type="text" 
+              id="unitprice{{ i }}" 
+              class="form-control" 
+              formControlName="unitprice" 
+              readonly>
+          </div>
+
+          <div class="form-group col-md-2 align-self-end">
+            <button type="button" class="btn btn-danger" (click)="removeProduct(i)">Remove</button>
+          </div>
+        </div>
+
+        <hr>
+      </div>
+    </div>
+
+    <!-- Add Product Button -->
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" (click)="addProduct()">Add Product</button>
+    </div>
+
+    <!-- Total Price -->
+    <div class="form-group">
+      <label for="totalprice">Total Price</label>
+      <input 
+        type="text" 
+        id="totalprice" 
+        class="form-control" 
+        formControlName="totalprice" 
+        readonly>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-group">
+      <button type="submit" class="btn btn-success" [disabled]="salesForm.invalid">
+        Update Sales
+      </button>
+    </div>
   </form>
 </div>

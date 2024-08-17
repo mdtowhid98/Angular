@@ -32,7 +32,7 @@ export class ViewsalesComponent implements OnInit{
       this.productService.getAllProductForSales().subscribe({
         next: (res: ProductModule[]) => {
           this.products = res;
-          console.log(this.products); // Log the products array
+          // console.log(this.products); // Log the products array
         },
         error: error => {
           console.error(error);
@@ -44,7 +44,7 @@ export class ViewsalesComponent implements OnInit{
       this.salesService.getAllsales().subscribe({
         next: (res: SalesModule[]) => {
           this.sales = res;
-          console.log(this.sales); // Log the sales array
+          // console.log(this.sales); // Log the sales array
         },
         error: error => {
           console.error(error);
