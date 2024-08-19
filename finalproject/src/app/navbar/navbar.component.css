@@ -1,7 +1,8 @@
 /* Common Styles */
 .navbar, .horizontal-sidebar {
-    background-color: #343a40; /* Bootstrap's 'bg-dark' color */
+    background-color: #08f757; /* Bootstrap's 'bg-dark' color */
     color: white;
+    
 }
 
 /* Navbar Styles */
@@ -10,7 +11,7 @@
 }
 
 .navbar .nav-link:hover, .navbar .nav-link.active {
-    color: #adb5bd; /* Slightly lighter color on hover/active */
+    color: #1cf11c; /* Slightly lighter color on hover/active */
 }
 
 .navbar .btn-outline-success {
@@ -19,7 +20,7 @@
 }
 
 .navbar .btn-outline-success:hover {
-    color: #343a40;
+    color: #06fa43;
     background-color: white;
     border-color: white;
 }
@@ -31,7 +32,7 @@
     top: 56px; /* Adjust based on the height of your navbar */
     left: 0;
     bottom: 0;
-    padding-top: 20px;
+    padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 1030; /* Ensure it stays above other elements */
     overflow-y: auto; /* Add scroll if content overflows */
@@ -52,7 +53,7 @@
 
 /* Dropdown Styles in Sidebar */
 .horizontal-sidebar .dropdown-menu {
-    background-color: #495057; /* Darker background for dropdown */
+    background-color: #3e0cf1; /* Darker background for dropdown */
     color: white; /* White text color for contrast */
     border: none; /* Remove border for a flat design */
     border-radius: 0; /* Flat design */
@@ -65,7 +66,7 @@
 }
 
 .horizontal-sidebar .dropdown-item:hover {
-    background-color: #6c757d; /* Light gray hover effect */
+    background-color: #0afa5a; /* Light gray hover effect */
 }
 
 .dropdown-toggle::after {
@@ -73,7 +74,7 @@
     margin-left: .255em;
     vertical-align: .255em;
     content: "";
-    border-top: .3em solid;
+    border-top: .2em solid;
     border-right: .3em solid transparent;
     border-left: .3em solid transparent;
     color: rgb(250, 24, 24);
@@ -87,3 +88,86 @@
 .horizontal-sidebar .dropdown-item:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
 }
+/* For the main navbar */
+.navbar {
+    background-color: rgb(20, 243, 243);
+    /* Add other styles as needed */
+}
+
+/* For the sidebar */
+.sidebar {
+    background-color: rgb(20, 243, 243);
+    /* Add other styles as needed */
+}
+form.d-flex {
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem; /* Space between input and buttons */
+  }
+  
+  form.d-flex .form-control {
+    flex-grow: 1;
+    max-width: 300px;
+  }
+  
+  form.d-flex .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  form.d-flex .btn-outline-success {
+    border-color: #4428a7;
+    color: #faf8f8;
+  }
+  
+  form.d-flex .btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  form.d-flex .btn-outline-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+  }
+  
+  form.d-flex .fa-icon {
+    margin-right: 0.25rem;
+  }
+  
+  @media (max-width: 768px) {
+    form.d-flex {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.75rem;
+    }
+  
+    form.d-flex .form-control {
+      width: 100%;
+    }
+  
+    form.d-flex .btn {
+      width: 100%;
+    }
+  }
+  @keyframes dance {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  img.rounded-circle {
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circle */
+    display: block; /* Removes any unwanted inline space */
+    max-height: 40px; /* Constrains the height */
+    width: auto; /* Maintains the aspect ratio */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+    animation: dance 1s ease-in-out infinite; /* Applies the dance animation */
+  }
+  
+  
+

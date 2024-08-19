@@ -6,7 +6,7 @@ import { SalesModule } from '../../module/sales/sales.module';
 import { ProductModule } from '../../module/product/product.module';
 import { Observable } from 'rxjs';
 import { log } from 'console';
-
+import { faEdit, faTrash, faEye } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-viewsales',
   templateUrl: './viewsales.component.html',
@@ -17,7 +17,10 @@ export class ViewsalesComponent implements OnInit{
   sales: SalesModule[] = [];
   products: ProductModule[] = [];
   
-  
+  faEdit = faEdit;
+  faTrash = faTrash;
+  faEye = faEye;
+
   constructor(private productService:ProductService,
     private salesService:SalesService,
     private router:Router

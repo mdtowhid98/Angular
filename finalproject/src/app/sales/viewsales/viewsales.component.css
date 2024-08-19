@@ -134,4 +134,69 @@ table tbody tr:hover {
     50% { transform: translateX(-5px); }
     100% { transform: translateX(5px); }
 }
-
+/* Basic link styling */
+a {
+    color: #1e90ff; /* Dodger Blue */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f0f8ff; /* Alice Blue */
+    border: 2px solid #1e90ff;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  /* Hover effect */
+  a:hover {
+    background-color: #1e90ff; /* Dodger Blue */
+    color: #fff; /* White text */
+    border-color: #1e90ff; /* Dodger Blue border */
+  }
+  
+  /* Active state */
+  a:active {
+    background-color: #4682b4; /* Steel Blue */
+    color: #fff; /* White text */
+    border-color: #4682b4; /* Steel Blue border */
+  }
+  
+  /* Focus state */
+  a:focus {
+    outline: none;
+    box-shadow: 0 0 3px 2px rgba(30, 144, 255, 0.5); /* Dodger Blue shadow */
+  }
+  
+/* Font Awesome icon styling within table buttons */
+.table .btn fa-icon {
+    margin-right: 5px; /* Space between the icon and button text */
+    color: #fff; /* Ensure icon color contrasts with button text */
+  }
+  
+  /* Ensure button colors are correct */
+  .btn-warning {
+    background-color: #1fdcf5;
+    border-color: #07b9ff;
+  }
+  
+  .btn-warning fa-icon {
+    color: #000; /* Icon color for warning buttons */
+  }
+  
+  .btn-danger {
+    background-color: #3d14f5;
+    border-color: #4f13f5;
+  }
+  
+  .btn-danger fa-icon {
+    color: #fff; /* Icon color for danger buttons */
+  }
+  
+  .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+  }
+  
+  .btn-info fa-icon {
+    color: #fff; /* Icon color for info button */
+  }
+  

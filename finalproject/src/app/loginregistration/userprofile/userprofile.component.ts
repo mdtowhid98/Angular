@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { UserModule } from '../../module/user/user.module';
 import { UserprofileService } from '../../service/userprofile.service';
 import { Router } from '@angular/router';
+import { faUser, faUserCircle, faEnvelope, faImage, faTag, faSpinner } from '@fortawesome/free-solid-svg-icons'; // Import icons
 
 @Component({
   selector: 'app-userprofile',
@@ -12,6 +13,12 @@ export class UserprofileComponent {
 
   user!: UserModule;
 
+  faUser = faUser;
+  faUserCircle = faUserCircle;
+  faEnvelope = faEnvelope;
+  faImage = faImage;
+  faTag = faTag;
+  faSpinner = faSpinner;
   constructor(private userprofileService: UserprofileService,
     private router: Router
 

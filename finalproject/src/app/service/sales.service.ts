@@ -56,7 +56,7 @@ export class SalesService {
   }
 
   updateSales(id: string, sale: SalesModule): Observable<SalesModule> {
-    return this.httpClient.put<SalesModule>(`${this.baseUrl}/${id}`, sale);
+    return this.httpClient.put<SalesModule>(this.baseUrl+id, sale);
   }
 
   getSalesById(saleId: string): Observable<SalesModule> {

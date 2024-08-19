@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../service/product.service';
 import { Router } from '@angular/router';
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-viewproduct',
@@ -10,6 +11,8 @@ import { Router } from '@angular/router';
 export class ViewproductComponent implements OnInit{
   products:any;
 
+  faEdit = faEdit;
+  faTrash = faTrash;
   constructor(private productService:ProductService,
     private router:Router
   ){}

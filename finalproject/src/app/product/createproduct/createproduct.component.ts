@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ProductService } from '../../service/product.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { faPlusCircle, faTag, faImage, faDollarSign, faBoxes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-createproduct',
@@ -15,6 +16,12 @@ export class CreateproductComponent implements OnInit{
   product: ProductModule = new ProductModule();
   formValue!: FormGroup;
   productData: any;
+
+  faPlusCircle = faPlusCircle;
+  faTag = faTag;
+  faImage = faImage;
+  faDollarSign = faDollarSign;
+  faBoxes = faBoxes;
 
   constructor(
     private productService: ProductService,
