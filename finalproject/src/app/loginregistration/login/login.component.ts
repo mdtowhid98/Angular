@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
+import { faEnvelope, faLock, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,9 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   loginForm!: FormGroup;
 
+  faSignInAlt = faSignInAlt;
+  faEnvelope = faEnvelope;
+  faLock = faLock;
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -31,7 +35,7 @@ export class LoginComponent {
         next: (res) => {
           console.log('User logged in successfully:', res);
           this.authService.storeToken(res.token);
-          this.router.navigate(['userprofile']); 
+          this.router.navigate(['home']); 
         },
         error: (err) => {
           console.error('Error logging in:', err);

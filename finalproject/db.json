@@ -23,124 +23,80 @@
       "password": "123456",
       "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
       "role": "User"
+    },
+    {
+      "id": "c890",
+      "name": "Apple",
+      "email": "jh8fud@ydu7hg",
+      "password": "123456",
+      "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "role": "User"
     }
   ],
   "products": [
     {
-      "id": "db4d",
-      "name": "Orange",
-      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-      "unitprice": 20,
-      "stock": 100
-    },
-    {
       "id": "e556",
       "name": "Nut",
       "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+      "stock": 10,
       "unitprice": 8,
-      "stock": 42
+      "quantity": 2
     },
     {
       "id": "62ad",
       "name": "apple",
       "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "stock": 2,
       "unitprice": 12,
-      "stock": 12
+      "quantity": 1
     },
     {
       "id": "27d8",
       "name": "Mango",
       "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
+      "stock": 8,
       "unitprice": 9,
-      "stock": 110
+      "quantity": 1
+    },
+    {
+      "id": "2b3d",
+      "name": "Orange",
+      "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+      "stock": -30,
+      "unitprice": 15,
+      "quantity": 9
     }
   ],
   "sales": [
     {
-      "id": "2f76",
-      "customername": "Shabab",
-      "salesdate": "2024-08-15",
-      "totalprice": 340,
+      "id": "66fe",
+      "customername": "fgygy",
+      "salesdate": "2024-08-19",
+      "totalprice": 36,
       "product": [
-        {
-          "id": "db4d",
-          "name": "Orange",
-          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-          "stock": 100,
-          "unitprice": 20,
-          "quantity": 13
-        },
-        {
-          "id": "e556",
-          "name": "Nut",
-          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
-          "stock": 42,
-          "unitprice": 8,
-          "quantity": 10
-        }
-      ]
-    },
-    {
-      "id": "1891",
-      "customername": "Final",
-      "salesdate": "2024-08-30",
-      "totalprice": 49,
-      "product": [
-        {
-          "id": "e556",
-          "name": "Nut",
-          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
-          "stock": 42,
-          "unitprice": 8,
-          "quantity": 1
-        },
-        {
-          "id": "db4d",
-          "name": "Orange",
-          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-          "stock": 100,
-          "unitprice": 20,
-          "quantity": 1
-        },
-        {
-          "id": "27d8",
-          "name": "Mango",
-          "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
-          "stock": 110,
-          "unitprice": 9,
-          "quantity": 1
-        },
         {
           "id": "62ad",
           "name": "apple",
           "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
-          "stock": 12,
+          "stock": 2,
           "unitprice": 12,
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "id": "d756",
-      "customername": "dsag",
-      "salesdate": "2024-08-29",
-      "totalprice": 29,
-      "product": [
-        {
-          "id": "db4d",
-          "name": "Orange",
-          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-          "stock": 100,
-          "unitprice": 20,
           "quantity": 1
         },
         {
-          "id": "27d8",
-          "name": "Mango",
-          "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
-          "stock": 110,
-          "unitprice": 9,
+          "id": "e556",
+          "name": "Nut",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 12,
+          "unitprice": 8,
           "quantity": 1
+        },
+        {
+          "id": "e556",
+          "name": "Nut",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 10,
+          "unitprice": 8,
+          "quantity": 2
         }
       ]
     },

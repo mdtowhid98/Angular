@@ -1,35 +1,56 @@
+/* Container styling */
 .container {
-    margin: 20px auto;
-    max-width: 800px;
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 50px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
+/* Table styling */
 .table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-.table th, .table td {
-    border: 1px solid #ddd;
-    padding: 8px;
+.table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.table th {
+.table-striped tbody tr:nth-of-type(odd) {
     background-color: #f2f2f2;
-    color: black;
 }
 
-.table tr:hover {
-    background-color: #f5f5f5;
+.table tbody tr {
+    transition: background-color 0.3s ease;
+    animation: dance 1s ease-in-out infinite;
 }
 
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling for table images */
 .table img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100px; /* Adjusted to fit your requirements */
+    height: 100px; /* Maintain consistent height */
+    border-radius: 50%; /* Make images round */
 }
 
+/* Button styling */
 .btn {
     padding: 5px 10px;
     border: none;
@@ -54,3 +75,35 @@
 .btn-danger:hover {
     background-color: #c9302c;
 }
+
+/* Animation keyframes */
+@keyframes dance {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+/* Font Awesome icon styling within table buttons */
+.table .btn fa-icon {
+    margin-right: 5px; /* Space between the icon and button text */
+    color: #fff; /* Ensure icon color contrasts with button text */
+  }
+  
+  /* Ensure button colors are correct */
+  .btn-warning {
+    background-color: #07cdff;
+    border-color: #10f742;
+  }
+  
+  .btn-warning fa-icon {
+    color: #000; /* Icon color for warning buttons */
+  }
+  
+  .btn-danger {
+    background-color: #5115f7;
+    border-color: #4516f0;
+  }
+  
+  .btn-danger fa-icon {
+    color: #fff; /* Icon color for danger buttons */
+  }
+  

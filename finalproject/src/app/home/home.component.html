@@ -1,1 +1,18 @@
-<img src="https://i.postimg.cc/7LcHzzfQ/4.jpg" alt="" >
+<div class="row container">
+    <div class="text-azur text-center">
+        <h2>There are various items of products</h2>
+        <h3>You can buy and sell</h3>
+    </div>
+    <div class="col-md-4">
+        <a href="#" class="text-white mb-2 dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <fa-icon [icon]="faAppleAlt"></fa-icon> Fruits
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="productDropdown">
+            <li><a class="dropdown-item" href="/viewproduct"><fa-icon [icon]="faEye"></fa-icon> View Fruits</a></li>
+            <li><a class="dropdown-item" href="/createProduct"><fa-icon [icon]="faPlus"></fa-icon>> Create Fruits</a></li>
+            <li><a class="dropdown-item" href="/viewsales"> <fa-icon [icon]="faShoppingCart"></fa-icon> View Sales</a></li>
+            <li><a class="dropdown-item" href="/createSales"><fa-icon [icon]="faChartLine"></fa-icon> Create Sales</a></li>
+        </ul>
+    </div>
+</div>

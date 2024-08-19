@@ -6,7 +6,7 @@ import { SalesModule } from '../../module/sales/sales.module';
 import { ProductModule } from '../../module/product/product.module';
 import { Observable } from 'rxjs';
 import { log } from 'console';
-
+import { faEdit, faTrash, faEye } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-viewsales',
   templateUrl: './viewsales.component.html',
@@ -17,7 +17,10 @@ export class ViewsalesComponent implements OnInit{
   sales: SalesModule[] = [];
   products: ProductModule[] = [];
   
-  
+  faEdit = faEdit;
+  faTrash = faTrash;
+  faEye = faEye;
+
   constructor(private productService:ProductService,
     private salesService:SalesService,
     private router:Router
@@ -32,7 +35,7 @@ export class ViewsalesComponent implements OnInit{
       this.productService.getAllProductForSales().subscribe({
         next: (res: ProductModule[]) => {
           this.products = res;
-          console.log(this.products); // Log the products array
+          // console.log(this.products); // Log the products array
         },
         error: error => {
           console.error(error);
@@ -44,7 +47,7 @@ export class ViewsalesComponent implements OnInit{
       this.salesService.getAllsales().subscribe({
         next: (res: SalesModule[]) => {
           this.sales = res;
-          console.log(this.sales); // Log the sales array
+          // console.log(this.sales); // Log the sales array
         },
         error: error => {
           console.error(error);

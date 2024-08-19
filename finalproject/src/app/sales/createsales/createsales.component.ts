@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 import { ProductService } from '../../service/product.service';
 import { SalesService } from '../../service/sales.service';
 import { Router } from '@angular/router';
+import { faUser, faCalendarAlt, faBox, faSortNumericDown, faDollarSign, faWarehouse, faTrash, faPlus, faCartPlus, faSave } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-createsales',
@@ -14,11 +15,22 @@ import { Router } from '@angular/router';
 export class CreatesalesComponent implements OnInit {
 
   products: ProductModule[] = [];
-  sales: SalesModule[] = [];
   salesForm!: FormGroup;
   sale: SalesModule = new SalesModule();
-
-  constructor(private productService: ProductService,
+  
+  faUser = faUser;
+  faCalendarAlt = faCalendarAlt;
+  faBox = faBox;
+  faSortNumericDown = faSortNumericDown;
+  faDollarSign = faDollarSign;
+  faWarehouse = faWarehouse;
+  faTrash = faTrash;
+  faPlus = faPlus;
+  faCartPlus = faCartPlus;
+  faSave = faSave;
+  
+  constructor(
+    private productService: ProductService,
     private salesService: SalesService,
     private formBuilder: FormBuilder,
     private router: Router
@@ -27,15 +39,18 @@ export class CreatesalesComponent implements OnInit {
   ngOnInit(): void {
     this.loadProduct();
 
+    // Set the current date
+    const currentDate = new Date().toISOString().substring(0, 10); // Format as YYYY-MM-DD
+
     this.salesForm = this.formBuilder.group({
       customername: ['', Validators.required],
-      salesdate: ['', Validators.required],
+      salesdate: [currentDate, Validators.required], // Set current date here
       products: this.formBuilder.array([]),
-      totalprice: [{ value: ''}]
+      totalprice: [{ value: '' }]
     });
 
     this.addProduct();
-    this.salesForm.get('product')?.valueChanges.subscribe(() => {
+    this.salesForm.get('products')?.valueChanges.subscribe(() => {
       this.calculateTotalPrice();
     });
   }
@@ -57,24 +72,48 @@ export class CreatesalesComponent implements OnInit {
 
   addProduct() {
     const productGroup = this.formBuilder.group({
-      id: ['',undefined],
+      id: ['', undefined],
       name: ['', Validators.required],
-      quantity: [0, Validators.required],
+      quantity: [{ value: 0, disabled: true }, Validators.required], // Start with quantity disabled
       unitprice: [{ value: 0, disabled: true }],
+      stock: [{ value: 0, disabled: true }],
     });
 
     productGroup.get('name')?.valueChanges.subscribe(name => {
       const selectedProduct = this.products.find(prod => prod.name === name);
       if (selectedProduct) {
-        productGroup.patchValue({ 
-          id: selectedProduct.id,
-          unitprice: selectedProduct.unitprice 
-        });
+        const oldStock = selectedProduct.stock;
+        if (oldStock > 0) {
+          productGroup.patchValue({
+            id: selectedProduct.id,
+            unitprice: selectedProduct.unitprice,
+            stock: oldStock // Set the current stock
+          });
+          productGroup.get('quantity')?.enable(); // Enable quantity input if stock is available
+        } else {
+          alert(`The product ${selectedProduct.name} is out of stock!`);
+          productGroup.patchValue({
+            id: selectedProduct.id,
+            unitprice: selectedProduct.unitprice,
+            stock: oldStock,
+            quantity: 0 // Reset quantity to 0
+          });
+          productGroup.get('quantity')?.disable(); // Disable quantity input if out of stock
+        }
         this.calculateTotalPrice();
+
       }
     });
 
-    productGroup.get('quantity')?.valueChanges.subscribe(() => {
+    productGroup.get('quantity')?.valueChanges.subscribe(quantity => {
+      const stock = productGroup.get('stock')?.value || 0;
+      const quantityValue = quantity ?? 0; // Use 0 as the default if quantity is null
+    
+      if (quantityValue > stock) {
+        alert(`The selected quantity exceeds the available stock of ${stock}. Please reduce the quantity.`);
+        productGroup.patchValue({ quantity: stock }); // Set quantity to the maximum available stock
+      }
+    
       this.calculateTotalPrice();
     });
 
@@ -103,19 +142,35 @@ export class CreatesalesComponent implements OnInit {
 
     this.sale.product = this.salesForm.value.products.map((product: any) => {
       const originalProduct = this.products.find(p => p.id === product.id);
+      if (originalProduct) {
+        originalProduct.stock -= product.quantity; // Adjust the stock based on the quantity sold
+      }
       return {
         id: originalProduct?.id,
         name: originalProduct?.name,
         photo: originalProduct?.photo,
-        stock: originalProduct?.stock,
+        stock: originalProduct?.stock, // Updated stock
         unitprice: originalProduct?.unitprice,
         quantity: product.quantity
       };
     });
 
+    // Create the sales order
     this.salesService.createSales(this.sale).subscribe({
       next: res => {
-        this.loadProduct();
+        // After successful creation of the sales order, update product stock
+        this.sale.product.forEach(prod => {
+          this.productService.updateProducts(prod).subscribe({
+            next: () => {
+              console.log(`Stock reduced and updated for product ID ${prod.id}`);
+            },
+            error: (error) => {
+              console.log(error);
+            }
+          });
+        });
+
+        // Reset the form and navigate
         this.salesForm.reset();
         this.router.navigate(['viewsales']);
       },
@@ -124,4 +179,5 @@ export class CreatesalesComponent implements OnInit {
       }
     });
   }
+
 }

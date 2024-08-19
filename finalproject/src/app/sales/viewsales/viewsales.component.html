@@ -26,12 +26,20 @@
                 </td>
                 <td>{{ sale.totalprice }}</td>
                 <td>
-                    <button (click)="editSales(sale)">Edit</button>
+                    <button class="btn btn-warning" (click)="editSales(sale)">
+                        <fa-icon [icon]="faEdit"></fa-icon> 
+                    </button>
                 </td>
                 <td>
-                    <button (click)="deleteSales(sale.id)">Delete</button>
+                    <button class="btn btn-danger" (click)="deleteSales(sale.id)">
+                        <fa-icon [icon]="faTrash"></fa-icon> 
+                    </button>
                 </td>
+                
             </tr>
         </tbody>
     </table>
+    <a href="viewproduct" >
+        <fa-icon [icon]="faEye"></fa-icon> View Product
+    </a>
 </div>

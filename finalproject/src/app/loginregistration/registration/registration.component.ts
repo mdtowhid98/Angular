@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
 import { UserModule } from '../../module/user/user.module';
+import { faEnvelope, faImage, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-registration',
@@ -13,6 +14,10 @@ export class RegistrationComponent {
 
   regForm!:FormGroup;
 
+  faUser = faUser;
+  faEnvelope = faEnvelope;
+  faLock = faLock;
+  faImage = faImage;
   constructor(private authService:AuthService,
     private router:Router,
     private formBuilder:FormBuilder
@@ -22,7 +27,7 @@ export class RegistrationComponent {
       email:['', [Validators.required, Validators.email]],
       password:['',Validators.required],
       photo:['',Validators.required],
-      role:['',Validators.required],
+      role:['User',Validators.required],
 
       // name:['', Validators.required],
       // email:['', [Validators.required, Validators.email]],

@@ -72,4 +72,12 @@
     background-color: #0056b3;
     border-color: #0056b3;
   }
-  
+  /* Font Awesome icon styling within form */
+.form-group fa-icon {
+  margin-right: 5px; /* Space between icon and label */
+  color: #007bff; /* Adjust color as needed */
+}
+
+.btn fa-icon {
+  margin-right: 5px; /* Space between icon and button text */
+}

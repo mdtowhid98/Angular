@@ -20,6 +20,7 @@ import { LogoutComponent } from './loginregistration/logout/logout.component';
 import { UserprofileComponent } from './loginregistration/userprofile/userprofile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -49,7 +50,8 @@ import { HomeComponent } from './home/home.component';
     ReactiveFormsModule,
     RouterModule,
     AppRoutingModule,
-    NgxPrintModule
+    NgxPrintModule,
+    FontAwesomeModule
   ],
   providers: [
     // provideClientHydration(),

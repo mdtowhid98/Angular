@@ -16,12 +16,20 @@
     <tr *ngFor="let product of products |async">
         <td>{{product.id}}</td>
         <td>{{product.name}}</td>
-         <td><img [src]="product.photo" alt="{{product.name}}" style="width: 50px; height: auto;"></td>
+         <td><img [src]="product.photo" alt="{{product.name}}" style="width: 120px; height: 120;"></td>
          <td>{{product.unitprice}}</td>
         <td>{{product.stock}}</td>
        
-        <td><button class="btn btn-warning" (click)="updateProduct(product.id)">Edit</button></td>
-        <td><button class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button></td>
+        <td>
+            <button class="btn btn-warning" (click)="updateProduct(product.id)">
+                <fa-icon [icon]="faEdit"></fa-icon> 
+            </button>
+        </td>
+        <td>
+            <button class="btn btn-danger" (click)="deleteProduct(product.id)">
+                <fa-icon [icon]="faTrash"></fa-icon> 
+            </button>
+        </td>
         
        
     </tr>

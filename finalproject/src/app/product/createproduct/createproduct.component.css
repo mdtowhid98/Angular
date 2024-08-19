@@ -53,3 +53,20 @@ h2 {
 .btn-primary:hover {
     background-color: #0056b3;
 }
+/* Styling for Font Awesome icons within labels */
+.form-group label fa-icon {
+    margin-right: 10px; /* Space between the icon and the label text */
+    color: #007bff; /* Icon color to match button or theme color */
+    font-size: 1.25rem; /* Icon size for better visibility */
+  }
+  
+  /* Adjust the icon size for form controls if needed */
+  .form-control {
+    font-size: 1rem; /* Adjust to ensure icons and text are balanced */
+  }
+  
+  /* Ensure buttons with icons have consistent spacing */
+  .btn-primary fa-icon {
+    margin-right: 5px; /* Space between icon and button text */
+  }
+  

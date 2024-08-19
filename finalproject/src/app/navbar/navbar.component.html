@@ -1,95 +1,87 @@
-<nav class="navbar navbar-expand-lg bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg bg-primary sticky-top">
     <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <a class="navbar-brand" href="#"><img src="https://i.postimg.cc/2yzzz6KY/bird-1045954-1280.jpg" height="40px"
-                alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/reg">Registration</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/logIn">Login</a>
-                </li>
-                <ng-container *ngIf="userRole === 'Admin'">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/createProduct">Create Product</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/createSales">Create Sales</a>
-                    </li>
-                </ng-container>
-                <ng-container *ngIf="userRole === 'User'">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/viewproduct">View Product</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/viewsales">View Sales</a>
-                    </li>
-                </ng-container>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-                <a class="btn btn-outline-success" href="/logout">Logout</a>
-            </form>
-        </div>
+      <a class="navbar-brand" href="#">
+        <img src="https://i.postimg.cc/SQMbrpzy/download.png" height="60px" alt="" class="rounded-circle">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/home">
+              <fa-icon [icon]="faHome"></fa-icon> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/reg">
+              <fa-icon [icon]="faUserPlus"></fa-icon> Registration
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logIn">
+              <fa-icon [icon]="faSignInAlt"></fa-icon> Login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/userprofile">
+              <fa-icon [icon]="faUser"></fa-icon> Profile
+            </a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">
+            <fa-icon [icon]="faSearch"></fa-icon> Search
+          </button>
+          <a class="btn btn-outline-success" href="/logout">
+            <fa-icon [icon]="faSignOutAlt"></fa-icon> Logout
+          </a>
+        </form>
+      </div>
     </div>
-</nav>
+  </nav>
+  
 
-<div class="row">
 
+  <div class="row">
     <div class="col-md-2">
         <!-- Left-Aligned Horizontal Sidebar -->
-        <div class="horizontal-sidebar bg-dark text-white d-flex flex-column align-items-start py-2">
-            <!-- <a href="/link1" class="text-white mb-2">Link 1</a>
-  <a href="/link2" class="text-white mb-2">Link 2</a> -->
-            <a href="/home" class="text-white mb-2">Home</a>
+        <div class="horizontal-sidebar bg-primary text-white d-flex flex-column align-items-start py-2">
+            <a href="/home" class="text-white mb-2">
+                <fa-icon [icon]="faHome"></fa-icon> Home
+            </a>
             <div class="dropdown mb-2">
                 <a href="#" class="text-white mb-2 dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    Product
+                    <fa-icon [icon]="faAppleAlt"></fa-icon> Fruits
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="productDropdown">
-                    <li><a class="dropdown-item" href="/viewproduct">View Product</a></li>
-                    <li><a class="dropdown-item" href="/createproduct">Create Product</a></li>
+                    <ng-container *ngIf="userRole === 'Admin'">
+                        <li><a class="dropdown-item" href="/viewproduct">
+                            <fa-icon [icon]="faEye"></fa-icon> View Fruits
+                        </a></li>
+                        <li><a class="dropdown-item" href="/createProduct">
+                            <fa-icon [icon]="faPlus"></fa-icon> Create Product
+                        </a></li>
+                        <li><a class="dropdown-item" href="/createSales">
+                            <fa-icon [icon]="faShoppingCart"></fa-icon> Create Sales
+                        </a></li>
+                        <li><a class="dropdown-item" href="/viewsales">
+                            <fa-icon [icon]="faChartLine"></fa-icon> View Sales
+                        </a></li>
+                    </ng-container>
+                    <ng-container *ngIf="userRole === 'User'">
+                        <li><a class="dropdown-item" href="/viewproduct">
+                            <fa-icon [icon]="faEye"></fa-icon> View Product
+                        </a></li>
+                        <li><a class="dropdown-item" href="/viewsales">
+                            <fa-icon [icon]="faChartLine"></fa-icon> View Sales
+                        </a></li>
+                    </ng-container>
                 </ul>
             </div>
-            <div class="dropdown mb-2">
-                <a href="#" class="text-white mb-2 dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Sales
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="productDropdown">
-                    <li><a class="dropdown-item" href="/viewsales">View Sales</a></li>
-                    <li><a class="dropdown-item" href="/createSales">Create Sales</a></li>
-                </ul>
-            </div>
-
         </div>
     </div>
 </div>

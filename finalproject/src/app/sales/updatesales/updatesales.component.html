@@ -1,45 +1,119 @@
-<div class="container">
-    <h2>Update Sales</h2>
-    <form [formGroup]="saleForm" (ngSubmit)="updateSale()">
-      <div class="form-group">
-        <label for="customername">Customer Name</label>
-        <input type="text" id="customername" class="form-control" formControlName="customername">
-      </div>
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">
+     Update Sale
+  </h2>
   
-      <div class="form-group">
-        <label for="quantity">Quantity</label>
-        <input type="number" id="quantity" class="form-control" formControlName="quantity">
+  <form [formGroup]="salesForm" (ngSubmit)="updateSales()">
+    
+    <div class="form-group mb-3">
+      <label for="customername">
+        <fa-icon [icon]="faUser"></fa-icon> Customer Name
+      </label>
+      <input
+        id="customername"
+        type="text"
+        class="form-control"
+        formControlName="customername"
+        placeholder="Enter customer name"
+      />
+      <div *ngIf="salesForm.get('customername')?.invalid && salesForm.get('customername')?.touched" class="text-danger">
+        Customer name is required.
       </div>
-  
-      <div class="form-group">
-        <label for="salesdate">Sales Date</label>
-        <input type="date" id="salesdate" class="form-control" formControlName="salesdate">
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="salesdate">
+        <fa-icon [icon]="faCalendarAlt"></fa-icon> Sales Date
+      </label>
+      <input
+        id="salesdate"
+        type="date"
+        class="form-control"
+        formControlName="salesdate"
+      />
+      <div *ngIf="salesForm.get('salesdate')?.invalid && salesForm.get('salesdate')?.touched" class="text-danger">
+        Sales date is required.
       </div>
-  
-      <div class="form-group">
-        <label for="totalprice">Total Price</label>
-        <input type="text" id="totalprice" class="form-control" formControlName="totalprice" readonly>
-      </div>
-  
-      <div formGroupName="product">
-        <div class="form-group">
-          <label for="product">Product</label>
-          <select id="product" class="form-control" formControlName="name">
-            <option *ngFor="let product of products" [value]="product.name">{{ product.name }}</option>
-          </select>
+    </div>
+
+    <div formArrayName="products">
+      <div *ngFor="let product of productsArray.controls; let i = index" [formGroupName]="i" class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">
+            <fa-icon [icon]="faBox"></fa-icon> Product {{ i + 1 }}
+          </h5>
+          
+          <div class="form-group mb-3">
+            <label for="productname{{i}}">
+              <fa-icon [icon]="faBox"></fa-icon> Product Name
+            </label>
+            <select id="productname{{i}}" class="form-control" formControlName="name">
+              <option value="">Select a product</option>
+              <option *ngFor="let prod of products" [value]="prod.name">{{ prod.name }}</option>
+            </select>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="quantity{{i}}">
+              <fa-icon [icon]="faSortNumericDown"></fa-icon> Quantity
+            </label>
+            <input
+              id="quantity{{i}}"
+              type="number"
+              class="form-control"
+              formControlName="quantity"
+              placeholder="Enter quantity"
+            />
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="unitprice{{i}}">
+              <fa-icon [icon]="faDollarSign"></fa-icon> Unit Price
+            </label>
+            <input
+              id="unitprice{{i}}"
+              type="text"
+              class="form-control"
+              formControlName="unitprice"
+              placeholder="Unit price"
+              readonly
+            />
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="stock{{i}}">
+              <fa-icon [icon]="faWarehouse"></fa-icon> Stock Available
+            </label>
+            <input
+              id="stock{{i}}"
+              type="text"
+              class="form-control"
+              formControlName="stock"
+              placeholder="Stock available"
+              readonly
+            />
+          </div>
+
+          <button type="button" class="btn btn-danger" (click)="removeProduct(i)">
+            <fa-icon [icon]="faTrash"></fa-icon> Remove Product
+          </button>
         </div>
-  
-        <div class="form-group">
-          <label for="unitprice">Unit Price</label>
-          <input type="text" id="unitprice" class="form-control" formControlName="unitprice" readonly>
-        </div>
-  
-        <div class="form-group">
-          <label for="stock">Stock</label>
-          <input type="text" id="stock" class="form-control" formControlName="stock" readonly>
-        </div>
       </div>
-  
-      <button type="submit" class="btn btn-primary">Update Sale</button>
-    </form>
-  </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <button type="button" class="btn btn-primary" (click)="addProduct()">
+        <fa-icon [icon]="faPlus"></fa-icon> Add Another Product
+      </button>
+    </div>
+
+    <div>
+      <label>Total Price: </label>
+      <span>{{ salesForm.get('totalprice')?.value | currency }}</span>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="salesForm.invalid">
+      <fa-icon [icon]="faSave"></fa-icon> Update Sale
+    </button>
+  </form>
+</div>
