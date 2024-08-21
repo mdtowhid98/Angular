@@ -46,7 +46,7 @@
       "id": "62ad",
       "name": "apple",
       "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
-      "stock": 34,
+      "stock": 33,
       "unitprice": 12,
       "quantity": 1
     },
@@ -54,7 +54,7 @@
       "id": "27d8",
       "name": "Mango",
       "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
-      "stock": 32,
+      "stock": 31,
       "unitprice": 9,
       "quantity": 1
     },
@@ -223,6 +223,30 @@
           "name": "Mango",
           "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
           "stock": 32,
+          "unitprice": 9,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "6271",
+      "customername": "Shabab",
+      "salesdate": "2024-08-21",
+      "totalprice": 21,
+      "product": [
+        {
+          "id": "62ad",
+          "name": "apple",
+          "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+          "stock": 33,
+          "unitprice": 12,
+          "quantity": 1
+        },
+        {
+          "id": "27d8",
+          "name": "Mango",
+          "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
+          "stock": 31,
           "unitprice": 9,
           "quantity": 1
         }
