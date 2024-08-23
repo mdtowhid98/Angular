@@ -13,6 +13,7 @@ import { LogoutComponent } from './loginregistration/logout/logout.component';
 import { authGuard } from './loginregistration/auth.guard';
 import { RoleGuard } from './loginregistration/role.guard';
 import { HomeComponent } from './home/home.component';
+import { InvoiceComponent } from './invoice/invoice.component';
 
 const routes: Routes = [
   {path:"viewproduct",component:ViewproductComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:"logIn",component:LoginComponent},
   {path:"reg",component:RegistrationComponent},
   {path:"home",component:HomeComponent},
+  {path:"invoice",component:InvoiceComponent},
   {
     path: 'userprofile',
     component: UserprofileComponent,

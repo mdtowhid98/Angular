@@ -38,7 +38,7 @@
       "id": "e556",
       "name": "Nut",
       "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
-      "stock": 36,
+      "stock": 34,
       "unitprice": 8,
       "quantity": 1
     },
@@ -46,7 +46,7 @@
       "id": "62ad",
       "name": "apple",
       "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
-      "stock": 32,
+      "stock": 33,
       "unitprice": 12,
       "quantity": 1
     },
@@ -62,9 +62,9 @@
       "id": "2b3d",
       "name": "Orange",
       "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
-      "stock": 19,
+      "stock": 15,
       "unitprice": 15,
-      "quantity": 1
+      "quantity": 2
     }
   ],
   "sales": [
@@ -229,11 +229,19 @@
       ]
     },
     {
-      "id": "6271",
-      "customername": "Shabab",
-      "salesdate": "2024-08-21",
-      "totalprice": 21,
+      "id": "b9b5",
+      "customername": "gushu",
+      "salesdate": "2024-08-20",
+      "totalprice": 20,
       "product": [
+        {
+          "id": "e556",
+          "name": "Nut",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 35,
+          "unitprice": 8,
+          "quantity": 1
+        },
         {
           "id": "62ad",
           "name": "apple",
@@ -241,6 +249,22 @@
           "stock": 33,
           "unitprice": 12,
           "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "af9e",
+      "customername": "fgygy",
+      "salesdate": "2024-08-22",
+      "totalprice": 39,
+      "product": [
+        {
+          "id": "2b3d",
+          "name": "Orange",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 17,
+          "unitprice": 15,
+          "quantity": 2
         },
         {
           "id": "27d8",
@@ -253,18 +277,26 @@
       ]
     },
     {
-      "id": "9d2b",
-      "customername": "yitr",
-      "salesdate": "2024-08-22",
-      "totalprice": 12,
+      "id": "c715",
+      "customername": "Kutub",
+      "salesdate": "2024-08-23",
+      "totalprice": 38,
       "product": [
         {
-          "id": "62ad",
-          "name": "apple",
-          "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
-          "stock": 32,
-          "unitprice": 12,
+          "id": "e556",
+          "name": "Nut",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 34,
+          "unitprice": 8,
           "quantity": 1
+        },
+        {
+          "id": "2b3d",
+          "name": "Orange",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 15,
+          "unitprice": 15,
+          "quantity": 2
         }
       ]
     }

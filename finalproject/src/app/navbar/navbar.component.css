@@ -1,6 +1,6 @@
 /* Common Styles */
 .navbar, .horizontal-sidebar {
-    background-color: #08f757; /* Bootstrap's 'bg-dark' color */
+    background-color: #037474; /* Bootstrap's 'bg-dark' color */
     color: white;
     
 }
@@ -90,7 +90,7 @@
 }
 /* For the main navbar */
 .navbar {
-    background-color: rgb(20, 243, 243);
+    background-color: #037474;
     /* Add other styles as needed */
 }
 

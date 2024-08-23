@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-primary sticky-top">
+<nav class="navbar navbar-expand-lg  sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="https://i.postimg.cc/SQMbrpzy/download.png" height="60px" alt="" class="rounded-circle">
@@ -24,17 +24,18 @@
               <fa-icon [icon]="faSignInAlt"></fa-icon> Login
             </a>
           </li>
-          <li class="nav-item">
+         
+        </ul>
+        <form class="d-flex" role="search">
+          <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">
+            <fa-icon [icon]="faSearch"></fa-icon> Search
+          </button> -->
+          
             <a class="nav-link" href="/userprofile">
               <fa-icon [icon]="faUser"></fa-icon> Profile
             </a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">
-            <fa-icon [icon]="faSearch"></fa-icon> Search
-          </button>
+         
           <a class="btn btn-outline-success" href="/logout">
             <fa-icon [icon]="faSignOutAlt"></fa-icon> Logout
           </a>
@@ -48,40 +49,37 @@
   <div class="row">
     <div class="col-md-2">
         <!-- Left-Aligned Horizontal Sidebar -->
-        <div class="horizontal-sidebar bg-primary text-white d-flex flex-column align-items-start py-2">
-            <a href="/home" class="text-white mb-2">
+        <div class="horizontal-sidebar  text-white d-flex flex-column align-items-start py-2">
+            <!-- <a href="/home" class="text-white mb-2">
                 <fa-icon [icon]="faHome"></fa-icon> Home
-            </a>
-            <div class="dropdown mb-2">
-                <a href="#" class="text-white mb-2 dropdown-toggle" id="productDropdown" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <fa-icon [icon]="faAppleAlt"></fa-icon> Fruits
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="productDropdown">
+            </a> -->
+            
+               
+               
                     <ng-container *ngIf="userRole === 'Admin'">
-                        <li><a class="dropdown-item" href="/viewproduct">
-                            <fa-icon [icon]="faEye"></fa-icon> View Fruits
-                        </a></li>
-                        <li><a class="dropdown-item" href="/createProduct">
-                            <fa-icon [icon]="faPlus"></fa-icon> Create Product
-                        </a></li>
-                        <li><a class="dropdown-item" href="/createSales">
+                       <a  href="/viewproduct">
+                            <fa-icon [icon]="faEye"></fa-icon> View Products
+                        </a>
+                        <a class="dropdown-item" href="/createProduct">
+                            <fa-icon [icon]="faPlus"></fa-icon> Create Products
+                        </a>
+                        <a class="dropdown-item" href="/createSales">
                             <fa-icon [icon]="faShoppingCart"></fa-icon> Create Sales
-                        </a></li>
-                        <li><a class="dropdown-item" href="/viewsales">
+                        </a>
+                        <a class="dropdown-item" href="/viewsales">
                             <fa-icon [icon]="faChartLine"></fa-icon> View Sales
-                        </a></li>
+                        </a>
                     </ng-container>
                     <ng-container *ngIf="userRole === 'User'">
-                        <li><a class="dropdown-item" href="/viewproduct">
-                            <fa-icon [icon]="faEye"></fa-icon> View Product
-                        </a></li>
-                        <li><a class="dropdown-item" href="/viewsales">
+                        <a class="dropdown-item" href="/viewproduct">
+                            <fa-icon [icon]="faEye"></fa-icon> View Products
+                        </a>
+                        <a class="dropdown-item" href="/viewsales">
                             <fa-icon [icon]="faChartLine"></fa-icon> View Sales
-                        </a></li>
+                        </a>
                     </ng-container>
-                </ul>
+                
             </div>
-        </div>
+        
     </div>
 </div>

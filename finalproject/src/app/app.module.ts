@@ -21,6 +21,7 @@ import { UserprofileComponent } from './loginregistration/userprofile/userprofil
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { InvoiceComponent } from './invoice/invoice.component';
 
 
 
@@ -40,6 +41,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     UserprofileComponent,
     NavbarComponent,
     HomeComponent,
+    InvoiceComponent,
     
     
   ],
