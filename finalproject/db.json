@@ -70,14 +70,15 @@
       "id": "54da",
       "name": "Computer",
       "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+      "stock": 49,
       "unitprice": 40000,
-      "stock": 50
+      "quantity": 1
     },
     {
       "id": "eed7",
       "name": "Tv",
       "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-      "stock": 29,
+      "stock": 28,
       "unitprice": 20000,
       "quantity": 1
     },
@@ -85,7 +86,7 @@
       "id": "4b45",
       "name": "AC",
       "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-      "stock": 19,
+      "stock": 18,
       "unitprice": 60000,
       "quantity": 1
     },
@@ -350,6 +351,38 @@
           "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
           "stock": 29,
           "unitprice": 20000,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "4a5d",
+      "customername": "Kutub",
+      "salesdate": "2024-08-24",
+      "totalprice": 120000,
+      "product": [
+        {
+          "id": "eed7",
+          "name": "Tv",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 28,
+          "unitprice": 20000,
+          "quantity": 1
+        },
+        {
+          "id": "4b45",
+          "name": "AC",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 18,
+          "unitprice": 60000,
+          "quantity": 1
+        },
+        {
+          "id": "54da",
+          "name": "Computer",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 49,
+          "unitprice": 40000,
           "quantity": 1
         }
       ]
