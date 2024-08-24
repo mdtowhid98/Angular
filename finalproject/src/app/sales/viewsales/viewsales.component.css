@@ -65,7 +65,7 @@ button:active {
 }
 
 button[click="deleteSales(sale.id)"] {
-    background-color: #dc3545;
+    background-color: #f8f2f3;
 }
 
 button[click="deleteSales(sale.id)"]:hover {

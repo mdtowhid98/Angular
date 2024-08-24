@@ -1,109 +1,63 @@
-/* Container styling */
 .container {
-    max-width: 1000px;
-    margin: 10px auto;
-    padding: 50px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    max-width: 100%;
+    margin: 5px auto;
+    padding: 10px;
+    overflow-x: scroll; /* Enables horizontal scrolling if needed */
 }
 
-/* Table styling */
 .table {
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    table-layout: auto;
+    border-collapse: collapse; /* Removes gaps between table cells */
 }
 
-.table thead {
-    background-color: #007bff;
-    color: white;
+.table th, .table td {
+    padding: 12px;
+    text-align: center; /* Centers text and content in table cells */
+    border: 1px solid #dee2e6; /* Adds border to table cells */
+    vertical-align: middle; /* Vertically centers content in cells */
 }
 
-.table th,
-.table td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+.table th {
+    background-color: #f8f9fa; /* Light gray background for table headers */
+    font-weight: bold;
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f2f2f2;
+    background-color: #f9f9f9; /* Adds subtle striping to the table rows */
 }
 
-.table tbody tr {
-    transition: background-color 0.3s ease;
-    animation: dance 1s ease-in-out infinite;
-}
-
-.table tbody tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* Styling for table images */
 .table img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100px; /* Adjusted to fit your requirements */
-    height: 100px; /* Maintain consistent height */
-    border-radius: 50%; /* Make images round */
+    width: 120px;
+    height: 120px;
+    object-fit: cover; /* Ensures the image doesn’t distort */
+    border-radius: 4px; /* Optional: adds rounded corners to the image */
 }
 
-/* Button styling */
 .btn {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px; /* Adds some spacing between the icon and text */
     cursor: pointer;
 }
 
 .btn-warning {
-    background-color: #4eddf0;
-    color: white;
-}
-
-.btn-warning:hover {
-    background-color: #ec971f;
+    background-color: #f8f8f6; /* Bootstrap warning color */
+    border-color: #faf9f7;
+    color: #21d8f8;
 }
 
 .btn-danger {
-    background-color: #d9534f;
-    color: white;
+    background-color: #fffdfd; /* Bootstrap danger color */
+    border-color: #fcf9f9;
+    color: #f50909;
 }
 
-.btn-danger:hover {
-    background-color: #c9302c;
+.btn-warning:hover, .btn-danger:hover {
+    opacity: 0.8; /* Slight transparency on hover */
 }
 
-/* Animation keyframes */
-@keyframes dance {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-5px); }
-    100% { transform: translateX(5px); }
-}
-/* Font Awesome icon styling within table buttons */
-.table .btn fa-icon {
-    margin-right: 5px; /* Space between the icon and button text */
-    color: #fff; /* Ensure icon color contrasts with button text */
-  }
-  
-  /* Ensure button colors are correct */
-  .btn-warning {
-    background-color: #07cdff;
-    border-color: #10f742;
-  }
-  
-  .btn-warning fa-icon {
-    color: #000; /* Icon color for warning buttons */
-  }
-  
-  .btn-danger {
-    background-color: #5115f7;
-    border-color: #4516f0;
-  }
-  
-  .btn-danger fa-icon {
-    color: #fff; /* Icon color for danger buttons */
-  }
-  

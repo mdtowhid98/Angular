@@ -47,7 +47,7 @@
       "name": "apple",
       "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
       "stock": 33,
-      "unitprice": 12,
+      "unitprice": 10,
       "quantity": 1
     },
     {
@@ -65,6 +65,36 @@
       "stock": 15,
       "unitprice": 15,
       "quantity": 2
+    },
+    {
+      "id": "54da",
+      "name": "Computer",
+      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+      "unitprice": 40000,
+      "stock": 50
+    },
+    {
+      "id": "eed7",
+      "name": "Tv",
+      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+      "stock": 29,
+      "unitprice": 20000,
+      "quantity": 1
+    },
+    {
+      "id": "4b45",
+      "name": "AC",
+      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+      "stock": 19,
+      "unitprice": 60000,
+      "quantity": 1
+    },
+    {
+      "id": "7b84",
+      "name": "Bike",
+      "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "unitprice": 200000,
+      "stock": 5
     }
   ],
   "sales": [
@@ -297,6 +327,30 @@
           "stock": 15,
           "unitprice": 15,
           "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "e4a5",
+      "customername": "jcfxhd",
+      "salesdate": "2024-08-24",
+      "totalprice": 80000,
+      "product": [
+        {
+          "id": "4b45",
+          "name": "AC",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 19,
+          "unitprice": 60000,
+          "quantity": 1
+        },
+        {
+          "id": "eed7",
+          "name": "Tv",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 29,
+          "unitprice": 20000,
+          "quantity": 1
         }
       ]
     }
