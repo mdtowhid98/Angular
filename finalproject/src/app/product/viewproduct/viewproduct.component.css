@@ -1,0 +1,63 @@
+.container {
+    max-width: 100%;
+    margin: 5px auto;
+    padding: 10px;
+    overflow-x: scroll; /* Enables horizontal scrolling if needed */
+}
+
+.table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse; /* Removes gaps between table cells */
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: center; /* Centers text and content in table cells */
+    border: 1px solid #dee2e6; /* Adds border to table cells */
+    vertical-align: middle; /* Vertically centers content in cells */
+}
+
+.table th {
+    background-color: #f8f9fa; /* Light gray background for table headers */
+    font-weight: bold;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9; /* Adds subtle striping to the table rows */
+}
+
+.table img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    height: 120px;
+    object-fit: cover; /* Ensures the image doesn’t distort */
+    border-radius: 4px; /* Optional: adds rounded corners to the image */
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px; /* Adds some spacing between the icon and text */
+    cursor: pointer;
+}
+
+.btn-warning {
+    background-color: #f8f8f6; /* Bootstrap warning color */
+    border-color: #faf9f7;
+    color: #21d8f8;
+}
+
+.btn-danger {
+    background-color: #fffdfd; /* Bootstrap danger color */
+    border-color: #fcf9f9;
+    color: #f50909;
+}
+
+.btn-warning:hover, .btn-danger:hover {
+    opacity: 0.8; /* Slight transparency on hover */
+}
+

@@ -1,0 +1,80 @@
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line if needed */
+    gap: 10px; /* Optional: Adds space between buttons */
+}
+
+.btn-custom {
+    padding: 30px 50px; /* Adjust padding for appropriate button size */
+    font-size: 1rem; /* Adjust font size if needed */
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    text-align: center;
+    margin: 50px; /* Remove margin */
+}
+
+/* Red Button */
+.btn-red {
+    background-color: #dc3545;
+}
+
+.btn-red:hover {
+    background-color: #c82333;
+}
+
+/* Blue Button */
+.btn-blue {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-blue:hover {
+    background-color: #0e6dcc;
+}
+
+/* Green Button */
+.btn-green {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-green:hover {
+    background-color: #218838;
+}
+
+/* Purple Button */
+.btn-purple {
+    background-color: #6f42c1;
+    color: #fff;
+}
+
+.btn-purple:hover {
+    background-color: #5a32a3;
+}
+
+/* Orange Button */
+.btn-orange {
+    background-color: #fd7e14;
+    color: #fff;
+}
+
+.btn-orange:hover {
+    background-color: #e06b12;
+}
+
+/* Adjust link styles inside buttons */
+.btn-custom a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,246 @@
+/* Container */
+.container {
+    margin-top: 2rem;
+    max-width: 800px;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Header */
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Form Groups */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select {
+    border-radius: 0.25rem;
+  }
+  
+  /* Readonly Inputs */
+  .form-group input[disabled] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+  }
+  
+  /* Product Group */
+  .product-group {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+  }
+  
+ /* Container and Form Styling */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Label Row */
+.d-flex label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+}
+
+/* Product Item Border */
+.mb-3.border {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+/* Button Styling */
+.btn {
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Align Remove and Add Buttons */
+.d-flex.justify-content-between button {
+  min-width: 130px;
+  text-align: center;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .d-flex.justify-content-between {
+    flex-direction: column;
+  }
+
+  .d-flex.justify-content-between button {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+ 
+  
+ 
+  
+
+  
+ 
+  /* Font Awesome icon styling within form */
+.form-group fa-icon {
+  margin-right: 5px; /* Space between icon and label */
+  color: #007bff; /* Adjust color as needed */
+}
+
+.btn fa-icon {
+  margin-right: 5px; /* Space between icon and button text */
+}
+/* Container and Form Styling */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Small Input Fields */
+.small-input .form-control {
+  max-width: 200px; /* Adjust width as needed */
+}
+
+/* Label Row */
+.d-flex label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Product Item Border */
+.mb-3.border {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+/* Button Styling */
+.btn {
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Align Remove and Add Buttons */
+.d-flex.justify-content-between button {
+  min-width: 130px;
+  text-align: center;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .d-flex.justify-content-between {
+    flex-direction: column;
+  }
+
+  .d-flex.justify-content-between button {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .small-input .form-control {
+    max-width: 100%;
+  }
+}
+/* Adjust Product Field to be Larger */
+
+
+/* Adjust the size of the "Sales Date" and "Total Price" input fields */
+.small-input input.form-control {
+  max-width: 200px; /* Adjust this value as needed */
+}
+
+/* Increase the size of the "Product" select box */
+.product-field {
+  flex: 2; /* This will make the Product field larger compared to others */
+}
+
+/* Maintain the size of other fields */
+.flex-fill {
+  flex: 1;
+}
+
+/* Add some right margin to the "Product" select box for better spacing */
+.product-field {
+  margin-right: 16px; /* Adjust this value as needed */
+}
+
+

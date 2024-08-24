@@ -1,0 +1,27 @@
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .nav-link {
+    color: #555;
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .nav-link:hover {
+    color: #007bff;
+  }
+  
+  .dropdown-menu {
+    border-radius: 0;
+  }
+  
+  
