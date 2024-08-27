@@ -37,9 +37,23 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/lib/owlcarousel/assets/owl.carousel.min.css",
+              "src/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/style.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/assets/lib/chart/chart.min.js",
+              "src/assets/lib/easing/easing.min.js",
+              "src/assets/lib/waypoints/waypoints.min.js",
+              "src/assets/lib/owlcarousel/owl.carousel.min.js",
+              "src/assets/lib/tempusdominus/js/moment.min.js",
+              "src/assets/lib/tempusdominus/js/moment-timezone.min.js",
+              "src/assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -107,5 +121,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c287d45f-f870-413b-83d8-886f59f8a010"
   }
 }
