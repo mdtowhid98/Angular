@@ -1,0 +1,38 @@
+
+
+
+<div class="container">
+    <table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Faculty</th>
+        
+        <th>Update</th>
+        <th>Delete</th>
+        
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let ds of departments |async">
+    
+        <td>{{ds.id}}</td>
+        <td>{{ds.name}}</td>
+        
+       
+        <td>{{ds.faculty.name}}</td>
+        
+        <td>
+    <button class="btn btn-warning" >Edit</button>
+    <!-- <button class="btn btn-danger" (click)="deleteStudent(st.id)">Delete</button> -->
+    
+        </td>
+        <td class="btn btn-danger" >Delete</td>
+    
+    </tr>
+    </tbody>
+    
+    </table>
+    
+    </div>

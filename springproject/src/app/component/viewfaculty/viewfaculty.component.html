@@ -1,0 +1,35 @@
+
+
+
+<div class="container">
+<table class="table table-striped">
+<thead>
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Total seat</th>
+    <th>Update</th>
+    <th>Delete</th>
+    
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let ft of faculties |async">
+
+    <td>{{ft.id}}</td>
+    <td>{{ft.name}}</td>
+    <td>{{ft.totalSeat}}</td>
+    <td><button class="btn btn-warning" >Edit</button></td>
+    <td><button class="btn btn-danger" (click)="deleteFaculty(ft.id)">Delete</button></td>
+
+
+
+  
+  
+
+</tr>
+</tbody>
+
+</table>
+
+</div>
