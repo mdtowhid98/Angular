@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CategoryModule } from '../category/category.module';
 
 
 
@@ -16,4 +17,15 @@ export class ProductModule {
   stock!: number
   unitprice!:number
   quantity!:number
+  categories!:CategoryModule[]
+
+  
+  
+    
+  
  }
+ export interface ProductWithCategory extends ProductModule {
+  id:string;
+  categoryname: string;
+}
+

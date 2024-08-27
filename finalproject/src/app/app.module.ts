@@ -22,6 +22,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InvoiceComponent } from './invoice/invoice.component';
+import { CategoryComponent } from './category/category.component';
+import { CreateCategoryComponent } from './create-category/create-category.component';
+
 
 
 
@@ -42,6 +45,8 @@ import { InvoiceComponent } from './invoice/invoice.component';
     NavbarComponent,
     HomeComponent,
     InvoiceComponent,
+    CategoryComponent,
+    CreateCategoryComponent,
     
     
   ],
@@ -62,6 +67,7 @@ import { InvoiceComponent } from './invoice/invoice.component';
     )
 
   ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -33,54 +33,100 @@
       "role": "User"
     }
   ],
+  "category": [
+    {
+      "id": "1",
+      "categoryname": "Electronics"
+    },
+    {
+      "id": "21e4",
+      "categoryname": "Mobiles"
+    },
+    {
+      "id": "20e7",
+      "categoryname": "Vehicles"
+    },
+    {
+      "id": "faf7",
+      "categoryname": "Property"
+    },
+    {
+      "id": "b6c8",
+      "categoryname": "Men's Fashion & Grooming"
+    },
+    {
+      "id": "9e9e",
+      "categoryname": "Women's Fashion & Beauty"
+    },
+    {
+      "id": "9673",
+      "categoryname": "Pet's & Animal's"
+    },
+    {
+      "id": "e4c8",
+      "categoryname": "Hobbies,Sports & Kids"
+    },
+    {
+      "id": "182c",
+      "categoryname": "Education"
+    },
+    {
+      "id": "0491",
+      "categoryname": "Agriculture"
+    }
+  ],
   "products": [
     {
-      "id": "54da",
-      "name": "Computer",
-<<<<<<< HEAD
-      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-      "stock": 49,
-      "unitprice": 40000,
-      "quantity": 1
-=======
-      "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
-      "stock": 43,
-      "unitprice": 40000,
-      "quantity": 5
->>>>>>> decb0434a20a65033cd333e7abf103227e79d7aa
+      "id": "fa04",
+      "name": "fdn",
+      "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "unitprice": 20,
+      "stock": 20,
+      "categories": [
+        {
+          "id": "9e9e",
+          "categoryname": "Women's Fashion & Beauty"
+        }
+      ]
     },
     {
-      "id": "eed7",
-      "name": "Tv",
-<<<<<<< HEAD
-      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-=======
-      "photo": "https://i.postimg.cc/LXKyxXWS/download-2.jpg",
->>>>>>> decb0434a20a65033cd333e7abf103227e79d7aa
-      "stock": 28,
-      "unitprice": 20000,
-      "quantity": 1
+      "id": "da68",
+      "name": "adf",
+      "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "unitprice": 20,
+      "stock": 60,
+      "categories": [
+        {
+          "id": "20e7",
+          "categoryname": "Vehicles"
+        }
+      ]
     },
     {
-      "id": "4b45",
-      "name": "AC",
-<<<<<<< HEAD
-      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-      "stock": 18,
-=======
-      "photo": "https://i.postimg.cc/Z5Xjqn4N/download-3.jpg",
-      "stock": 17,
->>>>>>> decb0434a20a65033cd333e7abf103227e79d7aa
-      "unitprice": 60000,
-      "quantity": 1
+      "id": "c29d",
+      "name": "tvf",
+      "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "unitprice": 40,
+      "stock": 20,
+      "categories": [
+        {
+          "id": "1",
+          "categoryname": "Electronics"
+        }
+      ]
     },
     {
-      "id": "7b84",
-      "name": "Bike",
-      "photo": "https://i.postimg.cc/Y9zx8xgN/download-4.jpg",
-      "stock": 2,
-      "unitprice": 200000,
-      "quantity": 1
+      "id": "ba19",
+      "name": "ew",
+      "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+      "unitprice": 10,
+      "stock": 2000,
+      "categories": [
+        {
+          "id": "faf7",
+          "categoryname": "Property"
+        }
+      ]
     }
   ],
   "sales": [
@@ -317,137 +363,197 @@
       ]
     },
     {
-      "id": "e4a5",
-      "customername": "jcfxhd",
-      "salesdate": "2024-08-24",
-      "totalprice": 80000,
+      "id": "4a09",
+      "customername": "gushu",
+      "salesdate": "2024-08-25",
+      "totalprice": 10,
       "product": [
         {
-          "id": "4b45",
+          "id": "ab97",
           "name": "AC",
           "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-          "stock": 19,
-          "unitprice": 60000,
+          "stock": 57,
+          "unitprice": 5,
           "quantity": 1
         },
         {
-          "id": "eed7",
-          "name": "Tv",
-          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-          "stock": 29,
-          "unitprice": 20000,
-          "quantity": 1
-        }
-      ]
-    },
-    {
-<<<<<<< HEAD
-      "id": "4a5d",
-      "customername": "Kutub",
-      "salesdate": "2024-08-24",
-      "totalprice": 120000,
-      "product": [
-        {
-          "id": "eed7",
-          "name": "Tv",
-          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-          "stock": 28,
-          "unitprice": 20000,
-          "quantity": 1
-=======
-      "id": "ee6d",
-      "customername": "raju",
-      "salesdate": "2024-08-24",
-      "totalprice": 520000,
-      "product": [
-        {
-          "id": "7b84",
-          "name": "Bike",
+          "id": "ee26",
+          "name": "sfdf",
           "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
-          "stock": 3,
-          "unitprice": 200000,
+          "stock": 57,
+          "unitprice": 5,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "4150",
+      "customername": "gushu",
+      "salesdate": "2024-08-25",
+      "totalprice": 12,
+      "product": [
+        {
+          "id": "cd13",
+          "name": "rsdf",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 57,
+          "unitprice": 12,
+          "quantity": 1
+        },
+        {}
+      ]
+    },
+    {
+      "id": "445a",
+      "customername": "gushu",
+      "salesdate": "2024-08-25",
+      "totalprice": 36,
+      "product": [
+        {
+          "id": "338f",
+          "name": "Appledc",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 56,
+          "unitprice": 12,
           "quantity": 2
->>>>>>> decb0434a20a65033cd333e7abf103227e79d7aa
         },
         {
-          "id": "4b45",
-          "name": "AC",
+          "id": "338f",
+          "name": "Appledc",
           "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-          "stock": 18,
-          "unitprice": 60000,
-          "quantity": 1
-        },
-        {
-<<<<<<< HEAD
-=======
-          "id": "eed7",
-          "name": "Tv",
-          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-          "stock": 28,
-          "unitprice": 20000,
-          "quantity": 1
-        },
-        {
->>>>>>> decb0434a20a65033cd333e7abf103227e79d7aa
-          "id": "54da",
-          "name": "Computer",
-          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
-          "stock": 49,
-          "unitprice": 40000,
-          "quantity": 1
-        }
-      ]
-<<<<<<< HEAD
-=======
-    },
-    {
-      "id": "b2bf",
-      "customername": "towhid",
-      "salesdate": "2024-08-24",
-      "totalprice": 300000,
-      "product": [
-        {
-          "id": "54da",
-          "name": "Computer",
-          "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
-          "stock": 48,
-          "unitprice": 40000,
-          "quantity": 1
-        },
-        {
-          "id": "4b45",
-          "name": "AC",
-          "photo": "https://i.postimg.cc/Z5Xjqn4N/download-3.jpg",
-          "stock": 17,
-          "unitprice": 60000,
-          "quantity": 1
-        },
-        {
-          "id": "7b84",
-          "name": "Bike",
-          "photo": "https://i.postimg.cc/Y9zx8xgN/download-4.jpg",
-          "stock": 2,
-          "unitprice": 200000,
+          "stock": 55,
+          "unitprice": 12,
           "quantity": 1
         }
       ]
     },
     {
-      "id": "e92f",
-      "customername": "yitr",
-      "salesdate": "2024-08-24",
-      "totalprice": 200000,
+      "id": "161e",
+      "customername": "Oppo",
+      "salesdate": "2024-08-25",
+      "totalprice": 27,
       "product": [
         {
-          "id": "54da",
-          "name": "Computer",
-          "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
-          "stock": 43,
-          "unitprice": 40000,
-          "quantity": 5
+          "id": "a0b7",
+          "name": "gujowk",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 57,
+          "unitprice": 5,
+          "quantity": 1
+        },
+        {
+          "id": "ee26",
+          "name": "sfdf",
+          "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+          "stock": 55,
+          "unitprice": 5,
+          "quantity": 2
+        },
+        {
+          "id": "611c",
+          "name": "vcjhn",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 57,
+          "unitprice": 12,
+          "quantity": 1
         }
       ]
->>>>>>> decb0434a20a65033cd333e7abf103227e79d7aa
+    },
+    {
+      "id": "d561",
+      "customername": "tyu",
+      "salesdate": "2024-08-26",
+      "totalprice": 10,
+      "product": [
+        {
+          "id": "3d92",
+          "name": "Potato",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 57,
+          "unitprice": 5,
+          "quantity": 1
+        },
+        {
+          "id": "6b2a",
+          "name": "Ac",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 57,
+          "unitprice": 5,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "7bc6",
+      "customername": "joipko",
+      "salesdate": "2024-08-26",
+      "totalprice": 17,
+      "product": [
+        {
+          "id": "0263",
+          "name": "Hilsa",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 57,
+          "unitprice": 5,
+          "quantity": 1
+        },
+        {
+          "id": "f556",
+          "name": "Orange",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 57,
+          "unitprice": 12,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "8867",
+      "customername": "Kutub",
+      "salesdate": "2024-08-26",
+      "totalprice": 12,
+      "product": [
+        {
+          "id": "2cf7",
+          "name": "apple",
+          "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg",
+          "stock": 57,
+          "unitprice": 12,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "d23f",
+      "customername": "fgygy",
+      "salesdate": "2024-08-26",
+      "totalprice": 12,
+      "product": [
+        {
+          "id": "8fbf",
+          "name": "Rice",
+          "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+          "stock": 57,
+          "unitprice": 12,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "210b",
+      "customername": "gushu",
+      "salesdate": "2024-08-26",
+      "totalprice": 5,
+      "product": [
+        {
+          "id": "b384",
+          "name": "rui",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 57,
+          "unitprice": 5,
+          "quantity": 1
+        }
+      ]
     }
   ]
 }

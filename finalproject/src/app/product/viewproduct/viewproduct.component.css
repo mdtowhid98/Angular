@@ -1,63 +1,166 @@
-.container {
-    max-width: 100%;
-    margin: 5px auto;
-    padding: 10px;
-    overflow-x: scroll; /* Enables horizontal scrolling if needed */
+/* Container for the entire view */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.table {
-    width: 100%;
-    table-layout: auto;
-    border-collapse: collapse; /* Removes gaps between table cells */
+/* Dropdown button styling */
+.category-dropdown {
+  margin-bottom: 50px;
+  position: relative;
 }
 
-.table th, .table td {
-    padding: 12px;
-    text-align: center; /* Centers text and content in table cells */
-    border: 1px solid #dee2e6; /* Adds border to table cells */
-    vertical-align: middle; /* Vertically centers content in cells */
+.category-dropdown button {
+  background-color: #28a745;
+  color: rgb(50, 235, 210);
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
-.table th {
-    background-color: #f8f9fa; /* Light gray background for table headers */
-    font-weight: bold;
+.category-dropdown button:hover {
+  background-color: #218838;
 }
 
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f9f9f9; /* Adds subtle striping to the table rows */
+/* Dropdown menu styling */
+.category-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 5px;
 }
 
-.table img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 120px;
-    height: 120px;
-    object-fit: cover; /* Ensures the image doesn’t distort */
-    border-radius: 4px; /* Optional: adds rounded corners to the image */
+.category-dropdown .dropdown-menu.show {
+  display: block;
 }
 
-.btn {
-    display: inline-flex;
-    align-items: center;
+.category-dropdown .dropdown-menu a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.category-dropdown .dropdown-menu a:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+
+/* Dropdown arrow */
+.category-dropdown button::after {
+  content: '▼';
+  font-size: 12px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* Optional: Additional styling for active or selected item */
+.category-dropdown .dropdown-menu a.active,
+.category-dropdown .dropdown-menu a.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+
+/* Product container styling */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Individual product card styling */
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition */
+  will-change: transform; /* Hint to browser for better performance */
+  margin: 10px 0; /* Added margin to prevent jumping */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Product image styling */
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Product name styling */
+.product-card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Product price and stock styling */
+.product-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Buttons styling */
+.product-card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.product-card .btn-primary {
+  background-color: #007bff;
+}
+
+.product-card .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.product-card .btn-danger {
+  background-color: #dc3545;
+}
+
+.product-card .btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Category header styling */
+.category-section h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .product-container {
     justify-content: center;
-    gap: 4px; /* Adds some spacing between the icon and text */
-    cursor: pointer;
-}
+  }
 
-.btn-warning {
-    background-color: #f8f8f6; /* Bootstrap warning color */
-    border-color: #faf9f7;
-    color: #21d8f8;
+  .product-card {
+    max-width: 100%;
+  }
 }
-
-.btn-danger {
-    background-color: #fffdfd; /* Bootstrap danger color */
-    border-color: #fcf9f9;
-    color: #f50909;
-}
-
-.btn-warning:hover, .btn-danger:hover {
-    opacity: 0.8; /* Slight transparency on hover */
-}
-

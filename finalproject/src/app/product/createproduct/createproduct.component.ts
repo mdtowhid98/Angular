@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductModule } from '../../module/product/product.module';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from '../../service/product.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { faPlusCircle, faTag, faImage, faDollarSign, faBoxes } from '@fortawesome/free-solid-svg-icons';
+import { CategoryModule } from '../../module/category/category.module';
+import { CategoryService } from '../../service/category.service';
 
 @Component({
   selector: 'app-createproduct',
   templateUrl: './createproduct.component.html',
-  styleUrl: './createproduct.component.css'
+  styleUrls: ['./createproduct.component.css'] // Note: Corrected the typo here
 })
-export class CreateproductComponent implements OnInit{
-
+export class CreateproductComponent implements OnInit {
+  categories: CategoryModule[] = [];
   product: ProductModule = new ProductModule();
   formValue!: FormGroup;
-  productData: any;
 
   faPlusCircle = faPlusCircle;
   faTag = faTag;
@@ -25,25 +26,48 @@ export class CreateproductComponent implements OnInit{
 
   constructor(
     private productService: ProductService,
+    private categoryService: CategoryService,
     private router: Router,
     private httpClient: HttpClient,
     private formBuilder: FormBuilder
-  ) { }
+  ) {}
 
   ngOnInit(): void {
+    this.loadCategory();
     this.formValue = this.formBuilder.group({
-      name: [''],
-      photo: [''],
-      unitprice: [''],
-      stock: ['']
+      name: ['', Validators.required],
+      photo: ['', Validators.required],
+      stock: [0, [Validators.required, Validators.min(0)]],
+      unitprice: [0, [Validators.required, Validators.min(0)]],
+      category: [null, Validators.required], // Updated to be a single value
+    });
+  }
+
+  loadCategory() {
+    this.categoryService.getAllCategoryForProduct().subscribe({
+      next: res => {
+        this.categories = res;
+        console.log('Categories loaded:', this.categories); // Debug statement
+      },
+      error: error => {
+        console.log(error);
+      }
     });
   }
 
   createProduct() {
+    const selectedCategory = this.formValue.value.category;
+
+    if (!selectedCategory) {
+      alert('Please select a category.');
+      return;
+    }
+
     this.product.name = this.formValue.value.name;
     this.product.photo = this.formValue.value.photo;
     this.product.unitprice = this.formValue.value.unitprice;
     this.product.stock = this.formValue.value.stock;
+    this.product.categories = [selectedCategory]; // Wrap in array if needed
 
     this.productService.getAllProductForSales().subscribe({
       next: (products) => {
@@ -52,7 +76,6 @@ export class CreateproductComponent implements OnInit{
         );
 
         if (existingProduct) {
-          // If the product already exists, update its stock
           existingProduct.stock += this.product.stock;
           this.productService.updateProducts(existingProduct).subscribe({
             next: (res) => {
@@ -65,7 +88,6 @@ export class CreateproductComponent implements OnInit{
             }
           });
         } else {
-          // If the product does not exist, create a new one
           this.productService.createProduct(this.product).subscribe({
             next: (res) => {
               console.log('Product created', res);

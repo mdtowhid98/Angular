@@ -14,6 +14,8 @@ import { authGuard } from './loginregistration/auth.guard';
 import { RoleGuard } from './loginregistration/role.guard';
 import { HomeComponent } from './home/home.component';
 import { InvoiceComponent } from './invoice/invoice.component';
+import { CategoryComponent } from './category/category.component';
+import { CreateCategoryComponent } from './create-category/create-category.component';
 
 const routes: Routes = [
   {path:"viewproduct",component:ViewproductComponent},
@@ -27,6 +29,8 @@ const routes: Routes = [
   {path:"reg",component:RegistrationComponent},
   {path:"home",component:HomeComponent},
   {path:"invoice",component:InvoiceComponent},
+  {path:"viewCategory",component:CategoryComponent},
+  {path:"createCategory",component:CreateCategoryComponent},
   {
     path: 'userprofile',
     component: UserprofileComponent,

@@ -1,0 +1,27 @@
+
+
+
+<div class="container">
+<table class="table table-striped">
+<thead>
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    
+    
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let category of categories |async">
+
+    <td>{{category.id}}</td>
+    <td>{{category.categoryname}}</td>
+    
+   
+
+</tr>
+</tbody>
+
+</table>
+
+</div>

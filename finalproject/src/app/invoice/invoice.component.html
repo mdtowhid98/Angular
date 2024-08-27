@@ -23,7 +23,7 @@
         <label for="saleSelect">Select Sale</label>
         <select id="saleSelect" formControlName="saleId" class="form-control">
           <option *ngFor="let sale of sales" [value]="sale.id">
-            ({{ sale.id }})-{{ sale.customername }} - {{ sale.salesdate | date }}
+            {{ sale.id }} - {{ sale.salesdate | date }}
           </option>
         </select>
       </div>
