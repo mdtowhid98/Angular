@@ -2,12 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ViewfacultyComponent } from './component/viewfaculty/viewfaculty.component';
 import { CreatefacultyComponent } from './component/createfaculty/createfaculty.component';
-import { ViewdepartmentComponent } from './component/department/viewdepartment/viewdepartment.component';
+import { ViewDepartmentComponent } from './component/depaerment/view-department/view-department.component';
+import { CreateDepartmentComponent } from './component/depaerment/create-department/create-department.component';
+
 
 const routes: Routes = [
   {path:"viewFaculty",component:ViewfacultyComponent},
   {path:"createFaculty",component:CreatefacultyComponent},
-  {path:"viewDepartment",component:ViewdepartmentComponent},
+  {path:"viewDepartment",component:ViewDepartmentComponent},
+  {path:"createDepartment",component:CreateDepartmentComponent},
+
 ];
 
 @NgModule({

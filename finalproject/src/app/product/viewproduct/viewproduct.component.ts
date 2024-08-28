@@ -47,25 +47,33 @@ export class ViewproductComponent implements OnInit {
 
   loadProducts(): void {
     this.productService.getProduct().subscribe((data: ProductModule[]) => {
+      console.log('Received products data:', data); // Log the data for inspection
       this.groupProductsByCategory(data);
       this.filteredProducts = this.getAllProducts(); // Initially display all products
     });
   }
+  
 
   groupProductsByCategory(products: ProductModule[]): void {
     this.productsByCategory = {};
-
+  
     products.forEach(product => {
       const categories = Array.isArray(product.categories) ? product.categories : [product.categories];
+  
       categories.forEach(category => {
-        if (!this.productsByCategory[category.categoryname]) {
-          this.productsByCategory[category.categoryname] = [];
+        if (category && category.categoryname) { // Check if category and categoryname exist
+          if (!this.productsByCategory[category.categoryname]) {
+            this.productsByCategory[category.categoryname] = [];
+          }
+          const productWithCategory: ProductWithCategory = { ...product, categoryname: category.categoryname };
+          this.productsByCategory[category.categoryname].push(productWithCategory);
+        } else {
+          console.warn('Category or categoryname is undefined for product:', product);
         }
-        const productWithCategory: ProductWithCategory = { ...product, categoryname: category.categoryname };
-        this.productsByCategory[category.categoryname].push(productWithCategory);
       });
     });
   }
+  
 
   getAllProducts(): ProductWithCategory[] {
     return Object.values(this.productsByCategory).flat();

@@ -1,0 +1,34 @@
+
+
+
+<div class="container">
+    <table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Faculty Name</th>
+        
+        
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let st of departments |async">
+    
+        <td>{{st.id}}</td>
+        <td>{{st.name}}</td>
+        <td>{{st.faculty.name}}</td>
+       
+        
+        <td>
+    <button class="btn btn-warning" >Edit</button>
+    <button class="btn btn-danger" >Delete</button>
+    
+        </td>
+    
+    </tr>
+    </tbody>
+    
+    </table>
+    
+    </div>

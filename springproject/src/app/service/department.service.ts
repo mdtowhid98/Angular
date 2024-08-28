@@ -20,7 +20,7 @@ export class DepartmentService {
 
   createDepartment(department:departmentModel):Observable<departmentModel>{
 
-    return this.httpClient.post<departmentModel>(this.baseUrl,department);
+    return this.httpClient.post<departmentModel>(this.baseUrl+"save",department);
   }
 
 }

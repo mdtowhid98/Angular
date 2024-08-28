@@ -18,8 +18,6 @@ import { SalesModule } from '../../module/sales/sales.module';
 export class CreatesalesComponent implements OnInit {
 
   products: ProductModule[] = [];
-  categories: any[] = [];
-  filteredProducts: ProductModule[] = [];
   salesForm!: FormGroup;
   sale: SalesModule = new SalesModule();
   
@@ -37,20 +35,19 @@ export class CreatesalesComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private salesService: SalesService,
-    private categoryService: CategoryService,
     private formBuilder: FormBuilder,
     private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.loadCategories();
-    this.loadProducts();
+    this.loadProduct();
 
+    // Set the current date
     const currentDate = new Date().toISOString().substring(0, 10); // Format as YYYY-MM-DD
 
     this.salesForm = this.formBuilder.group({
       customername: ['', Validators.required],
-      salesdate: [currentDate, Validators.required],
+      salesdate: [currentDate, Validators.required], // Set current date here
       products: this.formBuilder.array([]),
       totalprice: [{ value: '' }]
     });
@@ -65,78 +62,59 @@ export class CreatesalesComponent implements OnInit {
     return this.salesForm.get('products') as FormArray;
   }
 
-  loadCategories() {
-    this.categoryService.getCategories().subscribe({
-      next: res => {
-        this.categories = res;
-      },
-      error: error => {
-        console.log(error);
-      }
-    });
-  }
-
-  loadProducts() {
+  loadProduct() {
     this.productService.getAllProductForSales().subscribe({
       next: res => {
         this.products = res;
-        this.filteredProducts = res; // Initialize filtered products
       },
       error: error => {
         console.log(error);
       }
     });
-  }
-
-  filterProductsByCategory(categoryId: string) {
-    if (categoryId) {
-      this.filteredProducts = this.products.filter(product => product.categoryIds.includes(categoryId));
-    } else {
-      this.filteredProducts = this.products;
-    }
   }
 
   addProduct() {
     const productGroup = this.formBuilder.group({
       id: ['', undefined],
       name: ['', Validators.required],
-      quantity: [{ value: 0, disabled: true }, Validators.required],
+      quantity: [{ value: 0, disabled: true }, Validators.required], // Start with quantity disabled
       unitprice: [{ value: 0, disabled: true }],
       stock: [{ value: 0, disabled: true }],
     });
 
     productGroup.get('name')?.valueChanges.subscribe(name => {
-      const selectedProduct = this.filteredProducts.find(prod => prod.name === name);
+      const selectedProduct = this.products.find(prod => prod.name === name);
       if (selectedProduct) {
         const oldStock = selectedProduct.stock;
         if (oldStock > 0) {
           productGroup.patchValue({
             id: selectedProduct.id,
             unitprice: selectedProduct.unitprice,
-            stock: oldStock
+            stock: oldStock // Set the current stock
           });
-          productGroup.get('quantity')?.enable();
+          productGroup.get('quantity')?.enable(); // Enable quantity input if stock is available
         } else {
           alert(`The product ${selectedProduct.name} is out of stock!`);
           productGroup.patchValue({
             id: selectedProduct.id,
             unitprice: selectedProduct.unitprice,
             stock: oldStock,
-            quantity: 0
+            quantity: 0 // Reset quantity to 0
           });
-          productGroup.get('quantity')?.disable();
+          productGroup.get('quantity')?.disable(); // Disable quantity input if out of stock
         }
         this.calculateTotalPrice();
+
       }
     });
 
     productGroup.get('quantity')?.valueChanges.subscribe(quantity => {
       const stock = productGroup.get('stock')?.value || 0;
-      const quantityValue = quantity ?? 0;
+      const quantityValue = quantity ?? 0; // Use 0 as the default if quantity is null
     
       if (quantityValue > stock) {
         alert(`The selected quantity exceeds the available stock of ${stock}. Please reduce the quantity.`);
-        productGroup.patchValue({ quantity: stock });
+        productGroup.patchValue({ quantity: stock }); // Set quantity to the maximum available stock
       }
     
       this.calculateTotalPrice();
@@ -168,20 +146,22 @@ export class CreatesalesComponent implements OnInit {
     this.sale.product = this.salesForm.value.products.map((product: any) => {
       const originalProduct = this.products.find(p => p.id === product.id);
       if (originalProduct) {
-        originalProduct.stock -= product.quantity;
+        originalProduct.stock -= product.quantity; // Adjust the stock based on the quantity sold
       }
       return {
         id: originalProduct?.id,
         name: originalProduct?.name,
         photo: originalProduct?.photo,
-        stock: originalProduct?.stock,
+        stock: originalProduct?.stock, // Updated stock
         unitprice: originalProduct?.unitprice,
         quantity: product.quantity
       };
     });
 
+    // Create the sales order
     this.salesService.createSales(this.sale).subscribe({
       next: res => {
+        // After successful creation of the sales order, update product stock
         this.sale.product.forEach(prod => {
           this.productService.updateProducts(prod).subscribe({
             next: () => {
@@ -193,6 +173,7 @@ export class CreatesalesComponent implements OnInit {
           });
         });
 
+        // Reset the form and navigate
         this.salesForm.reset();
         this.router.navigate(['viewsales']);
       },

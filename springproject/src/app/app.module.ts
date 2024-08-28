@@ -7,16 +7,20 @@ import { ViewfacultyComponent } from './component/viewfaculty/viewfaculty.compon
 import { CreatefacultyComponent } from './component/createfaculty/createfaculty.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-import { ViewdepartmentComponent } from './component/department/viewdepartment/viewdepartment.component';
-import { CreatedepartmentComponent } from './component/department/createdepartment/createdepartment.component';
+import { ViewDepartmentComponent } from './component/depaerment/view-department/view-department.component';
+import { CreateDepartmentComponent } from './component/depaerment/create-department/create-department.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewfacultyComponent,
     CreatefacultyComponent,
-    ViewdepartmentComponent,
-    CreatedepartmentComponent
+    ViewDepartmentComponent,
+    CreateDepartmentComponent,
+   
+    
   ],
   imports: [
     BrowserModule,

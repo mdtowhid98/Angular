@@ -25,24 +25,5 @@ constructor(private facultyService:FacultyService,
     this.faculties=this.facultyService.getAllFaculty();
   }
 
-  deleteFaculty(id:number){
-    this.facultyService.deleteFaculty(id)
-    .subscribe({
-    next:res=>{
-      this.faculties=this.facultyService.getAllFaculty();
-      this.router.navigate(['viewFaculty']);
-    },
-    error:error=>{
-    
-      console.log(error);
-    }
-    
-    });
-    
-      }
-    
-      updateFaculty(id:number){
-    
-        this.router.navigate(['/updateFaculty',id]);
-      }
+ 
 }

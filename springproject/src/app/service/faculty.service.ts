@@ -37,18 +37,18 @@ return throwError(()=>new Error('test'));
     return this.httpClient.post<facultyModel>(this.baseUrl+"save",faculty);
    }
 
-   deleteFaculty(id:number):Observable<any>{
+  //  deleteFaculty(id:number):Observable<any>{
 
-    return this.httpClient.delete(this.baseUrl+"delete"+id);
-  }
+  //   return this.httpClient.delete(this.baseUrl+"delete"+id);
+  // }
 
-  updateFaculty(id:number,faculty:facultyModel):Observable<any>{
+  // updateFaculty(id:number,faculty:facultyModel):Observable<any>{
 
-    return this.httpClient.put(this.baseUrl+"update"+id,faculty);
-  }
+  //   return this.httpClient.put(this.baseUrl+"update"+id,faculty);
+  // }
 
-  getFacultyById(id:number):Observable<any>{
+  // getFacultyById(id:number):Observable<any>{
 
-    return this.httpClient.get(this.baseUrl+id);
-  }
+  //   return this.httpClient.get(this.baseUrl+id);
+  // }
 }

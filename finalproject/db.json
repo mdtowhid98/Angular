@@ -93,21 +93,16 @@
       "id": "da68",
       "name": "adf",
       "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "stock": 58,
       "unitprice": 20,
-      "stock": 60,
-      "categories": [
-        {
-          "id": "20e7",
-          "categoryname": "Vehicles"
-        }
-      ]
+      "quantity": 2
     },
     {
       "id": "c29d",
       "name": "tvf",
       "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
       "unitprice": 40,
-      "stock": 20,
+      "stock": 200,
       "categories": [
         {
           "id": "1",
@@ -119,12 +114,59 @@
       "id": "ba19",
       "name": "ew",
       "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+      "stock": 1995,
       "unitprice": 10,
-      "stock": 2000,
+      "quantity": 5
+    },
+    {
+      "id": "59d7",
+      "name": "sdf",
+      "photo": "https://i.postimg.cc/Y9zx8xgN/download-4.jpg",
+      "unitprice": 50,
+      "stock": 100,
       "categories": [
         {
-          "id": "faf7",
-          "categoryname": "Property"
+          "id": "b6c8",
+          "categoryname": "Men's Fashion & Grooming"
+        }
+      ]
+    },
+    {
+      "id": "0b08",
+      "name": "tsd",
+      "photo": "https://i.postimg.cc/wTf0SFr0/240-F-169179154-z-PZAk-C8-R6sn5-U17-HQWNXt-AD1-Q8-U7-Nt3-D.jpg",
+      "unitprice": 1,
+      "stock": 50,
+      "categories": [
+        {
+          "id": "9673",
+          "categoryname": "Pet's & Animal's"
+        }
+      ]
+    },
+    {
+      "id": "606b",
+      "name": "asf",
+      "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
+      "unitprice": 42,
+      "stock": 20,
+      "categories": [
+        {
+          "id": "0491",
+          "categoryname": "Agriculture"
+        }
+      ]
+    },
+    {
+      "id": "b41f",
+      "name": "gd",
+      "photo": "https://i.postimg.cc/wTf0SFr0/240-F-169179154-z-PZAk-C8-R6sn5-U17-HQWNXt-AD1-Q8-U7-Nt3-D.jpg",
+      "unitprice": 5,
+      "stock": 20,
+      "categories": [
+        {
+          "id": "0491",
+          "categoryname": "Agriculture"
         }
       ]
     }
@@ -552,6 +594,30 @@
           "stock": 57,
           "unitprice": 5,
           "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "d556",
+      "customername": "yitr",
+      "salesdate": "2024-08-28",
+      "totalprice": 90,
+      "product": [
+        {
+          "id": "ba19",
+          "name": "ew",
+          "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+          "stock": 1995,
+          "unitprice": 10,
+          "quantity": 5
+        },
+        {
+          "id": "da68",
+          "name": "adf",
+          "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+          "stock": 58,
+          "unitprice": 20,
+          "quantity": 2
         }
       ]
     }
