@@ -1,0 +1,37 @@
+
+
+
+<div class="container">
+<table class="table table-striped">
+<thead>
+<tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>cellNo</th>
+    <th>Location</th>
+    <th>Action</th>
+    
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let st of students |async">
+
+    <td>{{st.id}}</td>
+    <td>{{st.name}}</td>
+    <td>{{st.email}}</td>
+    <td>{{st.cellNo}}</td>
+    <td>{{st.location.name}}</td>
+    
+    <td>
+<button class="btn btn-warning" (click)="editStudent(st)">Edit</button>
+<button class="btn btn-danger" (click)="deleteStudent(st.id)">Delete</button>
+
+    </td>
+
+</tr>
+</tbody>
+
+</table>
+
+</div>

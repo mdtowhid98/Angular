@@ -1,0 +1,65 @@
+<div class="create-product-container">
+  <h2>Create New Product</h2>
+
+  <form [formGroup]="formValue" (ngSubmit)="createProduct()">
+    <div class="form-group">
+      <label for="name">
+        <fa-icon [icon]="faTag"></fa-icon> Product Name
+      </label>
+      <input id="name" formControlName="name" class="form-control" />
+      <div *ngIf="formValue.get('name')?.invalid && formValue.get('name')?.touched">
+        Product name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="photo">
+        <fa-icon [icon]="faImage"></fa-icon> Photo URL
+      </label>
+      <input id="photo" formControlName="photo" class="form-control" />
+      <div *ngIf="formValue.get('photo')?.invalid && formValue.get('photo')?.touched">
+        Photo URL is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="unitprice">
+        <fa-icon [icon]="faDollarSign"></fa-icon> Unit Price
+      </label>
+      <input id="unitprice" type="number" formControlName="unitprice" class="form-control" />
+      <div *ngIf="formValue.get('unitprice')?.invalid && formValue.get('unitprice')?.touched">
+        Unit price must be a non-negative number.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="stock">
+        <fa-icon [icon]="faBoxes"></fa-icon> Stock
+      </label>
+      <input id="stock" type="number" formControlName="stock" class="form-control" />
+      <div *ngIf="formValue.get('stock')?.invalid && formValue.get('stock')?.touched">
+        Stock must be a non-negative number.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Select Category</label>
+      <div *ngFor="let category of categories" class="category-option">
+        <input
+          type="radio"
+          formControlName="category"
+          [value]="category"
+          [id]="category.id"
+        />
+        <label [for]="category.id">{{ category.categoryname }}</label>
+      </div>
+      <div *ngIf="formValue.get('category')?.invalid && formValue.get('category')?.touched">
+        Please select a category.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="formValue.invalid">
+      <fa-icon [icon]="faPlusCircle"></fa-icon> Create Product
+    </button>
+  </form>
+</div>

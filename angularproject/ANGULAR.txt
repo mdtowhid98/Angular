@@ -1,0 +1,122 @@
+Node JS
+=======
+First install node-js
+node --version (for checking node version that installed on your computer)
+npm (install in the directory)
+npm -v (For checking npm version)
+
+
+Angular JS ========https://angular.dev/api
+==========
+npm install -g @angular/cli (For install angular)
+ng v (For checking angular version)
+npm fund 
+ctrl+shift+c (For copying from cmd)
+=====================================================
+================================================================
+ng new projectname (For create a new project where you install)
+ng serve or ng s (For start)
+ctrl+c (For close)
+================================================================
+\\\\\\\\\\\\
+npm install -g @angular/cli
+----------bash-------------
+ng new angular-crud-json
+cd angular-crud-json
+----------------------
+npm install -g json-server
+Create a JSON File: db.json
+Run JSON Server: json-server --watch db.json,  json-server --watch AddNewEmployer.json
+Generate Angular Components and Services: ng generate service item
+----------bash(git bash)--------
+ng generate component item-list
+ng generate component item-add
+ng generate component item-edit
+ng generate component item-view
+-------------------------------
+Configure Angular Service: item.service.ts
+Update Components: 
+		item-list.component.ts
+		item-add.component.ts:
+		item-edit.component.ts:
+		item-view.component.ts:
+Set Up Routing:	app-routing.module.ts
+Update HTML Templates: 
+		item-list.component.html:
+		item-add.component.html:
+		item-edit.component.html:
+		item-view.component.html:
+
+Run the Angular Application: ng serve
+Open your browser and navigate to: http://localhost:4200
+		
+\\\\\\\\\\\\\\\
+
+
+If error run the command (powershell Set-ExecutionPolicy RemoteSigned)
+
+
+npm i bootstrap@5.3.3 (add bootstrap npm from bootstrap website)
+add css source under the build:
+		src/styles.css
+		node_modules/bootstrap/dist/css/bootstrap.min.css
+		node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
+
+
+ng new myangularproject --no-standalone (project folder)
+
+============================================
+ng new myangularproject --standalone false
+ng g c student (For make a new component)
+ng new component --standalone projectname false/true
+====================================================
+
+npm install -g json-server (For installing json server on the project)
+manually create a db.json file
+Component: ng g c name
+Service: ng g s name
+
+
+
+=================================================================================
+=================================================================================
+=========================Angular Project Behevior================================
+=================================================================================
+=================================================================================
+---Again For json with bootstrap
+Create a project:-------------------> ng new myangularproject --no-standalone
+Create a JSON File:-----------------> db.json
+Install json server:----------------> npm install -g json-server
+Run json server:--------------------> json-server --watch db.json
+Create service for controller----> ng g s name
+Create component for view----------> ng g c name
+Install boostrap:-------------> npm i bootstrap@5.3.3
+npm install --save font-awesome angular-font-awesome
+
+For error: npm audit fix or npm audit fix --force
+ng analytics disable
+
+
+---Again For no-json with bootstrap
+Create a project:-------------------> ng new myangularproject --no-standalone
+Create a JSON File:-----------------> db.json
+Install json server:----------------> npm install -g json-server
+Run json server:--------------------> json-server --watch db.json
+Create service for controller-------> ng g s name
+Create component for view-----------> ng g c name
+
+important file for angular:
+***service file configure the json server and crud
+***
+
+
+--Angular(MVC)
+Component------>Service---->M(Service)
+HTML----------->Component-->V(View)
+Service-------->URL-------->C(controller)
+
+=================================================================================
+=================================================================================
+=================================================================================
+=================================================================================
+=================================================================================

@@ -1,0 +1,18 @@
+.chart-container {
+    position: relative;
+    width: 100%; /* Takes up the full width of its parent */
+    max-width: 600px; /* Optional: Limit the maximum width */
+    height: 400px; /* Set a fixed height */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Optional: Add some padding around the chart */
+    background-color: #f9f9f9; /* Optional: Background color */
+    border: 1px solid #ddd; /* Optional: Border around the container */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
+
+/* Optional: Adjust the canvas inside the container */
+.chart-container canvas {
+    width: 100% !important; /* Ensure the chart takes up full width */
+    height: 100% !important; /* Ensure the chart takes up full height */
+}

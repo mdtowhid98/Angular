@@ -1,0 +1,50 @@
+/* Container for the profile */
+.container {
+    margin-top: 20px; /* Adjust margin as needed */
+    max-width: 600px; /* Optional: set a max-width for the container */
+    padding: 20px; /* Add padding around the content */
+    border: 1px solid #ddd; /* Optional: add a border */
+    border-radius: 5px; /* Optional: round the corners of the border */
+    background-color: #f9f9f9; /* Optional: add a background color */
+  }
+  
+  /* Style for the profile heading */
+  .container h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    color: #333; /* Adjust text color */
+  }
+  
+  /* Style for profile paragraphs */
+  .container p {
+    margin-bottom: 15px; /* Space below paragraphs */
+    font-size: 1rem; /* Adjust font size as needed */
+    color: #555; /* Adjust text color */
+  }
+  
+  /* Style for the icons in the profile */
+  .container fa-icon {
+    color: #007bff; /* Set icon color */
+    font-size: 1.2rem; /* Adjust icon size */
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  /* Style for the profile image */
+  .img-fluid {
+    border-radius: 5px; /* Optional: round the corners of the image */
+    border: 1px solid #ddd; /* Optional: add a border around the image */
+    margin-top: 10px; /* Space above the image */
+    max-width: 100%; /* Ensure the image does not overflow the container */
+  }
+  
+  /* Style for loading message */
+  .container p fa-icon {
+    font-size: 1.2rem; /* Adjust spinner size */
+    color: #007bff; /* Set spinner color */
+  }
+  
+  /* Optional: Add hover effects for text */
+  .container p:hover {
+    color: #0056b3; /* Change text color on hover */
+  }
+  

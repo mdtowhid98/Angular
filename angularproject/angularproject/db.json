@@ -1,0 +1,69 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "Raju ahmed",
+      "email": "raju@gmail.com",
+      "password": "123456",
+      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg"
+    },
+    {
+      "id": "23e5",
+      "name": "Md Towhidul Alam",
+      "email": "alammdtowhidul9@gmail.com",
+      "password": "123456",
+      "photo": "https://i.postimg.cc/d1rfGQvX/181-Java-logo-logos-512.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+      "stock": "121010",
+      "unitprice": 5
+    },
+    {
+      "id": "ae06",
+      "name": "Banana",
+      "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "unitprice": 15,
+      "stock": 58
+    }
+  ],
+  "sales": [
+    {
+      "id": "af47",
+      "customername": "joipko",
+      "quantity": 10,
+      "salesdate": "2024-08-07",
+      "totalprice": "20",
+      "product": {
+        "id": "4043",
+        "name": "cfgct",
+        "photo": "https://i.postimg.cc/gJbTZp9X/2.jpg",
+        "stock": "79"
+      }
+    }
+  ],
+  "reciepts": [
+    {
+      "id": "1",
+      "subtotal": 0,
+      "sale": {
+        "id": "af47",
+        "customername": "joipko",
+        "unitprice": 5,
+        "quantity": 5,
+        "salesdate": "2024-08-07",
+        "totalprice": "25",
+        "product": {
+          "id": "4043",
+          "name": "cfgct",
+          "photo": "https://i.postimg.cc/gJbTZp9X/2.jpg",
+          "stock": "79"
+        }
+      }
+    }
+  ]
+}

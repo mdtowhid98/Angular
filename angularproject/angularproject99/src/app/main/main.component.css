@@ -1,0 +1,55 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Main sections */
+  .top-section, .middle-section, .buttom-section {
+    padding: 1rem;
+  }
+  
+  /* Top section */
+  .top-section {
+    background-color: #f1f1f1;
+    padding: 1.5rem;
+  }
+  
+  /* Middle and bottom sections */
+  .middle-section, .buttom-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  /* Widget styles */
+  .widget {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 48%; /* Ensures two widgets take up the full width */
+  }
+  
+  /* Left and Right widget specific styles */
+  .widget.left {
+    margin-right: 2%;
+  }
+  
+  .widget.right {
+    margin-left: 2%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .middle-section, .buttom-section {
+      flex-direction: column;
+    }
+  
+    .widget {
+      width: 100%;
+      margin: 0 0 1rem 0;
+    }
+  }
+  

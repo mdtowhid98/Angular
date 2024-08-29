@@ -1,0 +1,105 @@
+<div class="container mt-4">
+  <h2><fa-icon [icon]="faCartPlus"></fa-icon> Create Sales</h2>
+  <form [formGroup]="salesForm" (ngSubmit)="createSales()">
+    
+    <!-- Customer Name -->
+    <div class="form-group">
+      <label for="customername"><fa-icon [icon]="faUser"></fa-icon> Customer Name</label>
+      <input type="text" id="customername" class="form-control" formControlName="customername" placeholder="Enter customer name">
+      <div *ngIf="salesForm.get('customername')?.invalid && salesForm.get('customername')?.touched" class="text-danger">
+        Customer name is required
+      </div>
+    </div>
+    
+    <!-- Sales Date -->
+    <div class="form-group mt-3 small-input">
+      <label for="salesdate"><fa-icon [icon]="faCalendarAlt"></fa-icon> Sales Date</label>
+      <input type="date" id="salesdate" class="form-control" formControlName="salesdate" readonly>
+      <div *ngIf="salesForm.get('salesdate')?.invalid && salesForm.get('salesdate')?.touched" class="text-danger">
+        Sales date is required
+      </div>
+    </div>
+
+    <!-- Products List -->
+    <div formArrayName="products" class="mt-4">
+      <!-- Labels Row -->
+      <div class="d-flex justify-content-between">
+        <div class="flex-fill col-md-2"><label><fa-icon [icon]="faTags"></fa-icon> Category</label></div>
+        <div class="flex-fill col-md-3"><label><fa-icon [icon]="faBox"></fa-icon> Product</label></div>
+        <div class="flex-fill col-md-3"><label><fa-icon [icon]="faSortNumericDown"></fa-icon> Quantity</label></div>
+        <div class="flex-fill col-md-3"><label><fa-icon [icon]="faDollarSign"></fa-icon> Unit Price</label></div>
+        <div class="flex-fill col-md-2"><label><fa-icon [icon]="faWarehouse"></fa-icon> Stock</label></div>
+      </div>
+      
+
+      <div *ngFor="let product of productsArray.controls; let i = index" [formGroupName]="i" class="mb-3 border p-3">
+        <div class="d-flex justify-content-between">
+
+           <!-- Category Field -->
+           <div class="form-group flex-fill mr-2 col-md-2">
+            <select class="form-control" formControlName="category" (change)="onCategoryChange(i)">
+              <option value="">Select Category</option>
+              <option *ngFor="let category of categories" [value]="category">{{ category.categoryname }}</option>
+            </select>
+            <div *ngIf="product.get('category')?.invalid && product.get('category')?.touched" class="text-danger">
+              Category is required
+            </div>
+          </div>
+
+           <!-- Product Field -->
+           <div class="form-group flex-fill mr-4 col-md-3">
+            <select class="form-control" formControlName="name">
+              <option value="">Select Product</option>
+              <option *ngFor="let filteredProduct of getFilteredProducts(i)" [value]="filteredProduct.name">
+                {{ filteredProduct.name }}
+              </option>
+            </select>
+            <div *ngIf="product.get('name')?.invalid && product.get('name')?.touched" class="text-danger">
+              Product is required
+            </div>
+          </div>
+
+          <!-- Quantity Field -->
+          <div class="form-group flex-fill mr-2 col-md-3">
+            <input type="number" class="form-control" formControlName="quantity" min="1" placeholder="Enter quantity">
+            <div *ngIf="product.get('quantity')?.invalid && product.get('quantity')?.touched" class="text-danger">
+              Quantity is required
+            </div>
+          </div>
+
+          <!-- Unit Price Field -->
+          <div class="form-group flex-fill mr-2 col-md-3">
+            <input type="text" class="form-control" formControlName="unitprice" readonly>
+          </div>
+
+          <!-- Stock Field -->
+          <div class="form-group flex-fill col-md-3">
+            <input type="text" class="form-control" formControlName="stock" readonly>
+          </div>
+        </div>
+
+        <!-- Buttons Row -->
+        <div class="d-flex justify-content-between mt-3">
+          <button type="button" class="btn btn-info" (click)="removeProduct(i)">
+            <fa-icon [icon]="faTrash"></fa-icon> Remove Product
+          </button>
+
+          <button type="button" class="btn btn-primary" (click)="addProduct()">
+            <fa-icon [icon]="faPlus"></fa-icon> Add Product
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total Price -->
+    <div class="form-group mt-4 small-input">
+      <label for="totalprice"><fa-icon [icon]="faDollarSign"></fa-icon> Total Price</label>
+      <input type="text" id="totalprice" class="form-control" formControlName="totalprice" readonly>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-success mt-4" >
+      <fa-icon [icon]="faSave"></fa-icon> Create Sales
+    </button>
+  </form>
+</div>

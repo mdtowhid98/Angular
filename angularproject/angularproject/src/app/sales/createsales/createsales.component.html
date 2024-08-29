@@ -1,0 +1,39 @@
+<!-- createsales.component.html -->
+<div class="container">
+  <h2>Create Sales</h2>
+  <form [formGroup]="salesForm" (ngSubmit)="createSales()">
+    <div class="form-group">
+      <label for="customername">Customer Name</label>
+      <input type="text" id="customername" class="form-control" formControlName="customername">
+    </div>
+
+    <div class="form-group">
+      <label for="productname">Product</label>
+      <select id="productname" class="form-control" formControlName="name">
+        <option *ngFor="let product of products" [value]="product.name">{{ product.name }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="unitprice">Unit Price</label>
+      <input type="number" id="unitprice" class="form-control" formControlName="unitprice" [disabled]="true">
+    </div>
+
+    <div class="form-group">
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" class="form-control" formControlName="quantity">
+    </div>
+
+    <div class="form-group">
+      <label for="totalprice">Total Price</label>
+      <input type="number" id="totalprice" class="form-control" formControlName="totalprice" [disabled]="true">
+    </div>
+
+    <div class="form-group">
+      <label for="salesdate">Sales Date</label>
+      <input type="date" id="salesdate" class="form-control" formControlName="salesdate">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Sale</button>
+  </form>
+</div>

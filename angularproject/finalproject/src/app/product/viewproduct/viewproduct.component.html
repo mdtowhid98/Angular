@@ -1,0 +1,27 @@
+<div class="category-section">
+  <button (click)="toggleDropdown()">Select Category</button>
+  
+  <div *ngIf="dropdownVisible">
+    <select (change)="filterByCategory($event)">
+      <option value="">All Categories</option>
+      <option *ngFor="let cat of getCategoryKeys()" [value]="cat">{{ cat }}</option>
+    </select>
+  </div>
+</div>
+
+<div class="product-container">
+  <div *ngFor="let product of filteredProducts" class="product-card">
+    <h4>{{ product.name }}</h4>
+    <p *ngFor="let category of product.categories">Category: {{ category.categoryname }}</p> <!-- Display each category name -->
+    <img [src]="product.photo" alt="{{ product.name }}" />
+    <p>Unit Price: {{ product.unitprice | currency }}</p>
+    <p>Stock: {{ product.stock }}</p>
+    <button (click)="updateProduct(product.id)" class="btn btn-primary">
+      <fa-icon [icon]="faEdit"></fa-icon> Edit
+    </button>
+    <button (click)="deleteProduct(product.id)" class="btn btn-danger">
+      <fa-icon [icon]="faTrash"></fa-icon> Delete
+    </button>
+  </div>
+</div>
+

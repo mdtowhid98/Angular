@@ -1,0 +1,48 @@
+<div class="container">
+    <form [formGroup]="recieptsForm" (ngSubmit)="createReciepts()">
+
+        <div class="mb-3" formGroupName="sale">
+            <div class="invalid-feedback">Please select a name.</div>
+            <label for="sale" class="form-label">Customer Name:</label>
+            <select id="sale" formControlName="customername" class="form-select" required>
+                <option *ngFor="let loc of sales" [ngValue]="loc.customername">{{loc.customername}}</option>
+            </select>
+        </div>
+
+        <div class="mb-3" formGroupName="sale">
+            <div class="invalid-feedback">Please select a id.</div>
+            <label for="sale" class="form-label">Sales Id:</label>
+            <select id="sale" formControlName="id" class="form-select" required>
+                <option *ngFor="let loc of sales" [ngValue]="loc.id">{{loc.id}}</option>
+            </select>
+        </div>
+
+       
+
+        <div class="mb-3" formGroupName="sale">
+            <div class="invalid-feedback">Please select a date.</div>
+            <label for="sale" class="form-label">Sales Date:</label>
+            <select id="sale" formControlName="salesdate" class="form-select" required>
+                <option *ngFor="let loc of sales" [ngValue]="loc.salesdate">{{loc.salesdate}}</option>
+            </select>
+        </div>
+
+        <!-- <div class="mb-3" formGroupName="sale">
+            <div class="invalid-feedback">Please select a price.</div>
+            <label for="sale" class="form-label">Total Price:</label>
+            <select id="sale" formControlName="totalprice" class="form-select" required>
+                <option *ngFor="let loc of sales" [ngValue]="loc.totalprice">{{loc.totalprice}}</option>
+            </select>
+        </div> -->
+
+
+        <div class="mb-3">
+            <label for="subtotal" class="form-label">Subtotal</label>
+            <input id="subtotal" type="number" class="form-control" formControlName="subtotal">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>

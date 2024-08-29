@@ -1,0 +1,32 @@
+<div class="container">
+    <h2 class="text-center">Update Fruits</h2>
+    <form (ngSubmit)="updateProduct()">
+
+        <div class="mb-3">
+            <label for="name" class="form-label"><fa-icon [icon]="faTag"></fa-icon> Name</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="product.name">
+        </div>
+
+        <div class="mb-3">
+            <label for="photo" class="form-label"><fa-icon [icon]="faImage"></fa-icon> Photo</label>
+            <input type="text" class="form-control" id="photo" name="photo" [(ngModel)]="product.photo">
+        </div>
+
+        <div class="mb-3">
+            <label for="unitprice" class="form-label"><fa-icon [icon]="faDollarSign"></fa-icon> Unit Price</label>
+            <input type="number" class="form-control" id="unitprice" name="unitprice" [(ngModel)]="product.unitprice">
+        </div>
+        
+        <div class="mb-3">
+            <label for="stock" class="form-label"><fa-icon [icon]="faBoxes"></fa-icon> Stock</label>
+            <input type="number" class="form-control" id="stock" name="stock" [(ngModel)]="product.stock">
+        </div>
+
+        <!-- <div class="mb-3">
+            <label for="category" class="form-label"><fa-icon [icon]="faBoxes"></fa-icon> Category</label>
+            <input type="text" class="form-control" id="category" name="category" [(ngModel)]="product.categories">
+        </div> -->
+
+        <button type="submit" class="btn btn-primary"><fa-icon [icon]="faSave"></fa-icon> Submit</button>
+    </form>
+</div>

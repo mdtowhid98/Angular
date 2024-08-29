@@ -1,0 +1,43 @@
+/* Style for the entire header */
+/* *{
+  margin: 0;
+  padding: 0;
+} */
+.header {
+  background-color: black;
+  color: white; /* Optional: Sets text color to white for better visibility */
+  padding: 10px; /* Optional: Adds some padding around the header */
+  display: flex; /* Aligns children horizontally */
+  justify-content: space-between; /* Distributes space between logo and user section */
+  align-items: center; /* Vertically centers items */
+}
+
+/* Style for the logo */
+.logo {
+  font-size: 1.5em; /* Adjust font size as needed */
+  font-weight: bold; /* Makes the logo text bold */
+}
+
+/* Style for the user section */
+.user {
+  display: flex; /* Aligns user name and image horizontally */
+  align-items: center; /* Vertically centers the user name and image */
+}
+
+/* Style for the user name */
+.user-name {
+  margin-right: 10px; /* Adds space between user name and user image */
+}
+
+/* Style for the user image */
+.user-image {
+  background-color: grey; /* Optional: Background color for user image */
+  color: white; /* Optional: Text color for user initials */
+  border-radius: 50%; /* Makes the user image circular */
+  width: 40px; /* Width of the user image */
+  height: 40px; /* Height of the user image */
+  display: flex; /* Aligns text inside the user image */
+  align-items: center; /* Vertically centers text */
+  justify-content: center; /* Horizontally centers text */
+  font-size: 1em; /* Font size for the initials */
+}
