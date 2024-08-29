@@ -80,92 +80,97 @@
       "id": "fa04",
       "name": "fdn",
       "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "stock": 18,
       "unitprice": 20,
-      "stock": 20,
-      "categories": [
-        {
-          "id": "9e9e",
-          "categoryname": "Women's Fashion & Beauty"
-        }
-      ]
-    },
-    {
-      "id": "da68",
-      "name": "adf",
-      "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
-      "stock": 57,
-      "unitprice": 20,
-      "quantity": 1
-    },
-    {
-      "id": "c29d",
-      "name": "tvf",
-      "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
-      "stock": 196,
-      "unitprice": 40,
-      "quantity": 4
-    },
-    {
-      "id": "ba19",
-      "name": "ew",
-      "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
-      "stock": 1995,
-      "unitprice": 10,
-      "quantity": 5
+      "quantity": 2
     },
     {
       "id": "59d7",
       "name": "sdf",
       "photo": "https://i.postimg.cc/Y9zx8xgN/download-4.jpg",
+      "stock": 98,
       "unitprice": 50,
-      "stock": 100,
-      "categories": [
-        {
-          "id": "b6c8",
-          "categoryname": "Men's Fashion & Grooming"
-        }
-      ]
-    },
-    {
-      "id": "0b08",
-      "name": "tsd",
-      "photo": "https://i.postimg.cc/wTf0SFr0/240-F-169179154-z-PZAk-C8-R6sn5-U17-HQWNXt-AD1-Q8-U7-Nt3-D.jpg",
-      "stock": 40,
-      "unitprice": 1,
-      "quantity": 10
+      "quantity": 2
     },
     {
       "id": "606b",
       "name": "asf",
       "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
+      "stock": 19,
       "unitprice": 42,
-      "stock": 20,
-      "categories": [
-        {
-          "id": "0491",
-          "categoryname": "Agriculture"
-        }
-      ]
+      "quantity": 1
     },
     {
       "id": "b41f",
       "name": "gd",
       "photo": "https://i.postimg.cc/wTf0SFr0/240-F-169179154-z-PZAk-C8-R6sn5-U17-HQWNXt-AD1-Q8-U7-Nt3-D.jpg",
+      "stock": 18,
       "unitprice": 5,
-      "stock": 20,
-      "categories": [
-        {
-          "id": "0491",
-          "categoryname": "Agriculture"
-        }
-      ]
+      "quantity": 2
     },
     {
       "id": "0d70",
       "name": "rw",
       "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+      "stock": 199,
       "unitprice": 20,
-      "stock": 200,
+      "quantity": 1
+    },
+    {
+      "id": "55c2",
+      "name": "ewey",
+      "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
+      "stock": 298,
+      "unitprice": 30,
+      "quantity": 2
+    },
+    {
+      "id": "6816",
+      "name": "gds",
+      "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
+      "stock": 198,
+      "unitprice": 20,
+      "quantity": 2
+    },
+    {
+      "id": "4eac",
+      "name": "236",
+      "photo": "https://i.postimg.cc/wTf0SFr0/240-F-169179154-z-PZAk-C8-R6sn5-U17-HQWNXt-AD1-Q8-U7-Nt3-D.jpg",
+      "stock": 19,
+      "unitprice": 2,
+      "quantity": 1
+    },
+    {
+      "id": "8134",
+      "name": "yng6",
+      "photo": "https://i.postimg.cc/wTf0SFr0/240-F-169179154-z-PZAk-C8-R6sn5-U17-HQWNXt-AD1-Q8-U7-Nt3-D.jpg",
+      "stock": 25,
+      "unitprice": 50,
+      "quantity": 5
+    },
+    {
+      "id": "4793",
+      "name": "weg",
+      "photo": "https://angular.io/assets/images/tutorials/faa/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
+      "stock": 15,
+      "unitprice": 20,
+      "quantity": 5
+    },
+    {
+      "id": "4e9f",
+      "name": "fg",
+      "photo": "https://i.postimg.cc/wTf0SFr0/240-F-169179154-z-PZAk-C8-R6sn5-U17-HQWNXt-AD1-Q8-U7-Nt3-D.jpg",
+      "stock": 49,
+      "unitprice": 50,
+      "quantity": 1
+    },
+    {
+      "id": "520d",
+      "name": "yf",
+      "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
+      "stock": 0,
+      "unitprice": 30,
+      "quantity": 1,
       "categories": [
         {
           "id": "20e7",
@@ -174,15 +179,60 @@
       ]
     },
     {
-      "id": "716f",
-      "name": "fs",
-      "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
-      "unitprice": 46,
-      "stock": 233,
+      "id": "a2ae",
+      "name": "yt",
+      "photo": "https://i.postimg.cc/Y9zx8xgN/download-4.jpg",
+      "stock": 48,
+      "unitprice": 40,
+      "quantity": 2
+    },
+    {
+      "id": "c8a4",
+      "name": "th",
+      "photo": "https://i.postimg.cc/Z5Xjqn4N/download-3.jpg",
+      "stock": 95,
+      "unitprice": 80,
+      "quantity": 5
+    },
+    {
+      "id": "24d3",
+      "name": "hfj",
+      "photo": "https://i.postimg.cc/LXKyxXWS/download-2.jpg",
+      "stock": 32,
+      "unitprice": 40,
+      "quantity": 2,
       "categories": [
         {
-          "id": "21e4",
-          "categoryname": "Mobiles"
+          "id": "9673",
+          "categoryname": "Pet's & Animal's"
+        }
+      ]
+    },
+    {
+      "id": "0284",
+      "name": "te",
+      "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
+      "stock": 43,
+      "unitprice": 50,
+      "quantity": 2,
+      "categories": [
+        {
+          "id": "9e9e",
+          "categoryname": "Women's Fashion & Beauty"
+        }
+      ]
+    },
+    {
+      "id": "33ea",
+      "name": "tyj",
+      "photo": "https://i.postimg.cc/LXKyxXWS/download-2.jpg",
+      "stock": 37,
+      "unitprice": 60,
+      "quantity": 1,
+      "categories": [
+        {
+          "id": "182c",
+          "categoryname": "Education"
         }
       ]
     }
@@ -638,40 +688,354 @@
       ]
     },
     {
-      "id": "c325",
+      "id": "9668",
       "customername": "",
-      "salesdate": "2024-08-28",
+      "salesdate": "2024-08-29",
+      "totalprice": 400,
       "product": [
         {
-          "id": "c29d",
-          "name": "tvf",
-          "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
-          "stock": 196,
-          "unitprice": 40,
-          "quantity": 4
-        },
-        {
-          "id": "da68",
-          "name": "adf",
-          "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
-          "stock": 57,
-          "unitprice": 20,
-          "quantity": 1
+          "id": "c8a4",
+          "name": "th",
+          "photo": "https://i.postimg.cc/Z5Xjqn4N/download-3.jpg",
+          "stock": 95,
+          "unitprice": 80,
+          "quantity": 5
         }
       ]
     },
     {
-      "id": "5f74",
+      "id": "4e4e",
       "customername": "",
-      "salesdate": "2024-08-28",
+      "salesdate": "2024-08-29",
+      "totalprice": 80,
       "product": [
         {
-          "id": "0b08",
-          "name": "tsd",
-          "photo": "https://i.postimg.cc/wTf0SFr0/240-F-169179154-z-PZAk-C8-R6sn5-U17-HQWNXt-AD1-Q8-U7-Nt3-D.jpg",
+          "id": "a2ae",
+          "name": "yt",
+          "photo": "https://i.postimg.cc/Y9zx8xgN/download-4.jpg",
+          "stock": 48,
+          "unitprice": 40,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "8e8d",
+      "customername": "wte",
+      "salesdate": "2024-08-29",
+      "totalprice": 60,
+      "product": [
+        {
+          "id": "520d",
+          "name": "yf",
+          "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
+          "stock": 3,
+          "unitprice": 30,
+          "quantity": 2,
+          "categories": [
+            {
+              "id": "20e7",
+              "categoryname": "Vehicles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2735",
+      "customername": "erw",
+      "salesdate": "2024-08-29",
+      "totalprice": 400,
+      "product": [
+        {
+          "id": "24d3",
+          "name": "hfj",
+          "photo": "https://i.postimg.cc/LXKyxXWS/download-2.jpg",
           "stock": 40,
-          "unitprice": 1,
-          "quantity": 10
+          "unitprice": 40,
+          "quantity": 10,
+          "categories": [
+            {
+              "id": "9673",
+              "categoryname": "Pet's & Animal's"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6287",
+      "customername": "rejvi",
+      "salesdate": "2024-08-29",
+      "totalprice": 60,
+      "product": [
+        {
+          "id": "520d",
+          "name": "yf",
+          "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
+          "stock": 1,
+          "unitprice": 30,
+          "quantity": 2,
+          "categories": [
+            {
+              "id": "20e7",
+              "categoryname": "Vehicles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7af9",
+      "customername": "fsdav",
+      "salesdate": "2024-08-29",
+      "totalprice": 220,
+      "product": [
+        {
+          "id": "33ea",
+          "name": "tyj",
+          "photo": "https://i.postimg.cc/LXKyxXWS/download-2.jpg",
+          "stock": 38,
+          "unitprice": 60,
+          "quantity": 2,
+          "categories": [
+            {
+              "id": "182c",
+              "categoryname": "Education"
+            }
+          ]
+        },
+        {
+          "id": "0284",
+          "name": "te",
+          "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
+          "stock": 48,
+          "unitprice": 50,
+          "quantity": 2,
+          "categories": [
+            {
+              "id": "9e9e",
+              "categoryname": "Women's Fashion & Beauty"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f6d6",
+      "customername": "raju",
+      "salesdate": "2024-08-29",
+      "totalprice": 140,
+      "product": [
+        {
+          "id": "0284",
+          "name": "te",
+          "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
+          "stock": 46,
+          "unitprice": 50,
+          "quantity": 2,
+          "categories": [
+            {
+              "id": "9e9e",
+              "categoryname": "Women's Fashion & Beauty"
+            }
+          ]
+        },
+        {
+          "id": "24d3",
+          "name": "hfj",
+          "photo": "https://i.postimg.cc/LXKyxXWS/download-2.jpg",
+          "stock": 39,
+          "unitprice": 40,
+          "quantity": 1,
+          "categories": [
+            {
+              "id": "9673",
+              "categoryname": "Pet's & Animal's"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "87d7",
+      "customername": "yitr",
+      "salesdate": "2024-08-29",
+      "totalprice": 40,
+      "product": [
+        {
+          "id": "24d3",
+          "name": "hfj",
+          "photo": "https://i.postimg.cc/LXKyxXWS/download-2.jpg",
+          "stock": 38,
+          "unitprice": 40,
+          "quantity": 1,
+          "categories": [
+            {
+              "id": "9673",
+              "categoryname": "Pet's & Animal's"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08e2",
+      "customername": "yitr",
+      "salesdate": "2024-08-29",
+      "totalprice": 60,
+      "product": [
+        {
+          "id": "33ea",
+          "name": "tyj",
+          "photo": "https://i.postimg.cc/LXKyxXWS/download-2.jpg",
+          "stock": 37,
+          "unitprice": 60,
+          "quantity": 1,
+          "categories": [
+            {
+              "id": "182c",
+              "categoryname": "Education"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e75d",
+      "customername": "",
+      "salesdate": "2024-08-29",
+      "totalprice": 50,
+      "product": [
+        {
+          "id": "0284",
+          "name": "te",
+          "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
+          "stock": 45,
+          "unitprice": 50,
+          "quantity": 1,
+          "categories": [
+            {
+              "id": "9e9e",
+              "categoryname": "Women's Fashion & Beauty"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c575",
+      "customername": "Shabab",
+      "salesdate": "2024-08-29",
+      "totalprice": 40,
+      "product": [
+        {
+          "id": "24d3",
+          "name": "hfj",
+          "photo": "https://i.postimg.cc/LXKyxXWS/download-2.jpg",
+          "stock": 37,
+          "unitprice": 40,
+          "quantity": 1,
+          "categories": [
+            {
+              "id": "9673",
+              "categoryname": "Pet's & Animal's"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "432f",
+      "customername": "Shabab",
+      "salesdate": "2024-08-29",
+      "totalprice": 40,
+      "product": [
+        {
+          "id": "24d3",
+          "name": "hfj",
+          "photo": "https://i.postimg.cc/LXKyxXWS/download-2.jpg",
+          "stock": 36,
+          "unitprice": 40,
+          "quantity": 1,
+          "categories": [
+            {
+              "id": "9673",
+              "categoryname": "Pet's & Animal's"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a495",
+      "customername": "Shabab",
+      "salesdate": "2024-08-29",
+      "totalprice": 110,
+      "product": [
+        {
+          "id": "24d3",
+          "name": "hfj",
+          "photo": "https://i.postimg.cc/LXKyxXWS/download-2.jpg",
+          "stock": 34,
+          "unitprice": 40,
+          "quantity": 2,
+          "categories": [
+            {
+              "id": "9673",
+              "categoryname": "Pet's & Animal's"
+            }
+          ]
+        },
+        {
+          "id": "520d",
+          "name": "yf",
+          "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
+          "stock": 0,
+          "unitprice": 30,
+          "quantity": 1,
+          "categories": [
+            {
+              "id": "20e7",
+              "categoryname": "Vehicles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7aa5",
+      "customername": "Shabab",
+      "salesdate": "2024-08-29",
+      "totalprice": 180,
+      "product": [
+        {
+          "id": "0284",
+          "name": "te",
+          "photo": "https://i.postimg.cc/85JkDykD/download-1.jpg",
+          "stock": 43,
+          "unitprice": 50,
+          "quantity": 2,
+          "categories": [
+            {
+              "id": "9e9e",
+              "categoryname": "Women's Fashion & Beauty"
+            }
+          ]
+        },
+        {
+          "id": "24d3",
+          "name": "hfj",
+          "photo": "https://i.postimg.cc/LXKyxXWS/download-2.jpg",
+          "stock": 32,
+          "unitprice": 40,
+          "quantity": 2,
+          "categories": [
+            {
+              "id": "9673",
+              "categoryname": "Pet's & Animal's"
+            }
+          ]
         }
       ]
     }

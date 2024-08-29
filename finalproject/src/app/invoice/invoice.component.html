@@ -1,97 +1,16 @@
-<div id="print-section">
-  <div class="row">
-    <div class="col-md-3">
-      <a class="navbar-brand" href="#">
-        <img src="https://i.postimg.cc/SQMbrpzy/download.png" height="90px" alt="" class="rounded-circle">
-      </a>
-    </div>
-
-    <div class="col-md-6">
-      <h1 class="text-right">Invoice</h1>
-    </div>
-  </div>
-  <div class="row text-center">
-    <h4>Address :</h4>
-    <p>Dhanmondi,Dhaka</p>
-    <p>Bangladesh</p>
-  </div>
-  <div class="invoice-container">
-    <form [formGroup]="invoiceForm" class="invoice-form">
-
-      <!-- Sales Information Section -->
-      <div class="form-group col-md-4">
-        <label for="saleSelect">Select Sale</label>
-        <select id="saleSelect" formControlName="saleId" class="form-control">
-          <option *ngFor="let sale of sales" [value]="sale.id">
-            {{ sale.id }} - {{ sale.salesdate | date }}
-          </option>
-        </select>
-      </div>
-
-      <!-- Customer Name -->
-      <div class="form-group col-md-4">
-        <label for="customername">Customer Name</label>
-        <input type="text" id="customername" class="form-control" formControlName="customername"
-          placeholder="Enter customer name" readonly>
-        <div *ngIf="invoiceForm.get('customername')?.invalid && invoiceForm.get('customername')?.touched"
-          class="text-danger">
-          Customer name is required
-        </div>
-      </div>
-
-      <!-- Sales Date -->
-      <div class="form-group mt-3 small-input col-md-4">
-        <label for="salesdate">Sales Date</label>
-        <input type="date" id="salesdate" class="form-control" formControlName="salesdate" readonly>
-        <div *ngIf="invoiceForm.get('salesdate')?.invalid && invoiceForm.get('salesdate')?.touched" class="text-danger">
-          Sales date is required
-        </div>
-      </div>
-
-      <!-- Products List -->
-      <div formArrayName="products" class="mt-4">
-
-        <div *ngFor="let product of productsArray.controls; let i = index" [formGroupName]="i" class="product-row">
-          <div class="row">
-
-
-            <!-- <div class="product-item col-md-3">
-              <label>Product ID:</label>
-              <input formControlName="id" readonly>
-            </div> -->
-            <div class="product-item col-md-3">
-              <label>Product Name:</label><br>
-              <input formControlName="name" readonly>
-            </div>
-            <div class="product-item col-md-3">
-              <label>Unit Price:</label><br>
-              <input formControlName="unitprice" readonly>
-            </div>
-            <div class="product-item col-md-3">
-              <label>Quantity:</label><br>
-              <input formControlName="quantity" readonly>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Total Price -->
-      <div class="form-group mt-3 col-md-2">
-        <label for="totalprice">Total Price</label>
-        <input type="text" id="totalprice" class="form-control" formControlName="totalprice" readonly>
-      </div>
-
-    </form>
-  </div>
- 
-  <div class="row text-right">
-    <p>Towhid Product Collection</p>
-    <p>Phone: 01767515057</p>
-    <p>Dhaka, Bangladesh</p>
-  </div>
+<div *ngIf="sale">
+  <h1>Invoice</h1>
+  <p><strong>Customer Name:</strong> {{ sale.customername }}</p>
+  <p><strong>Sales Date:</strong> {{ sale.salesdate }}</p>
+  <p><strong>Total Price:</strong> {{ sale.totalprice | currency }}</p>
+  
+  <h2>Products</h2>
+  <ul>
+    <li *ngFor="let product of sale.product">
+      <p><strong>Name:</strong> {{ product.name }}</p>
+      <p><strong>Quantity:</strong> {{ product.quantity }}</p>
+      <p><strong>Unit Price:</strong> {{ product.unitprice | currency }}</p>
+      <p><strong>Subtotal:</strong> {{ product.quantity * product.unitprice | currency }}</p>
+    </li>
+  </ul>
 </div>
-
-<!-- Print Button -->
-<button [useExistingCss]="true" printSectionId="print-section" ngxPrint class="btn btn-primary">
-  <i class="fa fa-print"></i> Print
-</button>

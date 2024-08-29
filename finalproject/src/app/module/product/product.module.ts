@@ -17,16 +17,13 @@ export class ProductModule {
   stock!: number
   unitprice!:number
   quantity!:number
-  categories!:CategoryModule[]
-
-  
-  
+  categories!:CategoryModule[] 
     
   
  }
- export interface ProductWithCategory extends ProductModule {
-  id:string;
-  categoryname: string;
-}
+//  export interface ProductWithCategory extends ProductModule {
+//   id:string;
+//   categoryname: string;
+// }
 
 
