@@ -47,7 +47,7 @@ export class ViewproductComponent implements OnInit {
 
   loadProducts(): void {
     this.productService.getProduct().subscribe((data: ProductModule[]) => {
-      console.log('Received products data:', data); // Log the data for inspection
+      // console.log('Received products data:', data); // Log the data for inspection
       this.groupProductsByCategory(data);
       this.filteredProducts = this.getAllProducts(); // Initially display all products
     });
@@ -68,7 +68,7 @@ export class ViewproductComponent implements OnInit {
           const productWithCategory: ProductWithCategory = { ...product, categoryname: category.categoryname };
           this.productsByCategory[category.categoryname].push(productWithCategory);
         } else {
-          console.warn('Category or categoryname is undefined for product:', product);
+          // console.warn('Category or categoryname is undefined for product:', product);
         }
       });
     });

@@ -24,6 +24,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { CategoryComponent } from './category/category.component';
 import { CreateCategoryComponent } from './create-category/create-category.component';
+import { FilterByCategoryPipe } from './filter-by-category.pipe';
+import { CategoryService } from './service/category.service';
+
 
 
 
@@ -47,6 +50,7 @@ import { CreateCategoryComponent } from './create-category/create-category.compo
     InvoiceComponent,
     CategoryComponent,
     CreateCategoryComponent,
+    FilterByCategoryPipe,
     
     
   ],
@@ -60,13 +64,16 @@ import { CreateCategoryComponent } from './create-category/create-category.compo
     NgxPrintModule,
     FontAwesomeModule
   ],
+  
   providers: [
     // provideClientHydration(),
     provideHttpClient(
       withFetch()
-    )
+    ),
+    [CategoryService],
 
   ],
+  
   
   bootstrap: [AppComponent]
 })

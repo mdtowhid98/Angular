@@ -1,14 +1,13 @@
-// createsales.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 import { ProductService } from '../../service/product.service';
 import { SalesService } from '../../service/sales.service';
 import { CategoryService } from '../../service/category.service';
 import { Router } from '@angular/router';
-import { faUser, faCalendarAlt, faBox, faSortNumericDown, faDollarSign, faWarehouse, faTrash, faPlus, faCartPlus, faSave } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faCalendarAlt, faBox, faSortNumericDown, faDollarSign, faWarehouse, faTrash, faPlus, faCartPlus, faSave, faTags } from '@fortawesome/free-solid-svg-icons';
 import { ProductModule } from '../../module/product/product.module';
 import { SalesModule } from '../../module/sales/sales.module';
+import { CategoryModule } from '../../module/category/category.module';
 
 @Component({
   selector: 'app-createsales',
@@ -20,6 +19,7 @@ export class CreatesalesComponent implements OnInit {
   products: ProductModule[] = [];
   salesForm!: FormGroup;
   sale: SalesModule = new SalesModule();
+  categories: CategoryModule[] = []; 
   
   faUser = faUser;
   faCalendarAlt = faCalendarAlt;
@@ -31,15 +31,18 @@ export class CreatesalesComponent implements OnInit {
   faPlus = faPlus;
   faCartPlus = faCartPlus;
   faSave = faSave;
-  
+  faTags = faTags;
+
   constructor(
     private productService: ProductService,
     private salesService: SalesService,
+    private categoryService: CategoryService,
     private formBuilder: FormBuilder,
     private router: Router
-  ) { }
+  ) {}
 
   ngOnInit(): void {
+    this.loadCategories();
     this.loadProduct();
 
     // Set the current date
@@ -47,12 +50,12 @@ export class CreatesalesComponent implements OnInit {
 
     this.salesForm = this.formBuilder.group({
       customername: ['', Validators.required],
-      salesdate: [currentDate, Validators.required], // Set current date here
+      salesdate: [currentDate, Validators.required],
       products: this.formBuilder.array([]),
       totalprice: [{ value: '' }]
     });
 
-    this.addProduct();
+    this.addProduct(); // Add initial product form group
     this.salesForm.get('products')?.valueChanges.subscribe(() => {
       this.calculateTotalPrice();
     });
@@ -60,6 +63,17 @@ export class CreatesalesComponent implements OnInit {
 
   get productsArray(): FormArray {
     return this.salesForm.get('products') as FormArray;
+  }
+
+  loadCategories() {
+    this.categoryService.getAllCategory().subscribe({
+      next: res => {
+        this.categories = res;
+      },
+      error: error => {
+        console.log(error);
+      }
+    });
   }
 
   loadProduct() {
@@ -73,22 +87,35 @@ export class CreatesalesComponent implements OnInit {
     });
   }
 
+  onCategoryChange(index: number) {
+    const selectedCategory = this.productsArray.at(index).get('category')?.value;
+
+    const filteredProducts = this.products.filter(
+      product => product.categories.some(cat => cat.categoryname === selectedCategory)
+    );
+
+    this.productsArray.at(index).get('name')?.reset(); 
+    this.productsArray.at(index).get('filteredProducts')?.setValue(filteredProducts); 
+  }
+
   addProduct() {
     const productGroup = this.formBuilder.group({
-      id: ['', undefined],
+      id: [''],  
+      category: ['', Validators.required],
       name: ['', Validators.required],
-      quantity: [{ value: 0, disabled: true }, Validators.required], // Start with quantity disabled
+      filteredProducts: [[]], // Store filtered products for each product form group
+      quantity: [{ value: 0, disabled: true }, Validators.required],
       unitprice: [{ value: 0, disabled: true }],
       stock: [{ value: 0, disabled: true }],
     });
-
+  
     productGroup.get('name')?.valueChanges.subscribe(name => {
       const selectedProduct = this.products.find(prod => prod.name === name);
       if (selectedProduct) {
         const oldStock = selectedProduct.stock;
         if (oldStock > 0) {
           productGroup.patchValue({
-            id: selectedProduct.id,
+            id: selectedProduct.id,  // Set the id here, which is a string
             unitprice: selectedProduct.unitprice,
             stock: oldStock // Set the current stock
           });
@@ -104,23 +131,28 @@ export class CreatesalesComponent implements OnInit {
           productGroup.get('quantity')?.disable(); // Disable quantity input if out of stock
         }
         this.calculateTotalPrice();
-
       }
     });
-
+  
     productGroup.get('quantity')?.valueChanges.subscribe(quantity => {
       const stock = productGroup.get('stock')?.value || 0;
       const quantityValue = quantity ?? 0; // Use 0 as the default if quantity is null
-    
+  
       if (quantityValue > stock) {
         alert(`The selected quantity exceeds the available stock of ${stock}. Please reduce the quantity.`);
         productGroup.patchValue({ quantity: stock }); // Set quantity to the maximum available stock
       }
-    
+  
       this.calculateTotalPrice();
     });
-
+  
     this.productsArray.push(productGroup);
+  }
+  
+  
+
+  getFilteredProducts(index: number): ProductModule[] {
+    return this.productsArray.at(index).get('filteredProducts')?.value || [];
   }
 
   removeProduct(index: number) {
@@ -182,5 +214,4 @@ export class CreatesalesComponent implements OnInit {
       }
     });
   }
-
 }

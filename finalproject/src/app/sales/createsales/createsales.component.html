@@ -24,20 +24,35 @@
     <div formArrayName="products" class="mt-4">
       <!-- Labels Row -->
       <div class="d-flex justify-content-between">
+        <div class="flex-fill col-md-2"><label><fa-icon [icon]="faTags"></fa-icon> Category</label></div>
         <div class="flex-fill col-md-3"><label><fa-icon [icon]="faBox"></fa-icon> Product</label></div>
         <div class="flex-fill col-md-3"><label><fa-icon [icon]="faSortNumericDown"></fa-icon> Quantity</label></div>
         <div class="flex-fill col-md-3"><label><fa-icon [icon]="faDollarSign"></fa-icon> Unit Price</label></div>
-        <div class="flex-fill col-md-3"><label><fa-icon [icon]="faWarehouse"></fa-icon> Stock</label></div>
+        <div class="flex-fill col-md-2"><label><fa-icon [icon]="faWarehouse"></fa-icon> Stock</label></div>
       </div>
       
 
       <div *ngFor="let product of productsArray.controls; let i = index" [formGroupName]="i" class="mb-3 border p-3">
-        <div class="d-flex justify-content-between ">
-          <!-- Product Field -->
-          <div class="form-group flex-fill mr-4 col-md-3">
+        <div class="d-flex justify-content-between">
+
+           <!-- Category Field -->
+           <div class="form-group flex-fill mr-2 col-md-2">
+            <select class="form-control" formControlName="category" (change)="onCategoryChange(i)">
+              <option value="">Select Category</option>
+              <option *ngFor="let category of categories" [value]="category">{{ category.categoryname }}</option>
+            </select>
+            <div *ngIf="product.get('category')?.invalid && product.get('category')?.touched" class="text-danger">
+              Category is required
+            </div>
+          </div>
+
+           <!-- Product Field -->
+           <div class="form-group flex-fill mr-4 col-md-3">
             <select class="form-control" formControlName="name">
               <option value="">Select Product</option>
-              <option *ngFor="let product of products" [value]="product.name">{{ product.name }}</option>
+              <option *ngFor="let filteredProduct of getFilteredProducts(i)" [value]="filteredProduct.name">
+                {{ filteredProduct.name }}
+              </option>
             </select>
             <div *ngIf="product.get('name')?.invalid && product.get('name')?.touched" class="text-danger">
               Product is required

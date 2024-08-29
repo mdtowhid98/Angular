@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, PipeTransform } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CategoryModule } from '../category/category.module';
 
@@ -28,4 +28,5 @@ export class ProductModule {
   id:string;
   categoryname: string;
 }
+
 

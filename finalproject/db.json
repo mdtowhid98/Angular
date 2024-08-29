@@ -93,22 +93,17 @@
       "id": "da68",
       "name": "adf",
       "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
-      "stock": 58,
+      "stock": 57,
       "unitprice": 20,
-      "quantity": 2
+      "quantity": 1
     },
     {
       "id": "c29d",
       "name": "tvf",
       "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "stock": 196,
       "unitprice": 40,
-      "stock": 200,
-      "categories": [
-        {
-          "id": "1",
-          "categoryname": "Electronics"
-        }
-      ]
+      "quantity": 4
     },
     {
       "id": "ba19",
@@ -135,14 +130,9 @@
       "id": "0b08",
       "name": "tsd",
       "photo": "https://i.postimg.cc/wTf0SFr0/240-F-169179154-z-PZAk-C8-R6sn5-U17-HQWNXt-AD1-Q8-U7-Nt3-D.jpg",
+      "stock": 40,
       "unitprice": 1,
-      "stock": 50,
-      "categories": [
-        {
-          "id": "9673",
-          "categoryname": "Pet's & Animal's"
-        }
-      ]
+      "quantity": 10
     },
     {
       "id": "606b",
@@ -167,6 +157,32 @@
         {
           "id": "0491",
           "categoryname": "Agriculture"
+        }
+      ]
+    },
+    {
+      "id": "0d70",
+      "name": "rw",
+      "photo": "https://i.postimg.cc/VNWjKPrb/bird-1045954-1280.jpg",
+      "unitprice": 20,
+      "stock": 200,
+      "categories": [
+        {
+          "id": "20e7",
+          "categoryname": "Vehicles"
+        }
+      ]
+    },
+    {
+      "id": "716f",
+      "name": "fs",
+      "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+      "unitprice": 46,
+      "stock": 233,
+      "categories": [
+        {
+          "id": "21e4",
+          "categoryname": "Mobiles"
         }
       ]
     }
@@ -618,6 +634,44 @@
           "stock": 58,
           "unitprice": 20,
           "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "c325",
+      "customername": "",
+      "salesdate": "2024-08-28",
+      "product": [
+        {
+          "id": "c29d",
+          "name": "tvf",
+          "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+          "stock": 196,
+          "unitprice": 40,
+          "quantity": 4
+        },
+        {
+          "id": "da68",
+          "name": "adf",
+          "photo": "https://i.postimg.cc/ZqtQBkHY/johnson-martin-zpq2-DMid-OY0-unsplash.jpg",
+          "stock": 57,
+          "unitprice": 20,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "5f74",
+      "customername": "",
+      "salesdate": "2024-08-28",
+      "product": [
+        {
+          "id": "0b08",
+          "name": "tsd",
+          "photo": "https://i.postimg.cc/wTf0SFr0/240-F-169179154-z-PZAk-C8-R6sn5-U17-HQWNXt-AD1-Q8-U7-Nt3-D.jpg",
+          "stock": 40,
+          "unitprice": 1,
+          "quantity": 10
         }
       ]
     }

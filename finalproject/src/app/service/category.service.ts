@@ -15,9 +15,7 @@ export class CategoryService {
   getAllCategory(): Observable<CategoryModule[]> {
     return this.httpClient.get<CategoryModule[]>(this.baseUrl);
   }
-  getCategories(): Observable<any[]> {
-    return this.httpClient.get<any[]>(this.baseUrl);
-  }
+ 
 
   getAllCategoryForProduct():Observable<CategoryModule[]>{
 
@@ -38,4 +36,6 @@ export class CategoryService {
 
     return this.httpClient.post(this.baseUrl,category);
    }
+
+   
 }
