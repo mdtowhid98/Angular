@@ -2,14 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../../../service/student.service';
 import { DepartmentService } from '../../../service/department.service';
 import { Router } from '@angular/router';
-import { error } from 'console';
 
 @Component({
-  selector: 'app-viewstudent',
-  templateUrl: './viewstudent.component.html',
-  styleUrl: './viewstudent.component.css'
+  selector: 'app-view-student',
+  templateUrl: './view-student.component.html',
+  styleUrl: './view-student.component.css'
 })
-export class ViewstudentComponent implements OnInit {
+export class ViewStudentComponent implements OnInit{
 
   students: any;
 

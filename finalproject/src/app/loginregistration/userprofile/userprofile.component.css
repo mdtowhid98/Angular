@@ -1,50 +1,75 @@
-/* Container for the profile */
+/* Reset default margins and paddings */
+body, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* General body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333; /* Dark text color */
+  padding: 20px;
+}
+
+/* Container styling */
 .container {
-    margin-top: 20px; /* Adjust margin as needed */
-    max-width: 600px; /* Optional: set a max-width for the container */
-    padding: 20px; /* Add padding around the content */
-    border: 1px solid #ddd; /* Optional: add a border */
-    border-radius: 5px; /* Optional: round the corners of the border */
-    background-color: #f9f9f9; /* Optional: add a background color */
-  }
-  
-  /* Style for the profile heading */
-  .container h2 {
-    margin-bottom: 20px; /* Space below the heading */
-    font-size: 1.5rem; /* Adjust font size as needed */
-    color: #333; /* Adjust text color */
-  }
-  
-  /* Style for profile paragraphs */
-  .container p {
-    margin-bottom: 15px; /* Space below paragraphs */
-    font-size: 1rem; /* Adjust font size as needed */
-    color: #555; /* Adjust text color */
-  }
-  
-  /* Style for the icons in the profile */
-  .container fa-icon {
-    color: #007bff; /* Set icon color */
-    font-size: 1.2rem; /* Adjust icon size */
-    margin-right: 8px; /* Space between icon and text */
-  }
-  
-  /* Style for the profile image */
-  .img-fluid {
-    border-radius: 5px; /* Optional: round the corners of the image */
-    border: 1px solid #ddd; /* Optional: add a border around the image */
-    margin-top: 10px; /* Space above the image */
-    max-width: 100%; /* Ensure the image does not overflow the container */
-  }
-  
-  /* Style for loading message */
-  .container p fa-icon {
-    font-size: 1.2rem; /* Adjust spinner size */
-    color: #007bff; /* Set spinner color */
-  }
-  
-  /* Optional: Add hover effects for text */
-  .container p:hover {
-    color: #0056b3; /* Change text color on hover */
-  }
-  
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background for the profile card */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.text-center {
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  color: #333; /* Dark color for the heading */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Paragraph styling */
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  color: #333; /* Dark color for text */
+}
+
+/* Icon styling */
+fa-icon {
+  margin-right: 10px;
+  color: #007bff; /* Primary color for icons */
+  font-size: 20px; /* Adjust icon size */
+}
+
+/* Image styling */
+img {
+  border-radius: 10px; /* Rounded corners for the image */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  width: 150px; /* Fixed width for the profile image */
+  height: auto; /* Auto height to maintain aspect ratio */
+}
+
+/* Loading message styling */
+p.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #555; /* Slightly lighter color for loading text */
+}
+
+.fa-spinner {
+  color: #007bff; /* Primary color for the spinner */
+  font-size: 24px; /* Adjust spinner size */
+  margin-right: 10px;
+}

@@ -1,8 +1,7 @@
 /* Common Styles */
 .navbar, .horizontal-sidebar {
-    background-color: #037474; /* Bootstrap's 'bg-dark' color */
+    background-color: #2e2e2e; /* Light-black color */
     color: white;
-    
 }
 
 /* Navbar Styles */
@@ -27,7 +26,7 @@
 
 /* Sidebar Styles */
 .horizontal-sidebar {
-    width: 228px;
+    width: 200px;
     position: fixed;
     top: 56px; /* Adjust based on the height of your navbar */
     left: 0;
@@ -53,7 +52,7 @@
 
 /* Dropdown Styles in Sidebar */
 .horizontal-sidebar .dropdown-menu {
-    background-color: #3e0cf1; /* Darker background for dropdown */
+    background-color: #2e2e2e; /* Match sidebar background */
     color: white; /* White text color for contrast */
     border: none; /* Remove border for a flat design */
     border-radius: 0; /* Flat design */
@@ -88,77 +87,80 @@
 .horizontal-sidebar .dropdown-item:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
 }
+
 /* For the main navbar */
 .navbar {
-    background-color: #037474;
+    background-color: #2e2e2e; /* Light-black color */
     /* Add other styles as needed */
 }
 
 /* For the sidebar */
 .sidebar {
-    background-color: rgb(20, 243, 243);
+    background-color: #2e2e2e; /* Light-black color */
     /* Add other styles as needed */
 }
+
 form.d-flex {
     align-items: center;
     justify-content: flex-end;
     gap: 0.5rem; /* Space between input and buttons */
-  }
-  
-  form.d-flex .form-control {
+}
+
+form.d-flex .form-control {
     flex-grow: 1;
     max-width: 300px;
-  }
-  
-  form.d-flex .btn {
+}
+
+form.d-flex .btn {
     display: flex;
     align-items: center;
     gap: 0.25rem;
-  }
-  
-  form.d-flex .btn-outline-success {
+}
+
+form.d-flex .btn-outline-success {
     border-color: #4428a7;
     color: #faf8f8;
-  }
-  
-  form.d-flex .btn-outline-success:hover {
+}
+
+form.d-flex .btn-outline-success:hover {
     background-color: #28a745;
     color: white;
-  }
-  
-  form.d-flex .btn-outline-success:focus {
+}
+
+form.d-flex .btn-outline-success:focus {
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-  }
-  
-  form.d-flex .fa-icon {
+}
+
+form.d-flex .fa-icon {
     margin-right: 0.25rem;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     form.d-flex {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0.75rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
     }
-  
+
     form.d-flex .form-control {
-      width: 100%;
+        width: 100%;
     }
-  
+
     form.d-flex .btn {
-      width: 100%;
+        width: 100%;
     }
-  }
-  @keyframes dance {
+}
+
+@keyframes dance {
     0%, 100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
     50% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
-  }
-  
-  img.rounded-circle {
+}
+
+img.rounded-circle {
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image covers the circle */
     display: block; /* Removes any unwanted inline space */
@@ -167,7 +169,4 @@ form.d-flex {
     margin: 0; /* Removes default margins */
     padding: 0; /* Removes default padding */
     animation: dance 1s ease-in-out infinite; /* Applies the dance animation */
-  }
-  
-  
-
+}

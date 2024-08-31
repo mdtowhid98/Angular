@@ -81,7 +81,12 @@ export class CreateDepartmentComponent {
     // this.depaertment.name = this.depaertmentForm.value.name;
     // this.depaertment.faculty.name = this.depaertmentForm.value.faculty.name;
     
-    const departmentData:departmentModel=this.depaertmentForm.value;
+    
+
+    const departmentData: departmentModel = {
+      ...this.depaertmentForm.value,
+      faculty: { id: this.depaertmentForm.value.faculty } // Map faculty ID to expected format
+    };
 
 
     this.departmentService.createDepartment(departmentData)

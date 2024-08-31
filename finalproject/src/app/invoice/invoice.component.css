@@ -95,11 +95,11 @@ input {
 }
 
 button {
-  margin-top: 50px;
-  width: 100%;
+  margin-top: 20px;
+  width: 10%;
   background-color: #1dd2f1;
   color: #080710;
-  padding: 15px 0;
+  padding: 10px 0;
   font-size: 18px;
   font-weight: 600;
   border-radius: 5px;

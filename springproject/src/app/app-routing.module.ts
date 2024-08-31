@@ -4,7 +4,8 @@ import { ViewfacultyComponent } from './component/viewfaculty/viewfaculty.compon
 import { CreatefacultyComponent } from './component/createfaculty/createfaculty.component';
 import { ViewDepartmentComponent } from './component/depaerment/view-department/view-department.component';
 import { CreateDepartmentComponent } from './component/depaerment/create-department/create-department.component';
-import { ViewstudentComponent } from './component/student/viewstudent/viewstudent.component';
+import { ViewStudentComponent } from './component/student/view-student/view-student.component';
+
 
 
 const routes: Routes = [
@@ -12,7 +13,7 @@ const routes: Routes = [
   {path:"createFaculty",component:CreatefacultyComponent},
   {path:"viewDepartment",component:ViewDepartmentComponent},
   {path:"createDepartment",component:CreateDepartmentComponent},
-  {path:"viewstudent",component:ViewstudentComponent},
+  {path:"viewstudent",component:ViewStudentComponent},
 
 ];
 
