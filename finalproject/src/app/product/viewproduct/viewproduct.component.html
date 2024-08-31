@@ -1,4 +1,5 @@
 <div class="category-section">
+  <h6>Search Category</h6>
   <button (click)="toggleDropdown()">Select Category</button>
   
   <div *ngIf="dropdownVisible">
@@ -16,12 +17,14 @@
     <img [src]="product.photo" alt="{{ product.name }}" />
     <p>Unit Price: {{ product.unitprice | currency }}</p>
     <p>Stock: {{ product.stock }}</p>
+    <ng-container *ngIf="userRole === 'Admin'">
     <button (click)="updateProduct(product.id)" class="btn btn-primary">
       <fa-icon [icon]="faEdit"></fa-icon> Edit
     </button>
     <button (click)="deleteProduct(product.id)" class="btn btn-danger">
       <fa-icon [icon]="faTrash"></fa-icon> Delete
     </button>
+    </ng-container>
   </div>
 </div>
 

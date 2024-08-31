@@ -14,9 +14,10 @@ import { Router } from '@angular/router';
 export class CreateDepartmentComponent {
 
   faculties: facultyModel[] = [];
-  departments: departmentModel[] = [];
+  // departments: departmentModel[] = [];
   depaertmentForm!: FormGroup;
   depaertment: departmentModel = new departmentModel();
+  // departmentData:any;
 
   constructor(private facultyService: FacultyService,
     private departmentService: DepartmentService,
@@ -30,36 +31,37 @@ export class CreateDepartmentComponent {
     this.depaertmentForm = this.formBuilder.group({
 
       name: [''],
+      faculty:[null,'']
      
-      faculty: this.formBuilder.group({
+      // faculty: this.formBuilder.group({
 
-        id: [undefined],
-        name: [undefined],
-        totalSeat: [undefined],
+      //   id: [undefined],
+      //   name: [undefined],
+      //   totalSeat: [undefined],
        
 
-      })
+      // })
 
 
     });
 
-    this.depaertmentForm.get('faculty')?.get('name')?.valueChanges
-      .subscribe(name => {
+    // this.depaertmentForm.get('faculty')?.get('name')?.valueChanges
+    //   .subscribe(name => {
 
-        const selectedFaculty = this.faculties.find(loc => loc.name === name);
+    //     const selectedFaculty = this.faculties.find(loc => loc.name === name);
 
-        if (selectedFaculty) {
-          this.depaertmentForm.patchValue({ location: selectedFaculty });
+    //     if (selectedFaculty) {
+    //       this.depaertmentForm.patchValue({ location: selectedFaculty });
 
-        }
+    //     }
 
-      });
+    //   });
 
 
   }
 
   loadFaculty() {
-    this.facultyService.getFacultyForDepartment()
+    this.facultyService.getAllFaculty()
       .subscribe({
         next: res => {
           this.faculties = res;
@@ -76,11 +78,13 @@ export class CreateDepartmentComponent {
 
   createDepartment() {
 
-    this.depaertment.name = this.depaertmentForm.value.name;
-    this.depaertment.faculty = this.depaertmentForm.value.faculty;
+    // this.depaertment.name = this.depaertmentForm.value.name;
+    // this.depaertment.faculty.name = this.depaertmentForm.value.faculty.name;
     
+    const departmentData:departmentModel=this.depaertmentForm.value;
 
-    this.departmentService.createDepartment(this.depaertment)
+
+    this.departmentService.createDepartment(departmentData)
       .subscribe({
 
         next: res => {

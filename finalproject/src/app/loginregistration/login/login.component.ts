@@ -15,6 +15,7 @@ export class LoginComponent {
   faSignInAlt = faSignInAlt;
   faEnvelope = faEnvelope;
   faLock = faLock;
+  
   constructor(
     private authService: AuthService,
     private router: Router,

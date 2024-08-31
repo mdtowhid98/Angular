@@ -3,6 +3,8 @@ import { ProductService } from '../../service/product.service';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { ProductModule } from '../../module/product/product.module';
 import { Router } from '@angular/router';
+import { UserModule } from '../../module/user/user.module';
+import { AuthService } from '../../service/auth.service';
 
 interface ProductWithCategory extends ProductModule {
   categoryname: string;
@@ -18,16 +20,25 @@ export class ViewproductComponent implements OnInit {
   filteredProducts: ProductWithCategory[] = [];
   dropdownVisible = false;
 
+  userRole: string | null = '';
+  currentUser: UserModule | null = null;
+
   faEdit = faEdit;
   faTrash = faTrash;
 
   constructor(
     private productService: ProductService,
+    private authService:AuthService,
     private router: Router
   ) {}
 
   ngOnInit(): void {
     this.loadProducts();
+
+    this.authService.currentUser$.subscribe(user =>{
+      this.currentUser = user;
+      this.userRole = user?.role || null;
+    });
   }
 
   toggleDropdown(): void {

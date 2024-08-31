@@ -1,71 +1,120 @@
-/* createsales.component.css */
-
-/* General form styling */
-form {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+/* Container styling */
+.container {
+  max-width: 1200px; /* Max width for larger screens */
+  margin: 0 auto; /* Center align */
 }
 
-/* Styling for form groups */
-div {
-  margin-bottom: 15px;
+/* Heading styling */
+h2.text-center {
+  font-size: 24px; /* Font size */
+  font-weight: bold; /* Font weight */
+  margin-bottom: 20px; /* Space below heading */
 }
 
-/* Label styling */
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px; /* Space below form groups */
 }
 
-/* Input field styling */
-input[type="text"],
-input[type="date"],
-input[type="number"],
-select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
+/* Small input styling */
+.small-input {
+  max-width: 100%; /* Ensure it doesn't exceed container width */
 }
 
-/* Make sure that the select boxes are the same width as input fields */
-select {
-  width: calc(100% - 16px); /* Adjusting width to account for padding */
+/* Styling for dropdown and input fields */
+.form-control {
+  border-radius: 4px; /* Rounded corners */
+  border: 1px solid #ced4da; /* Border color */
+  padding: 10px; /* Padding inside input */
 }
 
-/* Button styling */
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  background-color: #007bff;
-  cursor: pointer;
-  font-size: 16px;
+/* Flexbox for product list headers */
+.d-flex {
+  display: flex;
 }
 
-button:hover {
-  background-color: #0056b3;
+.flex-fill {
+  flex: 1; /* Allows elements to grow */
 }
 
-/* Remove button styling */
-button[type="button"] {
-  background-color: #dc3545;
+.col-md-3, .col-md-4, .col-md-2 {
+  padding-left: 15px; /* Spacing for columns */
+  padding-right: 15px; /* Spacing for columns */
 }
 
-button[type="button"]:hover {
-  background-color: #c82333;
+/* Styling for product form groups */
+.mb-3 {
+  margin-bottom: 15px; /* Space below product form groups */
 }
 
-/* Disabled input and select */
-input[disabled],
-select[disabled] {
-  background-color: #e9ecef;
-  cursor: not-allowed;
+.border {
+  border: 1px solid #ddd; /* Border for product groups */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.p-3 {
+  padding: 15px; /* Padding inside product groups */
+}
+
+/* Buttons styling */
+.btn {
+  border-radius: 4px; /* Rounded corners */
+  font-size: 14px; /* Font size */
+  padding: 10px 20px; /* Padding inside buttons */
+}
+
+.btn-info {
+  background-color: #17a2b8; /* Info button color */
+  border: none; /* Remove border */
+  color: white; /* White text */
+}
+
+.btn-info:hover {
+  background-color: #138496; /* Darker shade on hover */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Primary button color */
+  border: none; /* Remove border */
+  color: white; /* White text */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.btn-success {
+  background-color: #28a745; /* Success button color */
+  border: none; /* Remove border */
+  color: white; /* White text */
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Darker shade on hover */
+}
+
+/* Text danger styling for validation errors */
+.text-danger {
+  color: #dc3545; /* Red color for errors */
+  font-size: 12px; /* Smaller font size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .d-flex {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  .form-group {
+    margin-bottom: 10px; /* Reduce spacing on small screens */
+  }
+
+  .col-md-3, .col-md-4, .col-md-2 {
+    padding-left: 0; /* Remove padding on small screens */
+    padding-right: 0; /* Remove padding on small screens */
+  }
+
+  .mb-3 {
+    margin-bottom: 10px; /* Reduce margin on small screens */
+  }
 }

@@ -27,7 +27,7 @@
 
 /* Sidebar Styles */
 .horizontal-sidebar {
-    width: 200px;
+    width: 228px;
     position: fixed;
     top: 56px; /* Adjust based on the height of your navbar */
     left: 0;

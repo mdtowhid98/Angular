@@ -1,70 +1,75 @@
-/* Container for the form */
-.container {
-    margin-top: 20px; /* Adjust as needed */
-    max-width: 600px; /* Optional: limit the form width */
-    padding: 20px;
-    border: 1px solid #ddd; /* Optional: add a border around the form */
-    border-radius: 5px; /* Optional: round the corners of the border */
-    background-color: #f9f9f9; /* Optional: add a background color */
-  }
-  
-  /* Style for the form heading */
-  .container h2 {
-    margin-bottom: 20px;
-    font-size: 1.5rem; /* Adjust as needed */
-    color: #333; /* Adjust text color */
-  }
-  
-  /* Style for input groups */
-  .input-group {
-    display: flex;
-    align-items: center; /* Center icon and input */
-  }
-  
-  /* Style for input group icons */
-  .input-group-text {
-    background-color: #e9ecef; /* Light background color for the icon container */
-    border: 1px solid #ced4da; /* Border around the icon container */
-    border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center icon inside the container */
-  }
-  
-  /* Style for icons inside input groups */
-  .input-group-text fa-icon {
-    font-size: 1.2rem; /* Adjust icon size */
-    color: #495057; /* Adjust icon color */
-  }
-  
-  /* Style for input fields */
-  .form-control {
-    border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
-    font-size: 1rem; /* Adjust font size */
-    padding: 0.75rem 1.25rem; /* Adjust padding */
-  }
-  
-  /* Style for submit button */
-  .btn-primary {
-    display: flex;
-    align-items: center; /* Center icon and text */
-    font-size: 1rem; /* Adjust font size */
-    padding: 0.75rem 1.25rem; /* Adjust padding */
-  }
-  
-  .btn-primary fa-icon {
-    margin-right: 8px; /* Space between the icon and text */
-    font-size: 1.2rem; /* Adjust icon size */
-  }
-  
-  /* Optional: Add focus and hover effects for form elements */
-  .form-control:focus {
-    border-color: #007bff; /* Border color on focus */
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Shadow effect on focus */
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3; /* Darker background on hover */
-    border-color: #004085; /* Darker border on hover */
-  }
-  
+.pos-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1a2a2;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pos-title {
+  color: #007bff;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.pos-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.pos-input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.pos-input-icon {
+  background-color: #007bff;
+  color: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+}
+
+.pos-input {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+.pos-form-group {
+  margin-bottom: 20px;
+}
+
+.pos-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.pos-select {
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.pos-btn {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pos-btn fa-icon {
+  margin-right: 8px;
+}

@@ -9,19 +9,27 @@
             <label for="email" class="form-label">Email</label>
             <input id="email" type="email" class="form-control" formControlName="email">
         </div> -->
-        
+
         <!-- <div class="mb-3">
             <label for="cellNo" class="form-label">Cell Number</label>
             <input id="cellNo" type="text" class="form-control" formControlName="cellNo">
         </div> -->
-       
-        <div class="mb-3" formGroupName="faculty">
+
+        <!-- <div class="mb-3" formGroupName="faculty">
             <div class="invalid-feedback">Please select a location.</div>
             <label for="faculty" class="form-label">Faculty Name:</label>
             <select id="faculty" formControlName="name" class="form-select" required>
                 <option *ngFor="let loc of faculties" [ngValue]="loc.name">{{loc.name}}</option>
             </select>
-            
+
+        </div> -->
+
+        <div class="mb-3">
+            <label for="generic" class="form-label">Faculty Name</label>
+            <select id="generic" formControlName="faculty" class="form-select" required>
+                <option *ngFor="let d of faculties" [ngValue]="d.id">{{d.name}}</option>
+            </select>
+            <div class="invalid-feedback">Please select a faculty</div>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

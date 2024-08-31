@@ -1,86 +1,153 @@
-/* General styling for the print section */
-#print-section {
-  padding: 20px;
-  background-color: #f8f9fa; /* Light background color */
-  border: 1px solid #ddd;
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f3f8;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 60px; /* Adds space between the navbar and the form */
+}
+
+.background {
+  width: 430px;
+  height: 520px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.background .shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.shape:first-child {
+  background: linear-gradient(#1845ad, #23a2f6);
+  left: -80px;
+  top: -80px;
+}
+
+.shape:last-child {
+  background: linear-gradient(to right, #ff512f, #f09819);
+  right: -30px;
+  bottom: -80px;
+}
+
+form {
+  height: 500px;
+  width: 400px;
+  background-color: #db8d8d;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
   border-radius: 10px;
-  font-family: Arial, sans-serif;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+  margin-top: 20px; /* Adds some space between the form and the navbar */
 }
 
-/* Styling for input fields */
-.form-control {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc; /* Border for input fields */
-  border-radius: 4px;
-  background-color: #ffffff; /* Background color for input fields */
-  color: #333; /* Text color */
-  box-sizing: border-box; /* Ensure padding doesn’t affect the width */
-}
-
-.form-control[readonly] {
-  background-color: #e9ecef; /* Light background for readonly fields */
-  border: 1px solid #ccc; /* Ensure the border is visible for readonly fields */
-}
-
-/* Label styling */
-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-/* Product row styling */
-.product-row {
-  margin-bottom: 15px;
-}
-
-/* Specific styling for total price input */
-#totalprice {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-/* Button styling */
-button[ngxPrint] {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+form * {
+  color: #0e0101;
+  letter-spacing: 0.5px;
+  outline: none;
   border: none;
+}
+
+form h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+  color: #fff;
+}
+
+label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: #ffffff; /* Set the background to white */
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+::placeholder {
+  color: #0a0101;
+}
+
+button {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #1dd2f1;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
 }
 
-button[ngxPrint]:hover {
-  background-color: #0056b3;
-}
-
-/* Adjust the layout of the row and col classes to ensure proper alignment */
-.row {
+.social {
+  margin-top: 30px;
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  justify-content: space-around;
 }
 
-.col-md-3 {
-  flex: 1;
-}
-
-.text-center {
+.social div {
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.27);
+  color: #01060f;
   text-align: center;
-}
-.row.text-right {
-  text-align: right; /* Align text to the right */
-  margin-top: 20px; /* Space above the text block */
-  margin-bottom: 20px; /* Space below the text block */
-  padding: 10px; /* Padding inside the text block */
-  background-color: #f8f9fa; /* Light background color for the text block */
-  border-top: 1px solid #e0e0e0; /* Light border at the top for separation */
-  border-bottom: 1px solid #e0e0e0; /* Light border at the bottom for separation */
+  cursor: pointer;
 }
 
-.row.text-right p {
-  margin: 0; /* Remove default margin from paragraphs */
-  font-size: 0.875rem; /* Slightly smaller font size */
-  color: #333; /* Darker text color for readability */
+.social div:hover {
+  background-color: rgba(255, 255, 255, 0.47);
+}
+
+.social .fb {
+  background: #3b5998; /* Facebook color */
+}
+
+.social .go {
+  background: #db4437; /* Google color */
+}
+
+.social i {
+  margin-right: 4px;
+}
+
+.text-light {
+  color: #fff;
+}
+
+/* Navbar fixed on scroll */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #333; /* Background color for the navbar */
+  padding: 10px 20px; /* Padding for the navbar content */
 }

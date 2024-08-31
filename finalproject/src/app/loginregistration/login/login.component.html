@@ -1,15 +1,51 @@
-<div class="container my-6">
-  <h2> Login</h2>
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-      <label for="email" class="form-label"><fa-icon [icon]="faEnvelope"></fa-icon> Email</label>
-      <input type="email" id="email" formControlName="email" class="form-control">
-    </div>
-    <div class="mb-3">
-      <label for="password" class="form-label"><fa-icon [icon]="faLock"></fa-icon> Password</label>
-      <input type="password" id="password" formControlName="password" class="form-control">
-    </div>
-    <button type="submit" class="btn btn-primary"><fa-icon [icon]="faSignInAlt"></fa-icon> Login</button>
-  </form>
-  <a href="/reg"><fa-icon [icon]="faSignInAlt"></fa-icon> Register</a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Glassmorphism Login Form</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Include CSS from above here */
+  </style>
+</head>
+
+<body>
+
+  <!-- <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div> -->
+  <div class="container my-6">
+    <!-- <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div> -->
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <h2 class="text-light">Login Here</h2>
+      <div class="mb-3">
+        <label for="email" class="form-label text-white">
+          <fa-icon [icon]="faEnvelope"></fa-icon> Email
+        </label>
+        <input type="email" id="email" formControlName="email" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label text-white">
+          <fa-icon [icon]="faLock"></fa-icon> Password
+        </label>
+        <input type="password" id="password" formControlName="password" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">
+        <fa-icon [icon]="faSignInAlt"></fa-icon> Login
+      </button>
+      <a class="text-white" href="/reg">
+        <fa-icon [icon]="faSignInAlt"></fa-icon> Register
+      </a>
+    </form>
+  </div>
+</body>
+
+</html>
