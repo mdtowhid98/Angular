@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { ViewDepartmentComponent } from './component/depaerment/view-department/view-department.component';
 import { CreateDepartmentComponent } from './component/depaerment/create-department/create-department.component';
+import { CreatestudentComponent } from './component/student/createstudent/createstudent.component';
+import { ViewstudentComponent } from './component/student/viewstudent/viewstudent.component';
 
 
 
@@ -19,6 +21,8 @@ import { CreateDepartmentComponent } from './component/depaerment/create-departm
     CreatefacultyComponent,
     ViewDepartmentComponent,
     CreateDepartmentComponent,
+    CreatestudentComponent,
+    ViewstudentComponent,
    
     
   ],
