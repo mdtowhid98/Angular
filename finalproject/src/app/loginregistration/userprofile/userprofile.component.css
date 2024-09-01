@@ -1,75 +1,33 @@
-/* Reset default margins and paddings */
-body, h2, p {
-  margin: 0;
-  padding: 0;
+.bg-profile {
+  background-image: url('https://i.postimg.cc/cCB3DhzT/istockphoto-1207331159-612x612.jpg');
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 20px; /* Adds padding inside the container */
+  color: white; /* Ensures text is visible against the background */
+  min-height: 100vh; /* Ensures the container takes at least the full viewport height */
+  display: flex; /* Use Flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
 }
 
-/* General body styling */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f4; /* Light gray background */
-  color: #333; /* Dark text color */
-  padding: 20px;
+.profile-content {
+  background-color: rgba(9, 24, 54, 0.8); /* Sets a background color with transparency */
+  padding: 20px; /* Adds padding inside the profile content */
+  border-radius: 8px; /* Optional: adds rounded corners to the profile content */
+  text-align: center; /* Centers text inside profile content */
+  width: 100%; /* Allows content to stretch to fit container width */
+  max-width: 600px; /* Limits the maximum width of the content */
 }
 
-/* Container styling */
-.container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff; /* White background for the profile card */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.profile-photo {
+  width: 150px; /* Sets a fixed width for the photo */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: adds rounded corners to the photo */
+  display: block; /* Ensures the image is treated as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
 }
 
-/* Title styling */
-.text-center {
-  text-align: center;
-}
-
-h2 {
-  font-size: 30px;
-  color: #333; /* Dark color for the heading */
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-/* Paragraph styling */
-p {
-  font-size: 16px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  color: #333; /* Dark color for text */
-}
-
-/* Icon styling */
-fa-icon {
-  margin-right: 10px;
-  color: #007bff; /* Primary color for icons */
-  font-size: 20px; /* Adjust icon size */
-}
-
-/* Image styling */
-img {
-  border-radius: 10px; /* Rounded corners for the image */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px 0;
-  width: 150px; /* Fixed width for the profile image */
-  height: auto; /* Auto height to maintain aspect ratio */
-}
-
-/* Loading message styling */
-p.loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  color: #555; /* Slightly lighter color for loading text */
-}
-
-.fa-spinner {
-  color: #007bff; /* Primary color for the spinner */
-  font-size: 24px; /* Adjust spinner size */
-  margin-right: 10px;
+.bg-profile p {
+  margin-bottom: 15px; /* Adds space between paragraphs */
 }

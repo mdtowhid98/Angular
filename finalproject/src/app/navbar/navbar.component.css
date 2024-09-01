@@ -1,6 +1,6 @@
 /* Common Styles */
-.navbar, .horizontal-sidebar {
-    background-color: #2e2e2e; /* Light-black color */
+.navbar, .horizontal-sidebar, .sidebar {
+    background-color: #0c1a49; /* Updated to #0c1a49 */
     color: white;
 }
 
@@ -26,7 +26,7 @@
 
 /* Sidebar Styles */
 .horizontal-sidebar {
-    width: 200px;
+    width: 215px;
     position: fixed;
     top: 56px; /* Adjust based on the height of your navbar */
     left: 0;
@@ -35,6 +35,7 @@
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 1030; /* Ensure it stays above other elements */
     overflow-y: auto; /* Add scroll if content overflows */
+    background-color: #0c1a49; /* Ensure consistency with sidebar */
 }
 
 .horizontal-sidebar a {
@@ -90,14 +91,12 @@
 
 /* For the main navbar */
 .navbar {
-    background-color: #2e2e2e; /* Light-black color */
-    /* Add other styles as needed */
+    background-color: #0c1a49; /* Updated to #0c1a49 */
 }
 
 /* For the sidebar */
 .sidebar {
-    background-color: #2e2e2e; /* Light-black color */
-    /* Add other styles as needed */
+    background-color: #0c1a49; /* Updated to #0c1a49 */
 }
 
 form.d-flex {

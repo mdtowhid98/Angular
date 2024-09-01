@@ -1,63 +1,41 @@
-/* Center the container vertically and horizontally */
-html, body {
-    height: 100%;
-    margin: 20;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f8f9fa; /* Light background color for the page */
-  }
-  
-  .container {
-    max-width: 600px;
-    width: 100%;
-    padding: 200px;
-    background-color: #f1a2a2; /* White background for the form */
-    border-radius: 8px; /* Rounded corners for the container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow around the container */
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333; /* Dark text color for the heading */
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ced4da; /* Light border color */
-    border-radius: 4px; /* Rounded corners for input fields */
-  }
-  
-  .btn {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .btn-primary {
-    background-color: #007bff; /* Primary color for the button */
-    color: #ffffff; /* White text color */
-  }
-  
-  .view-category-link {
-    display: block;
-    text-align: center;
-    margin-top: 15px;
-    color: #007bff; /* Primary color for the link */
-    text-decoration: none;
-  }
-  
-  .view-category-link:hover {
-    text-decoration: underline;
-  }
-  
+.bg-category-form {
+  background-image: url('https://i.postimg.cc/c49LgC8c/istockphoto-1334840476-640x640.jpg');
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 20px; /* Adds padding inside the container */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  color: rgb(23, 241, 42); /* Optional: makes text color stand out against the background */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: column; /* Aligns children elements in a column */
+  justify-content: center; /* Centers children elements vertically */
+  align-items: center; /* Centers children elements horizontally */
+}
+
+.bg-category-form form {
+  width: 30%; /* Ensures form takes full width of the container */
+  max-width: 400px; /* Limits the maximum width of the form */
+  text-align: center; /* Centers text inside the form */
+}
+
+.bg-category-form .form-control {
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for form fields for readability */
+  color: #333; /* Dark text color for better readability */
+  width: 100%; /* Ensures the input takes full width of its parent */
+  max-width: 300px; /* Limits the maximum width of the input */
+  margin-bottom: 15px; /* Adds space between input and button */
+}
+
+.bg-category-form .btn-primary {
+  background-color: #11e72d; /* Adjust button color if needed */
+  border-color: #007bff;
+  width: 100%; /* Ensures the button takes full width of its parent */
+  max-width: 80px; /* Limits the maximum width of the button */
+}
+
+.bg-category-form .view-category-link {
+  color: #e1f016; /* Adjust link color if needed */
+  display: block; /* Makes the link block-level for better alignment */
+  margin-top: 15px; /* Adds space above the link */
+}
