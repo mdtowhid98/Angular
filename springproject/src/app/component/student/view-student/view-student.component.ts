@@ -10,35 +10,52 @@ import { Router } from '@angular/router';
 })
 export class ViewStudentComponent implements OnInit{
 
-  students: any;
+  // students: any;
 
-  constructor(private studentService: StudentService,
-    private departmentService: DepartmentService,
-    private router: Router
-  ) { }
-
-
-
-  ngOnInit(): void {
-    this.loadAllStudent();
-  }
-
-  loadAllStudent() {
-
-    this.studentService.getAllStudent().subscribe({
-
-      next: res => {
-        this.students = res;
-
-      },
-      error: error => {
-        console.log(error);
-      }
+  // constructor(private studentService: StudentService,
+  //   private departmentService: DepartmentService,
+  //   private router: Router
+  // ) { }
 
 
-    });
 
-  }
+  // ngOnInit(): void {
+  //   this.loadAllStudent();
+  // }
+
+  // loadAllStudent() {
+
+  //   this.studentService.getAllStudent().subscribe({
+
+  //     next: res => {
+  //       this.students = res;
+
+  //     },
+  //     error: error => {
+  //       console.log(error);
+  //     }
+
+
+  //   });
+
+  // }
+
+
+  students:any;
+departments:any;
+
+
+
+constructor(private departmentService:DepartmentService,
+  private studentService:StudentService,
+  private router:Router
+){}
+
+ngOnInit(): void {
+  this.departments = this.departmentService.getAllDepartmentForStudent();
+  this.students = this.studentService.getAllStudent();
+}
+
 
 
 

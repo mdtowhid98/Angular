@@ -5,6 +5,7 @@ import { CreatefacultyComponent } from './component/createfaculty/createfaculty.
 import { ViewDepartmentComponent } from './component/depaerment/view-department/view-department.component';
 import { CreateDepartmentComponent } from './component/depaerment/create-department/create-department.component';
 import { ViewStudentComponent } from './component/student/view-student/view-student.component';
+import { CreatestudentComponent } from './component/student/createstudent/createstudent.component';
 
 
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:"viewDepartment",component:ViewDepartmentComponent},
   {path:"createDepartment",component:CreateDepartmentComponent},
   {path:"viewstudent",component:ViewStudentComponent},
+  {path:"createStudent",component:CreatestudentComponent},
 
 ];
 

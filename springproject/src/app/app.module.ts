@@ -10,6 +10,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { ViewDepartmentComponent } from './component/depaerment/view-department/view-department.component';
 import { CreateDepartmentComponent } from './component/depaerment/create-department/create-department.component';
 import { ViewStudentComponent } from './component/student/view-student/view-student.component';
+import { CreatestudentComponent } from './component/student/createstudent/createstudent.component';
 
 
 
@@ -23,6 +24,7 @@ import { ViewStudentComponent } from './component/student/view-student/view-stud
     ViewDepartmentComponent,
     CreateDepartmentComponent,
     ViewStudentComponent,
+    CreatestudentComponent,
     
     
    

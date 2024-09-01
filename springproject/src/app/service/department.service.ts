@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { departmentModel } from '../model/departmentModel';
 
 @Injectable({
@@ -15,6 +15,21 @@ export class DepartmentService {
   getAllDepartment(): Observable<any> {
 
     return this.httpClient.get(this.baseUrl);
+
+  }
+
+  getAllDepartmentForStudent():Observable<departmentModel[]>{
+
+    return this.httpClient.get<departmentModel[]>(this.baseUrl)
+    .pipe(
+      catchError(this.handleError)
+    )
+
+  }
+
+  private handleError(error:any){
+console.error('An error occurred:',error);
+return throwError(()=>new Error('test'));
 
   }
 
