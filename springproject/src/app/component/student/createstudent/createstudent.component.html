@@ -1,45 +1,66 @@
 <div class="container">
-    <form [formGroup]="studentForm" (ngSubmit)="createStudent()">
+
+    <form [formGroup]="studentForm">
         <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input id="name" type="text" class="form-control" formControlName="name">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                formControlName="name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                formControlName="email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Cell</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                formControlName="cell">
         </div>
 
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input id="email" type="email" class="form-control" formControlName="email">
-        </div>
-        
-        <div class="mb-3">
-            <label for="cell" class="form-label">Cell Number</label>
-            <input id="cell" type="text" class="form-control" formControlName="cell">
-        </div>
         <div class="mb-3">
             <label class="form-label">Gender</label>
-            <div>
-                <input id="male" type="radio" class="form-check-input" formControlName="gender" value="Male">
-                <label for="male" class="form-check-label">Male</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="Male"
+                       formControlName="gender" >
+                <label class="form-check-label" for="exampleRadios3">
+                    Male
+                </label>
+
             </div>
-            <div>
-                <input id="female" type="radio" class="form-check-input" formControlName="gender" value="Female">
-                <label for="female" class="form-check-label">Female</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="Female" formControlName="gender"  >
+                <label class="form-check-label" for="exampleRadios3">
+                    Female
+                </label>
             </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="exampleRadios3" value="Others" formControlName="gender"
+                >
+                <label class="form-check-label" for="exampleRadios3">
+                    Others
+                </label>
+            </div>
+
         </div>
+
+        <div class="mb-3 col-md-3">
+            <label for="exampleInputPassword1" class="form-label">Date Of Birth</label>
+            <input type="date" class="form-control" name="dob" id="exampleInputPassword1" formControlName="dob"  >
+        </div>
+
+
+
+
 
         <div class="mb-3">
-            <label for="dob" class="form-label">DoB</label>
-            <input id="dob" type="date" class="form-control" formControlName="dob">
-        </div>
-       
-        <div class="mb-3" formGroupName="department">
-            <div class="invalid-feedback">Please select a Department.</div>
-            <label for="generic" class="form-label">Department:</label>
+            <label for="generic" class="form-label">Department</label>
             <select id="generic" formControlName="department" class="form-select" required>
-                <option *ngFor="let loc of departments" [ngValue]="loc.name">{{loc.name}}</option>
+                <option *ngFor="let d of departments" [ngValue]="d.id">{{d.name}}</option>
             </select>
-            
+            <div class="invalid-feedback">Please select a Favulty.</div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" (click)="createStudent()">Submit</button>
     </form>
+
 </div>
