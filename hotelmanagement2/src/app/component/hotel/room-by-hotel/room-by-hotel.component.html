@@ -1,0 +1,44 @@
+<div class="container">
+    <!-- Display Hotel Details -->
+    <div class="hotel-details">
+      <h2>Hotel Details</h2>
+      <div *ngIf="hotel">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img [src]="'http://localhost:8088/images/hotel/' + hotel.image" class="img-fluid rounded-start" [alt]="'Image of ' + hotel.name">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ hotel.name }}</h5>
+                <p class="card-text">Address: {{ hotel.address }}</p>
+                <p class="card-text">Rating: {{ hotel.rating }}</p>
+                <p class="card-text">Price Range: BDT {{ hotel.minPrice }} - BDT {{ hotel.maxPrice }}</p>
+                <p class="card-text">Location: {{ hotel.location.name }}</p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Display Rooms for the Hotel -->
+    <!-- <h2>Rooms for Hotel: {{ hotel.name }}</h2> -->
+    <div class="row">
+      <div class="col-md-4 m-1" *ngFor="let room of rooms">
+        <div class="card" style="width: 18rem;">
+          <img [src]="'http://localhost:8088/images/room/' + room.image" class="card-img-top my-1" [alt]="'Image of ' + room.roomtype">
+          <div class="card-body">
+            <h5 class="card-title">Room Type: {{ room.roomtype }}</h5>
+            <p class="card-text">Adults: {{ room.adultNo }}</p>
+            <p class="card-text">Children: {{ room.childNo }}</p>
+            <p class="card-text">Price: BDT {{ room.price }}</p>
+            <p class="card-text">Availability: {{ room.availability ? 'Available' : 'Not Available' }}</p>
+            <a href="" class="btn btn-primary">Book Now</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

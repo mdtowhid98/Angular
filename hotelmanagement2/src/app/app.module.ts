@@ -7,12 +7,20 @@ import { ViewlocationComponent } from './component/location/viewlocation/viewloc
 import { CreatelocationComponent } from './component/location/createlocation/createlocation.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ViewhotelComponent } from './component/hotel/viewhotel/viewhotel.component';
+import { CreatehotelComponent } from './component/hotel/createhotel/createhotel.component';
+import { RoomByHotelComponent } from './component/hotel/room-by-hotel/room-by-hotel.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewlocationComponent,
-    CreatelocationComponent
+    CreatelocationComponent,
+    ViewhotelComponent,
+    CreatehotelComponent,
+    RoomByHotelComponent,
+ 
   ],
   imports: [
     BrowserModule,

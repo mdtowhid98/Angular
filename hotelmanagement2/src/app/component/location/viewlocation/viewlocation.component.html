@@ -1,35 +1,18 @@
-
-
-
 <div class="container">
-    <table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Image</th>
-        <th>Update</th>
-        <th>Delete</th>
-        
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let lc of locations |async">
-    
-        <td>{{lc.id}}</td>
-        <td>{{lc.name}}</td>
-        <td>{{lc.image}}</td>
-        <td><button class="btn btn-warning" >Edit</button></td>
-        <td><button class="btn btn-danger" >Delete</button></td>
-    
-    
-    
-      
-      
-    
-    </tr>
-    </tbody>
-    
-    </table>
-    
+    <div class="row">
+        <div class="col-md-4" *ngFor="let lc of locations | async">
+            <div class="card mb-4">
+                <!-- <img [src]="lc.image" class="card-img-top" alt="{{lc.name}}" style="height: 200px; object-fit: cover;"> -->
+                <img [src]="'http://localhost:8088/images/location/' + lc.image" class="card-img-top my-1" alt="{{ lc.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{lc.name}}</h5>
+                    <p class="card-text">ID: {{lc.id}}</p>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-warning" >Edit</button>
+                        <button class="btn btn-danger" >Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>

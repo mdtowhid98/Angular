@@ -1,0 +1,26 @@
+<div class="container">
+
+    <div class="row">
+        <div class="card md-4 m-1" style="width: 18rem;" *ngFor="let h of hotels">
+            <img [src]="'http://localhost:8088/images/hotel/' + h.image" class="card-img-top my-1" alt="{{ h.name }}">
+
+            <div class="card-body">
+                <p>
+                </p>
+                <h5 class="card-title">Name: {{h.name }}</h5>
+                <p class="card-text">Address: {{ h.address}}</p>
+                <p class="card-text">Rating: {{ h.rating}}</p>
+                <p class="card-text">Price: BDT {{h.minPrice}}- BDT {{h.maxPrice}}</p>
+                <p class="card-text">Location: {{ h.location.name}}</p>
+                
+
+                
+                <button class="btn btn-primary btn-sm" (click)="viewRooms(h.id)">View</button>
+                <!-- <button class="btn btn-danger btn-sm">Delete</button> -->
+            </div>
+        </div>
+    
+    
+    </div>
+
+</div>

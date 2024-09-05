@@ -16,6 +16,8 @@ export class CreatelocationComponent implements OnInit{
   formValue!: FormGroup;
   locationData: any;
 
+
+
   constructor(
     private locationService: LocationService,
     private router: Router,
