@@ -1,0 +1,39 @@
+<div class="container">
+    <form [formGroup]="medicineForm" (ngSubmit)="createMedicine()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input id="name" type="text" class="form-control" formControlName="name">
+        </div>
+
+        <div class="mb-3">
+            <label for="manufacturer" class="form-label">Manufacturer</label>
+            <input id="manufacturer" type="text" class="form-control" formControlName="manufacturer">
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input id="price" type="number" class="form-control" formControlName="price">
+        </div>
+
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input id="quantity" type="number" class="form-control" formControlName="quantity">
+        </div>
+
+        <div class="mb-3">
+            <label for="expiryDate" class="form-label">Expiry Date</label>
+            <input id="expiryDate" type="date" class="form-control" formControlName="expiryDate">
+        </div>
+       
+
+        <div class="mb-3">
+            <label for="generic" class="form-label">Category</label>
+            <select id="generic" formControlName="category" class="form-select" required>
+                <option *ngFor="let c of categories" [ngValue]="c.id">{{c.name}}</option>
+            </select>
+            <div class="invalid-feedback">Please select a Category</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+<div class="container bg-category-table">
+    <h1 class="text-center">All Categories Here</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let category of categories | async">
+                <td>{{category.id}}</td>
+                <td>{{category.name}}</td>
+                <td>
+                    <button >
+                         Update
+                    </button>
+                </td>
+                <td>
+                    <button >
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
