@@ -9,6 +9,7 @@ import { ViewMedicineCategoryComponent } from './component/category/view-medicin
 import { CreateMedicineCategoryComponent } from './component/category/create-medicine-category/create-medicine-category.component';
 import { ViewMedicineComponent } from './component/medicine/view-medicine/view-medicine.component';
 import { CreateMedicineComponent } from './component/medicine/create-medicine/create-medicine.component';
+import { MainnavComponent } from './layout/mainnav/mainnav.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CreateMedicineComponent } from './component/medicine/create-medicine/cr
     ViewMedicineCategoryComponent,
     CreateMedicineCategoryComponent,
     ViewMedicineComponent,
-    CreateMedicineComponent
+    CreateMedicineComponent,
+    MainnavComponent
   ],
   imports: [
     BrowserModule,
