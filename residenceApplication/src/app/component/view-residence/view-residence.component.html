@@ -1,0 +1,31 @@
+<div class="container">
+
+    <div class="row">
+        <div class="card md-4 m-1" style="width: 18rem;" *ngFor="let m of residence">
+            <img [src]="'http://localhost:8087/images/residence/' + m.image" class="card-img-top my-1"
+                alt="{{ m.name }}">
+
+            <div class="card-body">
+                <p>
+                </p>
+                <h5 class="card-title">Name: {{m.name }}</h5>
+                <p class="card-text">NIDNo: {{ m.NIDNo}}</p>
+                <p class="card-text">Address: {{ m.address}}</p>
+                <!-- <p class="card-text">Price: BDT {{h.minPrice}}- BDT {{h.maxPrice}}</p> -->
+                <p class="card-text">FamilyNo: {{ m.familyNo}}</p>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
