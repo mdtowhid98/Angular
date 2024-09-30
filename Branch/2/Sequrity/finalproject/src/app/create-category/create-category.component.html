@@ -1,0 +1,15 @@
+
+
+<div class="container bg-category-form">
+  <h1 class="text-center">Add Category</h1>
+  <form [formGroup]="formValue">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Category Name</label>
+      <input type="text" class="form-control" formControlName="categoryname">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="createCategory()">Submit</button>
+    <a href="viewCategory" class="view-category-link">View Category</a>
+  </form>
+</div>
+
+

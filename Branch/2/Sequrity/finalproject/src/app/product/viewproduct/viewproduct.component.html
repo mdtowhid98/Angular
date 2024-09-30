@@ -1,0 +1,48 @@
+<div class="category-section">
+  <h6>Search Category</h6>
+  <!-- Dropdown to select category -->
+  <select (change)="filterByCategory($event)">
+    <option value="">All Categories</option>
+    <!-- Dynamically populate categories -->
+    <option *ngFor="let c of categories" [value]="c.categoryname">{{ c.categoryname }}</option>
+  </select>
+</div>
+
+<div class="branch-section">
+  <h6>Search Branch</h6>
+  <!-- Dropdown to select branch -->
+  <select (change)="filterByBranch($event)">
+    <option value="">All Branch</option>
+    <!-- Dynamically populate branches -->
+    <option *ngFor="let b of branch" [value]="b.branchName">{{ b.branchName }}</option>
+  </select>
+</div>
+
+<div class="product-container">
+  <div *ngFor="let product of products" class="product-card">
+    
+    <img [src]="'http://localhost:8087/images/product/' + product.photo" class="card-img-top my-1"
+         alt="Image of {{ product.name }}">
+    <h4>{{ product.name }}</h4>
+    <p *ngFor="let category of product.categories">Category: {{ category.categoryname }}</p>
+    <p>Unit Price: {{ product.unitprice | currency }}</p>
+    <p>Stock: {{ product.stock }}</p>
+    <p>Manufacture Date: {{ product.manufactureDate }}</p>
+    <p>Expiry Date: {{ product.expiryDate }}</p>
+    <p>Supplier: {{ product.supplier.name }}</p>
+    <p>Branch: {{ product.branch.branchName }}</p>
+    
+    
+    <!-- Admin role controls -->
+    <ng-container *ngIf="authService.getUserRole() === 'ADMIN'">
+      <ng-container *ngIf="product.id">
+        <button (click)="updateProduct(product.id)" class="btn btn-primary">
+          <fa-icon [icon]="faEdit"></fa-icon> Edit
+        </button>
+        <button (click)="deleteProduct(product.id)" class="btn btn-danger">
+          <fa-icon [icon]="faTrash"></fa-icon> Delete
+        </button>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

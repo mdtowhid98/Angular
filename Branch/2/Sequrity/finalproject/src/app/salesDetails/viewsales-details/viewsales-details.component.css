@@ -1,0 +1,102 @@
+/* Main container for the sales details */
+.container {
+    max-width: 800px; /* Maximum width for the container */
+    margin: 20px auto; /* Center the container with top and bottom margin */
+    padding: 20px; /* Padding inside the container */
+    background-color: #ffffff; /* White background for clarity */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Headings */
+h2 {
+    color: #007bff; /* Stylish blue color for headings */
+    margin-bottom: 15px; /* Space below headings */
+    font-size: 1.5rem; /* Increase heading size */
+}
+
+/* Search input styles */
+.search-pill {
+    width: 100%; /* Full width for the search input */
+    padding: 10px; /* Padding inside input */
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below search input */
+    font-size: 1rem; /* Font size for readability */
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+}
+
+.search-pill:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Table styles */
+.table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders for cleaner look */
+    margin-bottom: 20px; /* Space below table */
+}
+
+/* Table header styles */
+.table thead th {
+    background-color: #007bff; /* Header background color */
+    color: white; /* White text color */
+    padding: 10px; /* Padding inside headers */
+    text-align: left; /* Align text to the left */
+    font-weight: bold; /* Bold text for headers */
+}
+
+/* Table row styles */
+.table tbody tr {
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1; /* Light background on hover */
+}
+
+/* Table cell styles */
+.table tbody td {
+    padding: 10px; /* Padding inside cells */
+    border-bottom: 1px solid #ddd; /* Light border below cells */
+}
+
+/* Grouped sales details */
+h3 {
+    color: #333; /* Dark color for subheadings */
+    margin-top: 20px; /* Space above subheadings */
+    font-size: 1.25rem; /* Slightly larger font for subheadings */
+}
+
+/* Unordered list styles */
+ul {
+    padding-left: 20px; /* Indentation for unordered lists */
+}
+
+ul li {
+    margin-bottom: 5px; /* Space between list items */
+    background-color: #e9ecef; /* Light background for list items */
+    padding: 10px; /* Padding inside list items */
+    border-radius: 4px; /* Rounded corners for list items */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+ul li:hover {
+    background-color: #d9d9d9; /* Darker background on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Reduced padding on smaller screens */
+    }
+    
+    .search-pill {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+    
+    h2, h3 {
+        font-size: 1.2rem; /* Slightly smaller headings for mobile */
+    }
+}

@@ -1,0 +1,82 @@
+<div class="container mt-5">
+    <h2>Create Order</h2>
+  
+    <!-- Order Form -->
+    <form [formGroup]="formValue" (ngSubmit)="createOrder()">
+      
+      <!-- Customer Dropdown -->
+      <div class="form-group">
+        <label for="customer">Customer</label>
+        <select
+          class="form-control"
+          id="customer"
+          formControlName="customer"
+          required
+        >
+          <option value="">Select Customer</option>
+          <option *ngFor="let customer of customers" [ngValue]="customer">
+            {{ customer.name }}
+          </option>
+        </select>
+        <div *ngIf="formValue.get('customer')?.invalid && formValue.get('customer')?.touched" class="text-danger">
+          Customer is required.
+        </div>
+      </div>
+  
+      <!-- Product Dropdown -->
+      <div class="form-group">
+        <label for="product">Product</label>
+        <select
+          class="form-control"
+          id="product"
+          formControlName="product"
+          required
+        >
+          <option value="">Select Product</option>
+          <option *ngFor="let product of products" [ngValue]="product">
+            {{ product.name }} - ${{ product.unitprice }}
+          </option>
+        </select>
+        <div *ngIf="formValue.get('product')?.invalid && formValue.get('product')?.touched" class="text-danger">
+          Product is required.
+        </div>
+      </div>
+  
+      <!-- Quantity Input -->
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input
+          type="number"
+          id="quantity"
+          class="form-control"
+          formControlName="quantity"
+          required
+          min="1"
+        />
+        <div *ngIf="formValue.get('quantity')?.invalid && formValue.get('quantity')?.touched" class="text-danger">
+          Quantity is required and must be greater than 0.
+        </div>
+      </div>
+  
+      <!-- Order Date Input -->
+      <div class="form-group">
+        <label for="orderDate">Order Date</label>
+        <input
+          type="date"
+          id="orderDate"
+          class="form-control"
+          formControlName="orderDate"
+          required
+        />
+        <div *ngIf="formValue.get('orderDate')?.invalid && formValue.get('orderDate')?.touched" class="text-danger">
+          Order date is required.
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary" [disabled]="formValue.invalid">
+        <fa-icon [icon]="faPlus"></fa-icon> Create Order
+      </button>
+    </form>
+  </div>
+  

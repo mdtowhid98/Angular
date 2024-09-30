@@ -1,0 +1,53 @@
+/* Main container for the product form with background settings */
+.product-form {
+  background-image: url('https://i.postimg.cc/xd6n0rdM/pexels-pixabay-139398.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px; /* Adds padding inside the container */
+  border-radius: 8px;
+  color: rgb(3, 1, 12);
+  height: auto; /* Let the height adjust based on content */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Aligns the form closer to the top */
+  align-items: center; /* Centers the form horizontally */
+  margin-top: 20px; /* Small gap below navbar */
+}
+
+/* Form layout adjustments */
+.product-form form {
+  width: 100%; /* Full-width form within its parent container */
+  max-width: 550px; /* Limits the maximum width of the form */
+  padding: 20px; /* Adds padding inside the form */
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for contrast */
+  border-radius: 8px; /* Soft rounded corners for the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+}
+
+/* Reset padding and margin for the entire page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the navbar (if applicable) */
+.navbar {
+  margin-bottom: 0; /* Removes bottom margin from navbar */
+}
+
+/* Additional adjustments */
+body {
+  margin: 0; /* Reset body margin to prevent extra space */
+  padding: 0; /* Reset body padding */
+}
+
+.product-form h1 {
+  
+  color: rgb(6, 8, 7); /* Optional: Change text color for better contrast */
+  padding: 10px; /* Optional: Add some padding */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  text-align: center; /* Center the text */
+}
+

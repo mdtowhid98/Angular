@@ -1,0 +1,16 @@
+<div class="container bg-profile">
+    <div class="profile-content">
+        <h2 class="text-center">Your Profile</h2>
+
+        <div *ngIf="user">
+            <p><fa-icon [icon]="faUserCircle"></fa-icon> <strong>Name: </strong>{{user.name}}</p>
+            <p><fa-icon [icon]="faEnvelope"></fa-icon> <strong>Email: </strong>{{user.email}}</p>
+            <!-- <p><fa-icon [icon]="faImage"></fa-icon> <img [src]="user.photo" alt="{{user.name}}" class="profile-photo"></p> -->
+            <p><fa-icon [icon]="faTag"></fa-icon> <strong>Role: </strong>{{user.role}}</p>
+        </div>
+
+        <div *ngIf="!user">
+            <p><fa-icon [icon]="faSpinner" spin></fa-icon> Loading user profile ....</p>
+        </div>
+    </div>
+</div>

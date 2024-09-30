@@ -1,0 +1,29 @@
+<div class="container bg-category-table">
+    <h1 class="text-center">All Customer Here</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Cell No</th>
+                <th>Address</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers ">
+                <td>{{customer.id}}</td>
+                <td>{{customer.name}}</td>
+                <td>{{customer.cell}}</td>
+                <td>{{customer.address}}</td>
+                <td>
+                    <button class="btn btn-warning" (click)="updateCustomer(customer.id)">Edit</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteCustomer(customer.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

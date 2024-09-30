@@ -1,0 +1,185 @@
+/* Common Styles */
+.navbar, .horizontal-sidebar, .sidebar {
+    background-color: #0c1a49; /* Updated to #0c1a49 */
+    color: white;
+}
+
+/* Navbar Styles */
+.navbar .nav-link {
+    color: white;
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active {
+    color: #1cf11c; /* Slightly lighter color on hover/active */
+}
+
+.navbar .btn-outline-success {
+    color: white;
+    border-color: white;
+}
+
+.navbar .btn-outline-success:hover {
+    color: #06fa43;
+    background-color: white;
+    border-color: white;
+}
+
+/* Sidebar Styles */
+.horizontal-sidebar {
+    width: 220px;
+    position: fixed;
+    top: 56px; /* Adjust based on the height of your navbar */
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1030; /* Ensure it stays above other elements */
+    overflow-y: auto; /* Add scroll if content overflows */
+    background-color: #0c1a49; /* Ensure consistency with sidebar */
+}
+
+.horizontal-sidebar a {
+    display: block;
+    padding: 10px;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+
+.horizontal-sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect */
+}
+
+/* Dropdown Styles in Sidebar */
+.horizontal-sidebar .dropdown-menu {
+    background-color: #fcf9f9; /* Match sidebar background */
+    color: rgb(14, 1, 1); /* White text color for contrast */
+    border: none; /* Remove border for a flat design */
+    border-radius: 0; /* Flat design */
+    text-align: center;
+}
+
+.horizontal-sidebar .dropdown-item {
+    padding: 10px;
+    color: rgb(14, 0, 0);
+}
+
+.horizontal-sidebar .dropdown-item:hover {
+    background-color: #0afa5a; /* Light gray hover effect */
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .2em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
+    color: rgb(249, 249, 252);
+}
+
+/* Additional Dropdown Specific Styles */
+.horizontal-sidebar .dropdown-toggle {
+    cursor: pointer;
+}
+
+.horizontal-sidebar .dropdown-item:hover {
+    background-color: rgba(147, 238, 245, 0.884); /* Light hover effect */
+}
+
+/* For the main navbar */
+.navbar {
+    background-color: #0c1a49; /* Updated to #0c1a49 */
+}
+
+/* For the sidebar */
+.sidebar {
+    background-color: #0c1a49; /* Updated to #0c1a49 */
+}
+
+form.d-flex {
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem; /* Space between input and buttons */
+}
+
+form.d-flex .form-control {
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+form.d-flex .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+form.d-flex .btn-outline-success {
+    border-color: #4428a7;
+    color: #faf8f8;
+}
+
+form.d-flex .btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+form.d-flex .btn-outline-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+form.d-flex .fa-icon {
+    margin-right: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    form.d-flex {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+
+    form.d-flex .form-control {
+        width: 100%;
+    }
+
+    form.d-flex .btn {
+        width: 100%;
+    }
+}
+
+@keyframes dance {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+img.rounded-circle {
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circle */
+    display: block; /* Removes any unwanted inline space */
+    max-height: 40px; /* Constrains the height */
+    width: auto; /* Maintains the aspect ratio */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
+    animation: dance 1s ease-in-out infinite; /* Applies the dance animation */
+}
+/* Specific style for sales branch links */
+.horizontal-sidebar .dropdown-item[href*="/createSales"],
+.horizontal-sidebar .dropdown-item[href*="/salesgulshanbranch"],
+.horizontal-sidebar .dropdown-item[href*="/salesbananibranch"],
+.horizontal-sidebar .dropdown-item[href*="/salesdetails"]
+ {
+    color: rgb(248, 243, 243); /* Change font color to black */
+}
+
+/* Optional: Change hover effect to maintain visibility */
+.horizontal-sidebar .dropdown-item:hover {
+    background-color: rgba(147, 238, 245, 0.884); /* Keep the hover effect */
+    color: rgb(10, 1, 1); /* Change text color on hover if desired */
+}

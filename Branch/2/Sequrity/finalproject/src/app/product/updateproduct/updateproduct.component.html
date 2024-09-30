@@ -1,0 +1,37 @@
+<div class="container">
+    <h2 class="text-center">Update Product</h2>
+    <form (ngSubmit)="updateProduct()" #productForm="ngForm">
+
+        <div class="mb-3">
+            <label for="name" class="form-label"><fa-icon [icon]="faTag"></fa-icon> Name</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="product.name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="manufactureDate" class="form-label"><fa-icon [icon]="faTag"></fa-icon> Manufacture Date</label>
+            <input type="date" class="form-control" id="manufactureDate" name="manufactureDate" [(ngModel)]="product.manufactureDate" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="expiryDate" class="form-label"><fa-icon [icon]="faTag"></fa-icon> Expiry Date</label>
+            <input type="date" class="form-control" id="expiryDate" name="expiryDate" [(ngModel)]="product.expiryDate" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="photo" class="form-label"><fa-icon [icon]="faImage"></fa-icon> Photo</label>
+            <input type="file" id="productImage" (change)="onFileChange($event)">
+        </div>
+
+        <div class="mb-3">
+            <label for="unitprice" class="form-label"><fa-icon [icon]="faDollarSign"></fa-icon> Unit Price</label>
+            <input type="number" class="form-control" id="unitprice" name="unitprice" [(ngModel)]="product.unitprice" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="stock" class="form-label"><fa-icon [icon]="faTag"></fa-icon> Add Stock</label>
+            <input type="number" class="form-control" id="stock" name="stock" [(ngModel)]="newStock" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!productForm.form.valid"><fa-icon [icon]="faSave"></fa-icon> Submit</button>
+    </form>
+</div>

@@ -1,0 +1,53 @@
+<div class="container">
+  <h2>Sales Details</h2>
+
+  <div class="mt-4">
+    <input class="search-pill" [(ngModel)]="searchTerm" (input)="searchCustomerNameAndId()"
+      placeholder="Search by Customername or  Sales id ">
+  </div>
+
+  <table class="table table-striped">
+
+
+    <thead>
+      <tr>
+        <th>Sales ID</th>
+        <th>Customer Name</th>
+        <th>Sales Date</th>
+        <th>Product Details</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let saleDetail of filteredCustomerNameAndId">
+        <td>{{ saleDetail.sale.id }}</td>
+        <td>{{ saleDetail.sale.customername }}</td>
+        <td>{{ saleDetail.sale.salesdate }}</td>
+        <td>
+          <ul>
+            <!-- Displaying the product details -->
+            <li>
+              {{ saleDetail.product.name }} - Quantity: {{ saleDetail.quantity }} - Unit Price: {{ saleDetail.unitPrice
+              }}
+            </li>
+          </ul>
+        </td>
+        <td>{{ saleDetail.totalPrice }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Grouped Sales Details (by Sales ID)</h2>
+  <div *ngFor="let group of groupedSalesDetails | keyvalue">
+    <h3>Sales ID: {{ group.key }}</h3>
+
+    <ul>
+
+      <li *ngFor="let saleDetail of group.value">
+        <!-- Display the product name and quantity from the grouped sales -->
+
+        {{ saleDetail.product.name }} - Quantity: {{ saleDetail.quantity }}
+      </li>
+    </ul>
+  </div>
+</div>

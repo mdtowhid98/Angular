@@ -1,0 +1,33 @@
+.bg-profile {
+  background-image: url('https://i.postimg.cc/cCB3DhzT/istockphoto-1207331159-612x612.jpg');
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 20px; /* Adds padding inside the container */
+  color: white; /* Ensures text is visible against the background */
+  min-height: 100vh; /* Ensures the container takes at least the full viewport height */
+  display: flex; /* Use Flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.profile-content {
+  background-color: rgba(9, 24, 54, 0.8); /* Sets a background color with transparency */
+  padding: 20px; /* Adds padding inside the profile content */
+  border-radius: 8px; /* Optional: adds rounded corners to the profile content */
+  text-align: center; /* Centers text inside profile content */
+  width: 100%; /* Allows content to stretch to fit container width */
+  max-width: 600px; /* Limits the maximum width of the content */
+}
+
+.profile-photo {
+  width: 150px; /* Sets a fixed width for the photo */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: adds rounded corners to the photo */
+  display: block; /* Ensures the image is treated as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+.bg-profile p {
+  margin-bottom: 15px; /* Adds space between paragraphs */
+}

@@ -1,0 +1,28 @@
+<div class="container bg-category-table">
+    <h1 class="text-center">All Branch Here</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Branch Name</th>
+                <th>Loation</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let branch of branches ">
+                <td>{{branch.id}}</td>
+                <td>{{branch.branchName}}</td>
+                <td>{{branch.location}}</td>
+                <td>
+                    <button class="btn btn-warning" (click)="updateBranch(branch.id)">Edit</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteBranch(branch.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

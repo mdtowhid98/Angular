@@ -1,0 +1,46 @@
+.bg-supplier-form {
+    background-image: url('https://i.postimg.cc/9QJXRMgD/abstract-dark-blurred-background-smooth-gradient-texture-color-shiny-bright-website-pattern-banner-h.avif');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 50px; /* Adds padding inside the container */
+    border-radius: 8px; /* Adds rounded corners */
+    color: rgb(70, 23, 241); /* Text color to contrast with background */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Enables Flexbox layout */
+    flex-direction: column; /* Aligns children elements in a column */
+    justify-content: center; /* Centers children elements vertically */
+    align-items: center; /* Centers children elements horizontally */
+}
+
+.bg-supplier-form form {
+    width: 100%; /* Full-width form within its parent container */
+    max-width: 400px; /* Limits the maximum width of the form */
+}
+
+.bg-supplier-form .form-group {
+    text-align: left; /* Aligns form labels and inputs to the left */
+    width: 100%;
+}
+
+.bg-supplier-form label {
+    display: block; /* Forces label to be above input */
+    font-weight: bold; /* Makes the label text bold */
+    margin-bottom: 5px; /* Adds space between label and input */
+}
+
+.bg-supplier-form .form-control {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for form fields */
+    color: #333; /* Dark text color for readability */
+    width: 100%; /* Full width of the input field */
+    max-width: 300px; /* Max width to keep form compact */
+    margin-bottom: 15px; /* Adds space between input fields */
+}
+
+.bg-supplier-form .btn-primary {
+    background-color: #11e72d; /* Adjust button color */
+    border-color: #007bff;
+    width: 100%; /* Full-width button */
+    max-width: 150px; /* Limits the maximum width of the button */
+    margin-top: 10px; /* Adds space above the button */
+}

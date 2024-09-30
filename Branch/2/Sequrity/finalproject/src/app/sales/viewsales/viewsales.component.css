@@ -1,0 +1,202 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table ul {
+    padding-left: 20px;
+}
+
+.table ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    background-color: #1e7e34;
+}
+
+button[click="deleteSales(sale.id)"] {
+    background-color: #f8f2f3;
+}
+
+button[click="deleteSales(sale.id)"]:hover {
+    background-color: #c82333;
+}
+
+button[click="deleteSales(sale.id)"]:active {
+    background-color: #ec2727;
+}
+/* Delete button color red */
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Table row hover dancing effect */
+table tbody tr:hover {
+    animation: dance 0.5s infinite alternate;
+}
+
+@keyframes dance {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+/* Edit button color green */
+button.edit-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.edit-button:hover {
+    opacity: 0.8;
+}
+
+/* Delete button color red */
+button.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.delete-button:hover {
+    opacity: 0.8;
+}
+
+/* Table row hover dancing effect */
+table tbody tr:hover {
+    animation: dance 0.5s infinite alternate;
+}
+
+@keyframes dance {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+/* Basic link styling */
+a {
+    color: #1e90ff; /* Dodger Blue */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f0f8ff; /* Alice Blue */
+    border: 2px solid #1e90ff;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  /* Hover effect */
+  a:hover {
+    background-color: #1e90ff; /* Dodger Blue */
+    color: #fff; /* White text */
+    border-color: #1e90ff; /* Dodger Blue border */
+  }
+  
+  /* Active state */
+  a:active {
+    background-color: #4682b4; /* Steel Blue */
+    color: #fff; /* White text */
+    border-color: #4682b4; /* Steel Blue border */
+  }
+  
+  /* Focus state */
+  a:focus {
+    outline: none;
+    box-shadow: 0 0 3px 2px rgba(30, 144, 255, 0.5); /* Dodger Blue shadow */
+  }
+  
+/* Font Awesome icon styling within table buttons */
+.table .btn fa-icon {
+    margin-right: 5px; /* Space between the icon and button text */
+    color: #fff; /* Ensure icon color contrasts with button text */
+  }
+  
+  /* Ensure button colors are correct */
+  .btn-warning {
+    background-color: #1fdcf5;
+    border-color: #07b9ff;
+  }
+  
+  .btn-warning fa-icon {
+    color: #000; /* Icon color for warning buttons */
+  }
+  
+  .btn-danger {
+    background-color: #3d14f5;
+    border-color: #4f13f5;
+  }
+  
+  .btn-danger fa-icon {
+    color: #fff; /* Icon color for danger buttons */
+  }
+  
+  .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+  }
+  
+  .btn-info fa-icon {
+    color: #fff; /* Icon color for info button */
+  }
+  

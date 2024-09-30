@@ -1,0 +1,200 @@
+<nav class="navbar navbar-expand-lg  sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://i.postimg.cc/SQMbrpzy/download.png" height="60px" alt="" class="rounded-circle">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/home">
+            <fa-icon [icon]="faHome"></fa-icon> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/reg">
+            <fa-icon [icon]="faUserPlus"></fa-icon> Registration
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logIn">
+            <fa-icon [icon]="faSignInAlt"></fa-icon> Login
+          </a>
+        </li>
+
+        
+
+      </ul>
+      <form class="d-flex" role="search">
+
+        <a class="nav-link" href="/userprofile">
+          <fa-icon [icon]="faUser"></fa-icon> Profile
+        </a>
+
+        <a class="btn btn-outline-success" href="/logout">
+          <fa-icon [icon]="faSignOutAlt"></fa-icon> Logout
+        </a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="row">
+  <div class="col-md-2">
+    <!-- Left-Aligned Horizontal Sidebar -->
+    <div class="horizontal-sidebar  text-white d-flex flex-column align-items-start py-2">
+   
+      <ng-container *ngIf="this.authService.getUserRole() === 'ADMIN'">
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="productDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Medicine
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="productDropdown">
+            <li>
+              <a class="dropdown-item" href="/viewproduct">
+              View Medicine
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/createProduct">
+                Create Medicine
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+
+        <!-- <div class="dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="productDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Sales
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="productDropdown">
+            <li> -->
+              <a class="dropdown-item" href="/salesdetails">
+                Sales Details
+              </a>
+            <!-- </li>
+           
+          </ul>
+        </div> -->
+
+
+        <a class="dropdown-item" href="/createSales">
+          Sales Dhanmondi Branch
+        </a>
+
+
+        <a class="dropdown-item" href="/salesgulshanbranch">
+          Sales Gulshan Branch
+        </a>
+
+        <a class="dropdown-item" href="/salesbananibranch">
+          Sales Banani Branch
+        </a>
+
+
+
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="productDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Generics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="productDropdown">
+            <li>
+              <a class="dropdown-item" href="/viewCategory">
+                Generics
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/createCategory">
+                Create Generics
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="productDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Supplier
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="productDropdown">
+            <li>
+              <a class="dropdown-item" href="/viewsupplier">
+                Supplier
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/createsupplier">
+                Create Supplier
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        
+
+        <!-- <div class="dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="productDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Customer
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="productDropdown"> -->
+            <!-- <li>
+              <a class="dropdown-item" href="/salesgulshanbranch">
+                Create Sales Gulshan
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/salesbananibranch">
+                Create Sales Banani 
+              </a>
+            </li> -->
+          <!-- </ul>
+        </div> -->
+
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="productDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Branch
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="productDropdown">
+            <li>
+              <a class="dropdown-item" href="/viewbranch">
+                View Branch
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/createbranch">
+                Create Branch
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+
+       
+
+      </ng-container>
+      <ng-container *ngIf="this.authService.getUserRole() === 'USER'">
+        <a class="dropdown-item" href="/viewproduct">
+          <fa-icon [icon]="faEye"></fa-icon> View Products
+        </a>
+
+      </ng-container>
+
+     
+
+    </div>
+
+  </div>
+</div>

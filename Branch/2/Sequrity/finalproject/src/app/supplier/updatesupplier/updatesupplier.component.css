@@ -1,0 +1,54 @@
+/* Main container for the supplier form */
+.container {
+    max-width: 400px; /* Maximum width for the form */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styling for form labels */
+.form-label {
+    font-weight: bold; /* Make labels bold */
+    margin-bottom: 5px; /* Space below the label */
+}
+
+/* Styling for form inputs */
+.form-control {
+    width: 100%; /* Full-width input fields */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border for inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+    font-size: 14px; /* Font size for inputs */
+}
+
+/* Add focus effect for inputs */
+.form-control:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow on focus */
+}
+
+/* Button styling */
+.btn {
+    width: 100%; /* Full-width button */
+    padding: 10px; /* Padding inside button */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for button */
+    font-size: 16px; /* Font size for button */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+}

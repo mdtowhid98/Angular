@@ -1,0 +1,78 @@
+<div class="container mt-4 product-form">
+  <h1 class="text-center">Add Medicine</h1>
+  <form [formGroup]="formValue" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+    
+    <div class="form-group">
+      <label for="name">
+         Name:
+      </label>
+      <input type="text" id="name" class="form-control" formControlName="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="stock">
+         Stock:
+      </label>
+      <input type="number" id="stock" class="form-control" formControlName="stock" required>
+    </div>
+
+    <div class="form-group">
+      <label for="manufactureDate">
+         Manufacture Date:
+      </label>
+      <input type="date" id="manufactureDate" class="form-control" formControlName="manufactureDate" required>
+    </div>
+
+    <div class="form-group">
+      <label for="expiryDate">
+         Expiry Date:
+      </label>
+      <input type="date" id="expiryDate" class="form-control" formControlName="expiryDate" required>
+    </div>
+
+    <div class="form-group">
+      <label for="unitprice">
+        Unit Price:
+      </label>
+      <input type="number" id="unitprice" class="form-control" formControlName="unitprice" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="categories" class="form-label">
+        Category:
+      </label>
+      <select id="categories" class="form-select" formControlName="category" required>
+        <option *ngFor="let g of categories" [ngValue]="g.id">{{ g.categoryname }}</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="suppliers" class="form-label">
+        Supplier:
+      </label>
+      <select id="supplier" class="form-select" formControlName="supplier" required>
+        <option *ngFor="let g of suppliers" [ngValue]="g.id">{{ g.name }}</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="branch" class="form-label">
+       Branch:
+      </label>
+      <select id="branch" class="form-select" formControlName="branch" required>
+        <option *ngFor="let g of branches" [ngValue]="g.id">{{ g.branchName }}</option>
+      </select>
+    </div>
+
+
+    <div class="mb-3">
+      <label for="formFile" class="form-label">
+         Image:
+      </label>
+      <input class="form-control" type="file" id="formFile" (change)="onFileSelected($event)" accept="image/*" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+       Add Medicine
+    </button>
+     

@@ -1,0 +1,47 @@
+.bg-category-table {
+  background-image: url('https://i.postimg.cc/SszmvGS9/images.jpg');
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 20px; /* Adds padding inside the container */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  color: rgb(13, 14, 13); /* Optional: makes text color stand out against the background */
+  min-height: 100vh; /* Ensures the container takes at least the full viewport height */
+}
+
+.bg-category-table h1 {
+  margin-bottom: 20px; /* Adds space below the heading */
+}
+
+.bg-category-table .table {
+  background-color: rgba(9, 24, 54, 0.8); /* Light background for the table for readability */
+  color: #333; /* Dark text color for better readability */
+  border-radius: 8px; /* Optional: adds rounded corners to the table */
+  padding: 20px; /* Adds padding inside the table */
+}
+
+/* Optional: Styling for table headers and rows */
+.bg-category-table th, .bg-category-table td {
+  padding: 10px; /* Adds padding inside table cells */
+}
+
+.bg-category-table th {
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly dark background for headers */
+  color: white; /* White text color for table headers */
+}
+
+.bg-category-table tr:nth-child(even) {
+  background-color: rgba(74, 19, 204, 0.9); /* Slightly different background for even rows */
+}
+
+/* New CSS rule for the form background color */
+.bg-category-table form {
+  background-color: rgba(9, 24, 54, 0.8); /* Sets the form background color */
+  padding: 20px; /* Adds padding inside the form */
+  border-radius: 8px; /* Optional: adds rounded corners to the form */
+  color: rgb(11, 37, 85); /* Ensures text inside the form is visible against the background */
+  margin: 0 auto; /* Centers the form horizontally */
+  max-width: 600px; /* Optional: limits the maximum width of the form */
+}
+
+

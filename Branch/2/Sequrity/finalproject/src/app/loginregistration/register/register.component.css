@@ -1,0 +1,36 @@
+.register-form {
+    background-image: url('https://i.postimg.cc/9QJXRMgD/abstract-dark-blurred-background-smooth-gradient-texture-color-shiny-bright-website-pattern-banner-h.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 8px;
+    color: rgb(70, 23, 241);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .register-form form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  

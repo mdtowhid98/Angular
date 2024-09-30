@@ -1,0 +1,43 @@
+<div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Order Date</th>
+          <th>Customer</th>
+          
+          <th>Product Details</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of order">
+          <td>{{ order.id }}</td>
+          <td>{{ order.orderDate }}</td>
+          <td>{{ order.customer.name }}</td>
+          
+          <td>
+            <ul>
+              <li *ngFor="let product of order.products">
+                Name: {{ product.name }} - 
+                <!-- Quantity: {{product.quantity}}  -->
+                - Unit Price: {{ product.unitprice }}
+              </li>
+            </ul>
+          </td>
+          
+          <!-- <td>
+            <button class="btn btn-warning" (click)="editSales(sale)">
+              <fa-icon [icon]="faEdit"></fa-icon> 
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteSales(sale.id)">
+              <fa-icon [icon]="faTrash"></fa-icon> 
+            </button>
+          </td> -->
+        </tr>
+      </tbody>
+    </table>
+</div>

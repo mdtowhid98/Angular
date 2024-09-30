@@ -1,0 +1,32 @@
+<div class="container bg-supplier-table">
+    <h1 class="text-center">All Supplier Here</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Cell No</th>
+                <th>Address</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let supplier of suppliers ">
+                <td>{{supplier.id}}</td>
+                <td>{{supplier.name}}</td>
+                <td>{{supplier.email}}</td>
+                <td>{{supplier.cell}}</td>
+                <td>{{supplier.address}}</td>
+                <td>
+                    <button class="btn btn-warning" (click)="updateSupplier(supplier.id)">Edit</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteSupplier(supplier.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

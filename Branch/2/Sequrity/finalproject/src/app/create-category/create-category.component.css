@@ -1,0 +1,41 @@
+.bg-category-form {
+  background-image: url('https://i.postimg.cc/9QJXRMgD/abstract-dark-blurred-background-smooth-gradient-texture-color-shiny-bright-website-pattern-banner-h.avif');
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 20px; /* Adds padding inside the container */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  color: rgb(70, 23, 241); /* Optional: makes text color stand out against the background */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: column; /* Aligns children elements in a column */
+  justify-content: center; /* Centers children elements vertically */
+  align-items: center; /* Centers children elements horizontally */
+}
+
+.bg-category-form form {
+  width: 30%; /* Ensures form takes full width of the container */
+  max-width: 400px; /* Limits the maximum width of the form */
+  text-align: center; /* Centers text inside the form */
+}
+
+.bg-category-form .form-control {
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for form fields for readability */
+  color: #333; /* Dark text color for better readability */
+  width: 100%; /* Ensures the input takes full width of its parent */
+  max-width: 300px; /* Limits the maximum width of the input */
+  margin-bottom: 15px; /* Adds space between input and button */
+}
+
+.bg-category-form .btn-primary {
+  background-color: #11e72d; /* Adjust button color if needed */
+  border-color: #007bff;
+  width: 100%; /* Ensures the button takes full width of its parent */
+  max-width: 80px; /* Limits the maximum width of the button */
+}
+
+.bg-category-form .view-category-link {
+  color: #0c0c0a; /* Adjust link color if needed */
+  display: block; /* Makes the link block-level for better alignment */
+  margin-top: 15px; /* Adds space above the link */
+}

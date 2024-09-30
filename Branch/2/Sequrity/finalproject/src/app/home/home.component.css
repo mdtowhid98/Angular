@@ -1,0 +1,19 @@
+@keyframes dance {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-10px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.dancing {
+  animation: dance 1s ease-in-out infinite;
+}
+
+.card {
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
