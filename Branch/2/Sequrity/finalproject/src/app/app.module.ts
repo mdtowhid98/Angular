@@ -46,6 +46,8 @@ import { CreateSalesGulshanBranceComponent } from './gulshanBrance/create-sales-
 import { FeaturedProductComponent } from './featured-product/featured-product.component';
 import { LatestOffersComponent } from './latest-offers/latest-offers.component';
 import { HealthtipsComponent } from './healthtips/healthtips.component';
+import { BananiBranceInvoiceComponent } from './invoice/banani-brance-invoice/banani-brance-invoice.component';
+import { GulshanBranceInvoiceComponent } from './invoice/gulshan-brance-invoice/gulshan-brance-invoice.component';
 
 
 
@@ -91,6 +93,8 @@ import { HealthtipsComponent } from './healthtips/healthtips.component';
     FeaturedProductComponent,
     LatestOffersComponent,
     HealthtipsComponent,
+    BananiBranceInvoiceComponent,
+    GulshanBranceInvoiceComponent,
     
     
     

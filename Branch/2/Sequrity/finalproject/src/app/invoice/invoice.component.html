@@ -13,7 +13,54 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       <!-- Custom CSS -->
       <style>
+        body {
+          background-color: #f8f9fa;
+          font-family: Arial, sans-serif;
+        }
 
+        .invoice {
+          background: white;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .invoice-logo {
+          width: 90px;
+        }
+
+        .address-section h1, .address-section h2 {
+          margin: 0;
+          color: #1aee36;
+        }
+
+        .table {
+          margin-top: 20px;
+        }
+
+        .table th {
+          background-color: #c6d827;
+          color: white;
+        }
+
+        .footer-text {
+          font-weight: bold;
+          margin: 20px 0;
+        }
+
+        .printbtn {
+          margin-top: 20px;
+        }
+
+        .printbtn i {
+          margin-right: 5px;
+        }
+
+        @media print {
+          .printbtn {
+            display: none;
+          }
+        }
       </style>
     </head>
 
@@ -36,9 +83,11 @@
         <!-- Address Section -->
         <div class="row address-section text-center mb-4">
           <div class="col">
-            <h4>Address:</h4>
-            <p>Dhaka</p>
-            <p>Bangladesh</p>
+              <h1>Towhid Medical</h1>
+              <h2>Dhanmondi Branch</h2>
+            <h4>Address:Dhanmondi,Dhaka</h4>
+            
+            <h5>Bangladesh</h5>
           </div>
         </div>
 
@@ -92,10 +141,12 @@
           </div>
         </div>
         <div class="row text-right">
-          <div class="col">
-            <p>Towhid Product Collection</p>
-            <p>Phone: 01767515057</p>
-            <p>Dhaka, Bangladesh</p>
+          <div class="row text-right">
+            <div class="col">
+              <p>Towhid Medicine Collection</p>
+              <p>Phone: 01767515057</p>
+              <p>Dhanmondi, Dhaka, Bangladesh</p>
+            </div>
           </div>
         </div>
 

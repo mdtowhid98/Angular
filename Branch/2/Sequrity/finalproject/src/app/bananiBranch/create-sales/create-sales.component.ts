@@ -197,7 +197,7 @@ export class CreateSalesComponent implements OnInit, OnDestroy {
             error: (error) => { console.log(error); }
           });
         });
-        this.router.navigate(['invoice'], { queryParams: { sale: JSON.stringify(this.sale) } });
+        this.router.navigate(['bananiinvoice'], { queryParams: { sale: JSON.stringify(this.sale) } });
       },
       error: error => { console.log(error); }
     });

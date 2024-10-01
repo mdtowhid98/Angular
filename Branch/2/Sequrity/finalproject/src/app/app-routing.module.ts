@@ -38,6 +38,8 @@ import { CreateSalesGulshanBranceComponent } from './gulshanBrance/create-sales-
 import { FeaturedProductComponent } from './featured-product/featured-product.component';
 import { LatestOffersComponent } from './latest-offers/latest-offers.component';
 import { HealthtipsComponent } from './healthtips/healthtips.component';
+import { BananiBranceInvoiceComponent } from './invoice/banani-brance-invoice/banani-brance-invoice.component';
+import { GulshanBranceInvoiceComponent } from './invoice/gulshan-brance-invoice/gulshan-brance-invoice.component';
 
 const routes: Routes = [
   {path:"viewproduct",component:ViewproductComponent},
@@ -69,6 +71,8 @@ const routes: Routes = [
   {path:"featuredproducts",component:FeaturedProductComponent},
   {path:"offers",component:LatestOffersComponent},
   {path:"helthtips",component:HealthtipsComponent},
+  {path:"bananiinvoice",component:BananiBranceInvoiceComponent},
+  {path:"gulshaninvoice",component:GulshanBranceInvoiceComponent},
   {
     path: 'userprofile',
     component: UserprofileComponent,

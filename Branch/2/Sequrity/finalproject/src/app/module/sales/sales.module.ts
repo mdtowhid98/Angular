@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductModule } from '../product/product.module';
+import { BranchModule } from '../branch/branch.module';
 
 
 
@@ -18,4 +19,5 @@ export class SalesModule {
   quantity!:number;
   discount!:number;
   product!: ProductModule[];
+  
 }

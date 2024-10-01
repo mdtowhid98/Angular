@@ -1,6 +1,7 @@
 package com.towhid.practicepharmacy.restController;
 
 import com.towhid.practicepharmacy.entity.AuthenticationResponse;
+import com.towhid.practicepharmacy.entity.Branch;
 import com.towhid.practicepharmacy.entity.Category;
 import com.towhid.practicepharmacy.entity.User;
 import com.towhid.practicepharmacy.service.AuthService;

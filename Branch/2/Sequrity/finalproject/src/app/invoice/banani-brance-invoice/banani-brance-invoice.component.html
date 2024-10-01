@@ -1,0 +1,170 @@
+<div id="print-section">
+    <div class="container">
+      <!DOCTYPE html>
+      <html lang="en">
+  
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Receipt Page</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- Custom CSS -->
+        <style>
+            body {
+              background-color: #f8f9fa;
+              font-family: Arial, sans-serif;
+            }
+    
+            .invoice {
+              background: white;
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            .invoice-logo {
+              width: 90px;
+            }
+    
+            .address-section h1, .address-section h2 {
+              margin: 0;
+              color: #230deb;
+            }
+    
+            .table {
+              margin-top: 20px;
+            }
+    
+            .table th {
+              background-color: #24df5c;
+              color: white;
+            }
+    
+            .footer-text {
+              font-weight: bold;
+              margin: 20px 0;
+            }
+    
+            .printbtn {
+              margin-top: 20px;
+            }
+    
+            .printbtn i {
+              margin-right: 5px;
+            }
+    
+            @media print {
+              .printbtn {
+                display: none;
+              }
+            }
+          </style>
+      </head>
+  
+      <body>
+        <div *ngIf="sale" class="invoice">
+  
+          <!-- Invoice Header -->
+          <div class="row mb-4">
+            <div class="col-md-3">
+              <a class="navbar-brand" href="#">
+                <img src="https://i.postimg.cc/ry95B8nc/download-9.jpg" height="90" alt="Logo"
+                  class="invoice-logo rounded-circle">
+              </a>
+            </div>
+            <div class="col-md-9 text-right">
+              <h1>Invoice</h1>
+            </div>
+          </div>
+  
+          <!-- Address Section -->
+          <div class="row address-section text-center mb-4">
+            <div class="col">
+                <h1>Towhid Medical</h1>
+                <h2>Banani Branch</h2>
+              <h4>Address:Banani,Dhaka</h4>
+              
+              <h5>Bangladesh</h5>
+            </div>
+          </div>
+  
+          <!-- Customer and Sales Info -->
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <p><strong>Customer Name:</strong> {{ sale.customername }}</p>
+              <!-- <p><strong>Address:</strong> [Customer Address]</p> -->
+            </div>
+            <div class="col-md-6 text-right">
+              <p><strong>Sales Date:</strong> {{ sale.salesdate }}</p>
+              <!-- <p><strong>Invoice No:</strong> [Invoice Number]</p> -->
+            </div>
+          </div>
+  
+  
+          <!-- Products Section -->
+          <div class="row">
+            <div class="col">
+              <h2 class="text-center">Products</h2>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of sale.product">
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.quantity }}</td>
+                    <td>{{ product.unitprice | currency }}</td>
+                    <td>{{ product.quantity * product.unitprice | currency }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-md-6 offset-md-5 text-right">
+              <p><strong>Total Price:</strong> {{ sale.totalprice | currency }}</p>
+            </div>
+          </div>
+  
+          <!-- Footer Section -->
+          <div class="row mt-4">
+            <div class="col text-center">
+              <p class="footer-text">Thank you for your business!</p>
+            </div>
+          </div>
+          <div class="row text-right">
+            <div class="col">
+              <p>Towhid Medicine Collection</p>
+              <p>Phone: 01767515057</p>
+              <p>Banani, Dhaka, Bangladesh</p>
+            </div>
+          </div>
+  
+        </div>
+  
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Custom Script for ngxPrint if needed -->
+      </body>
+  
+      </html>
+    </div>
+  
+  </div>
+  
+  <!-- Print Button -->
+  <div class="d-flex justify-content-center mt-3">
+    <button printSectionId="print-section" ngxPrint class="btn btn-primary printbtn">
+      <i class="fas fa-print"></i> Print
+    </button>
+  </div>

@@ -23,7 +23,8 @@ body {
     border-radius: 8px;
     color: #4617f1; /* Text color for contrast */
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
+    height: 100vh;
     margin: 20px auto;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
 }
