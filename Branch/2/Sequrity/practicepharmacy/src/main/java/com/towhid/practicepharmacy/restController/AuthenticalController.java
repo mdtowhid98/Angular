@@ -1,11 +1,14 @@
 package com.towhid.practicepharmacy.restController;
 
 import com.towhid.practicepharmacy.entity.AuthenticationResponse;
+import com.towhid.practicepharmacy.entity.Category;
 import com.towhid.practicepharmacy.entity.User;
 import com.towhid.practicepharmacy.service.AuthService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @AllArgsConstructor
@@ -13,6 +16,9 @@ import org.springframework.web.bind.annotation.*;
 public class AuthenticalController {
 
     private final AuthService authService;
+
+
+
 
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(

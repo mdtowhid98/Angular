@@ -1,0 +1,117 @@
+/* Full-body background with image */
+body {
+   
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Text color to stand out on the background */
+}
+
+/* Container for the form with its own background */
+.bg-category-form {
+    background-image: url('https://i.postimg.cc/9QJXRMgD/abstract-dark-blurred-background-smooth-gradient-texture-color-shiny-bright-website-pattern-banner-h.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    border-radius: 8px;
+    color: #4617f1; /* Text color for contrast */
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+/* Table styles */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    color: #333;
+}
+
+.table thead th {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+.table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Button styles */
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bg-category-form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .table thead, .table tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .table thead th, .table tbody td {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+/* Ensure proper spacing between form elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Adjust the submit button alignment */
+.btn-submit {
+    margin-top: 20px; /* Adds space above the button to ensure it isn't too close to input fields */
+    display: block;
+    width: 100%; /* Makes the button span the entire width of the form */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn-submit {
+        width: 100%;
+        margin-top: 15px;
+    }
+}

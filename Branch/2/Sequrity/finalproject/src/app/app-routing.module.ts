@@ -28,13 +28,16 @@ import { ViewCustomerComponent } from './customer/view-customer/view-customer.co
 import { CreateCustomerComponent } from './customer/create-customer/create-customer.component';
 import { UpdateCustomerComponent } from './customer/update-customer/update-customer.component';
 
-import { ViewSalesOrderComponent } from './salesOrder/view-sales-order/view-sales-order.component';
+
 import { ViewsalesDetailsComponent } from './salesDetails/viewsales-details/viewsales-details.component';
 import { ViewBranchComponent } from './branch/view-branch/view-branch.component';
 import { CreateBranchComponent } from './branch/create-branch/create-branch.component';
 import { UpdateBranchComponent } from './branch/update-branch/update-branch.component';
 import { CreateSalesComponent } from './bananiBranch/create-sales/create-sales.component';
 import { CreateSalesGulshanBranceComponent } from './gulshanBrance/create-sales-gulshan-brance/create-sales-gulshan-brance.component';
+import { FeaturedProductComponent } from './featured-product/featured-product.component';
+import { LatestOffersComponent } from './latest-offers/latest-offers.component';
+import { HealthtipsComponent } from './healthtips/healthtips.component';
 
 const routes: Routes = [
   {path:"viewproduct",component:ViewproductComponent},
@@ -56,13 +59,16 @@ const routes: Routes = [
   {path:"viewcustomer",component:ViewCustomerComponent},
   {path:"createcustomer",component:CreateCustomerComponent},
   {path:"updatecustomer/:id",component:UpdateCustomerComponent},
-  {path:"vieworder",component:ViewSalesOrderComponent},
+
   {path:"salesdetails",component:ViewsalesDetailsComponent},
   {path:"viewbranch",component:ViewBranchComponent},
   {path:"createbranch",component:CreateBranchComponent},
   {path:"updatebranch/:id",component:UpdateBranchComponent},
   {path:"salesbananibranch",component:CreateSalesComponent},
   {path:"salesgulshanbranch",component:CreateSalesGulshanBranceComponent},
+  {path:"featuredproducts",component:FeaturedProductComponent},
+  {path:"offers",component:LatestOffersComponent},
+  {path:"helthtips",component:HealthtipsComponent},
   {
     path: 'userprofile',
     component: UserprofileComponent,

@@ -35,16 +35,17 @@ import { UpdatesupplierComponent } from './supplier/updatesupplier/updatesupplie
 import { ViewCustomerComponent } from './customer/view-customer/view-customer.component';
 import { CreateCustomerComponent } from './customer/create-customer/create-customer.component';
 import { UpdateCustomerComponent } from './customer/update-customer/update-customer.component';
-import { ViewOrderComponent } from './order/view-order/view-order.component';
-import { CreateOrderComponent } from './order/create-order/create-order.component';
-import { ViewSalesOrderComponent } from './salesOrder/view-sales-order/view-sales-order.component';
-import { CreateSalesOrderComponent } from './salesOrder/create-sales-order/create-sales-order.component';
+
+
 import { ViewsalesDetailsComponent } from './salesDetails/viewsales-details/viewsales-details.component';
 import { ViewBranchComponent } from './branch/view-branch/view-branch.component';
 import { CreateBranchComponent } from './branch/create-branch/create-branch.component';
 import { UpdateBranchComponent } from './branch/update-branch/update-branch.component';
 import { CreateSalesComponent } from './bananiBranch/create-sales/create-sales.component';
 import { CreateSalesGulshanBranceComponent } from './gulshanBrance/create-sales-gulshan-brance/create-sales-gulshan-brance.component';
+import { FeaturedProductComponent } from './featured-product/featured-product.component';
+import { LatestOffersComponent } from './latest-offers/latest-offers.component';
+import { HealthtipsComponent } from './healthtips/healthtips.component';
 
 
 
@@ -79,16 +80,17 @@ import { CreateSalesGulshanBranceComponent } from './gulshanBrance/create-sales-
     ViewCustomerComponent,
     CreateCustomerComponent,
     UpdateCustomerComponent,
-    ViewOrderComponent,
-    CreateOrderComponent,
-    ViewSalesOrderComponent,
-    CreateSalesOrderComponent,
+    
+   
     ViewsalesDetailsComponent,
     ViewBranchComponent,
     CreateBranchComponent,
     UpdateBranchComponent,
     CreateSalesComponent,
     CreateSalesGulshanBranceComponent,
+    FeaturedProductComponent,
+    LatestOffersComponent,
+    HealthtipsComponent,
     
     
     

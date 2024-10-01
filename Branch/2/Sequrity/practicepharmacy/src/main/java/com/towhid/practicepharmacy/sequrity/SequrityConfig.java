@@ -43,7 +43,7 @@ public class SequrityConfig {
                                 req ->
                                         req.requestMatchers("api/**","/login", "/register","/register/admin","/activate/**")
                                                 .permitAll()
-                                                .requestMatchers("api/medicine/save", "api/medicinegeneric/save","/api/category/save")
+                                                .requestMatchers("api/product/save","api/product/", "api/category/save","/api/branch/save")
                                                 .hasAuthority("ADMIN")
                                                 .requestMatchers( "api/medicine/{id}","api/pharmacist/all/**", "api/location/")
                                                 .hasAnyAuthority("ADMIN", "PHARMACIST")
