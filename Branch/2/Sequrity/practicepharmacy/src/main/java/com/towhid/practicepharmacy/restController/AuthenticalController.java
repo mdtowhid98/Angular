@@ -35,7 +35,7 @@ public class AuthenticalController {
         return ResponseEntity.ok(authService.registerAdmin(request));
     }
 
-    @PostMapping("/register/pharmacisat")
+    @PostMapping("/register/pharmacist")
     public ResponseEntity<AuthenticationResponse> registerPharmacist(
             @RequestBody User request
     ) {
